@@ -1,0 +1,2 @@
+# interestingresources
+collect something interesting
