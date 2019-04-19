@@ -4,3 +4,5 @@
 DuckDuckGo的官网Twitter：https://twitter.com/duckduckgo
 
 Tor project的Twitter：https://twitter.com/torproject
+
+Freebuf的twitter：https://twitter.com/freebuf
