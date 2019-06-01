@@ -10,3 +10,5 @@ Freebuf的twitter：https://twitter.com/freebuf
 湖南卫视的twitter:https://twitter.com/HUNANTVCHINA
 
 nmap的twitter：https://twitter.com/nmap
+
+restart chrome: chrome://restart
