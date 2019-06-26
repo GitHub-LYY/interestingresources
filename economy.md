@@ -8,3 +8,8 @@
 
 定投就是每隔一段固定时间买入固定金额的基金，它比直接全仓买入风险更小。至于收益，我们分情况看。
 
+
+
+股票涨停是指为了减少[股市交易](https://baike.baidu.com/item/%E8%82%A1%E5%B8%82%E4%BA%A4%E6%98%93)的投机行为，规定每个股票每个[交易日](https://baike.baidu.com/item/%E4%BA%A4%E6%98%93%E6%97%A5/1174461)的[涨跌幅度](https://baike.baidu.com/item/%E6%B6%A8%E8%B7%8C%E5%B9%85%E5%BA%A6/11061781)，达到上涨上限幅度的就叫涨停。就中国股市来说，每个交易日涨跌限幅为10%，达到10%涨幅的就是[涨停](https://baike.baidu.com/item/%E6%B6%A8%E5%81%9C/586)，当天不能再涨了。
+
+对[特别处理](https://baike.baidu.com/item/%E7%89%B9%E5%88%AB%E5%A4%84%E7%90%86/5461960)的ST[股票](https://baike.baidu.com/item/%E8%82%A1%E7%A5%A8/22647)规定只能每天涨5%就涨停。 所有的价格升降都是由股票的[市场价值](https://baike.baidu.com/item/%E5%B8%82%E5%9C%BA%E4%BB%B7%E5%80%BC/2258976)（即股票的预期收益和相应的风险）大小决定，受[供求](https://baike.baidu.com/item/%E4%BE%9B%E6%B1%82)关系的影响。
