@@ -66,7 +66,6 @@ int main(int argc, char** argv) {
     ListNode* node1 = new ListNode(1);
     node1->next = new ListNode(4);
     node1->next = new ListNode(5);
-    node1->next = new ListNode(5);
     ListNode* node2 = new ListNode(1);
     node2->next = new ListNode(3);
     node2->next = new ListNode(4);
