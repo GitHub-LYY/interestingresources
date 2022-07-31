@@ -63,21 +63,57 @@ public:
 int main(int argc, char** argv) {
     // 测试用例
     vector<ListNode*> lists;
+
     ListNode* node1 = new ListNode(1);
     node1->next = new ListNode(4);
-    node1->next = new ListNode(5);
-    node1->next = new ListNode(5);
+    node1->next->next = new ListNode(5);
+
     ListNode* node2 = new ListNode(1);
     node2->next = new ListNode(3);
-    node2->next = new ListNode(4);
+    node2->next->next = new ListNode(4);
+
     ListNode* node3 = new ListNode(2);
     node3->next = new ListNode(6);
+
     lists.push_back(node1);
     lists.push_back(node2);
     lists.push_back(node3);
 
+    // 输出测试用例
+    cout << "Before merge:" << endl;
+    cout << "list1:";
+    while (node1 != nullptr) {
+        cout << node1->val << " ";
+        node1 = node1->next;
+    }
+    cout << endl;
+
+    cout << "list2:";
+    while (node2 != nullptr) {
+        cout << node2->val << " ";
+        node2 = node2->next;
+    }
+    cout << endl;
+
+    cout << "list3:";
+    while (node3 != nullptr) {
+        cout << node3->val << " ";
+        node3 = node3->next;
+    }
+    cout << endl;
+
+    // 执行测试用例
     Solution s;
     s.mergeKLists(lists);
+
+    // 输出结果
+    cout << "After merge:" << endl;
+    ListNode* cur = lists[0];
+    while (cur != nullptr) {
+        cout << cur->val << " ";
+        cur = cur->next;
+    }
+    cout << endl;
 
     return 0;
 }

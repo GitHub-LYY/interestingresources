@@ -17,3 +17,5 @@ restart chrome: chrome://restart
 stackedit的twitter：https://twitter.com/stackedit
 
 简历制作：https://www.mujicv.com/
+
+高效做LeetCode：https://leetcode.cn/circle/discuss/jq9Zke/
