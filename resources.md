@@ -19,3 +19,5 @@ stackedit的twitter：https://twitter.com/stackedit
 简历制作：https://www.mujicv.com/
 
 高效做LeetCode：https://leetcode.cn/circle/discuss/jq9Zke/
+
+高效做LeetCode且形成长期记忆：https://leetcode.cn/circle/discuss/jq9Zke/

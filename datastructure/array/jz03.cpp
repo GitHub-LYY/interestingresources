@@ -3,7 +3,7 @@
 ** Date: 2022-07-31
 ** Description: 剑指 Offer 03. 数组中重复的数字
 ** link: https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
-** reference: 
+** reference: 题解区Krahets的答案，搜索剑指 Offer 03. 数组中重复的数字（哈希表 / 原地交换，清晰图解） 
 */
 
 #include <iostream>
