@@ -1,12 +1,12 @@
 /*
 ** Author: Yangyang Liu
 ** Date: 2022-08-04
-** Description: 206. 反转链表
-** link: https://leetcode.cn/problems/reverse-linked-list/
+** Description: 24. 两两交换链表中的节点
+** link: https://leetcode.cn/problems/swap-nodes-in-pairs/
 ** reference: 
 */
 
-#include <iostream> 
+#include <iostream>
 
 using namespace std;
 
@@ -21,19 +21,28 @@ struct ListNode {
 
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
+    ListNode* swapPairs(ListNode* head) {
+        // 异常情况
         if (head == nullptr || head->next == nullptr) {
             return head;
         }
-        ListNode* pre = nullptr;
-        ListNode* cur = head;
-        while (cur != nullptr) {
-            ListNode* tmp = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = tmp;
+
+        // 创建虚拟头结点
+        ListNode* dummyHead = new ListNode(0);
+        dummyHead->next = head;
+        ListNode* cur = dummyHead;
+
+        // 循环遍历链表
+        while (cur->next != nullptr && cur->next->next != nullptr) {
+            ListNode* tmp1 = cur->next;
+            ListNode* tmp2 = cur->next->next->next;
+            cur->next = cur->next->next;
+            cur->next->next = tmp1;
+            cur->next->next->next = tmp2;
+            cur = cur->next->next;
         }
-        return pre;
+
+        return dummyHead->next;
     }
 };
 
@@ -42,9 +51,8 @@ int main(int argc, char** argv) {
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);
     head->next->next->next = new ListNode(4);
-    head->next->next->next->next = new ListNode(5);
 
-    cout << "before reverse: ";
+    cout << "before swap: ";
     ListNode* cur = head;
     while (cur != nullptr) {
         cout << cur->val << " ";
@@ -53,9 +61,9 @@ int main(int argc, char** argv) {
     cout << endl;
 
     Solution s;
-    ListNode* newHead = s.reverseList(head);
+    ListNode* newHead = s.swapPairs(head);
 
-    cout << "after reverse: ";
+    cout << "after swap: ";
     cur = newHead;
     while (cur != nullptr) {
         cout << cur->val << " ";
