@@ -39,7 +39,7 @@ public:
         // 定义优先级队列，把lists中的每个链表的头结点入队
         priority_queue<ListNode*, vector<ListNode*>, Cmp> pri_que;
         for (auto node : lists) {
-            if (node != nullptr) {
+            if (node != nullptr) { // 链表为空，则不用入堆，不写，LeetCode会报错
                 pri_que.push(node);
             }
         }

@@ -4,6 +4,11 @@ LeetCode、剑指offer题
 
 ### 链表
 
+链表的题通常需要注意两点：
+
+1. 舍得用变量，千万别想着节省变量，否则容易被逻辑绕晕
+2. head 有可能需要改动时，先增加一个 假head，返回的时候直接取 假head.next，这样就不需要为修改 head 增加一大堆逻辑了。
+
 #### [剑指 Offer 06. 从尾到头打印链表](https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
 
 #### [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
@@ -36,4 +41,22 @@ LeetCode、剑指offer题
 
 #### [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
 
+#### [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/)
+
+#### [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
+
+#### [23. 合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
+
+#### [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/)
+
+#### [143. 重排链表](https://leetcode.cn/problems/reorder-list/)
+
+#### [148. 排序链表](https://leetcode.cn/problems/sort-list/)
+
+#### [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/)
+
+#### [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)
+
 ### 字符串
+
+![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
