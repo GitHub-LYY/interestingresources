@@ -2,6 +2,8 @@ LeetCode、剑指offer题
 
 ### 数组
 
+#### [912. 排序数组](https://leetcode.cn/problems/sort-an-array/)
+
 ### 链表
 
 链表的题通常需要注意两点：
