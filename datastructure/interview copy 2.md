@@ -1,5 +1,7 @@
 LeetCode、剑指offer题
 
+数据结构，比如数组、链表、栈、队列、集合、映射、哈希表、二叉树。单纯数据结构的题不多，最多的是链表，因为链表的特点，指来指去，所以链表自己能出很多题了，但是其他的数据结构单纯出题的不多，不知道是不是这些数据结构的特点比较简单，所以基本是他们配合算法解决特定问题。因此，重点放在算法的分类上，数据结构除了链表，不特别看数据结构的分类题。
+
 ### 数组
 
 #### [912. 排序数组](https://leetcode.cn/problems/sort-an-array/)
@@ -60,5 +62,29 @@ LeetCode、剑指offer题
 #### [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)
 
 ### 字符串
+
+#### [344. 反转字符串](https://leetcode.cn/problems/reverse-string/)
+
+#### [541. 反转字符串 II](https://leetcode.cn/problems/reverse-string-ii/)
+
+#### [剑指 Offer 05. 替换空格](https://leetcode.cn/problems/ti-huan-kong-ge-lcof/)
+
+#### [151. 颠倒字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/)
+
+#### [剑指 Offer 58 - II. 左旋转字符串](https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
+
+### 栈与队列
+
+#### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
+
+### 二叉树
+
+#### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
+
+#### [94. 二叉树的中序遍历](https://leetcode.cn/problems/binary-tree-inorder-traversal/)
+
+#### [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
+
+#### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
