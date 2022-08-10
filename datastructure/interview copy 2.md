@@ -61,6 +61,10 @@ LeetCode、剑指offer题
 
 #### [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)
 
+#### [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/)
+
+#### [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
+
 ### 字符串
 
 #### [344. 反转字符串](https://leetcode.cn/problems/reverse-string/)
