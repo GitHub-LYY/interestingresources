@@ -111,4 +111,6 @@ LeetCode、剑指offer题
 
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
+#### [297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
+
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
