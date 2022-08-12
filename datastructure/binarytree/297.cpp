@@ -56,7 +56,7 @@ public:
                 } else {
                     // 如果节点为空，则把none加入序列化结果中
 
-                    res += "None";
+                    res += "None,"; // 第一版，忘记写逗号了，报错
                 }
             }
         }
@@ -89,7 +89,9 @@ public:
         }
 
         // 以上逻辑没有把最后一个节点值加入链表，所以单独处理
-        dataArray.push_back(str);
+        if (str.size() != 0) { // 上边写的None后边有逗号，所以这儿必须判断尺寸
+            dataArray.push_back(str);
+        }
 
         // 定义队列保存树节点
         queue<TreeNode*> que;
@@ -100,7 +102,7 @@ public:
         }
 
         // 求出根节点
-        TreeNode* root = new TreeNode(dataArray.front());
+        TreeNode* root = new TreeNode(stoi(dataArray.front()));
         dataArray.pop_front(); // 保证下边的循环是从第二层节点开始的
 
         // 根节点入队
@@ -118,14 +120,14 @@ public:
 
                 // 插入根节点的左子节点
                 if (dataArray.front() != "None") {
-                    node->left = new TreeNode(dataArray.front());
+                    node->left = new TreeNode(stoi(dataArray.front()));
                     que.push(node->left);
                 }
                 dataArray.pop_front(); // 是否为none都必须pop
 
                 // 插入根节点的右子节点
                 if (dataArray.front() != "None") {
-                    node->right = new TreeNode(dataArray.front());
+                    node->right = new TreeNode(stoi(dataArray.front()));
                     que.push(node->right);
                 }
                 dataArray.pop_front();

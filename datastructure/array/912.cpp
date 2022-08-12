@@ -255,25 +255,25 @@ public:
         // 合并两个区间
         while (left < mid && right < end) {
             if (nums[left] <= nums[right]) { // 如果左边元素小于等于右边，则把左边的复制到临时数组
-                vec[index++] = nums[left++];
+                vecSec[index++] = nums[left++];
             } else { // 如果左边元素大于右边，则把右边的复制到临时数组
-                vec[index++] = nums[right++];
+                vecSec[index++] = nums[right++];
             }
         }
 
         // 把左边剩余的复制到临时数组
         while (left < mid) {
-            vec[index++] = nums[left++];
+            vecSec[index++] = nums[left++];
         }
 
         // 把右边剩余的复制到临时数组
         while (right < end) {
-            vec[index++] = nums[right++];
+            vecSec[index++] = nums[right++];
         }
 
         // 把临时数组复制到原数组
         for (int i = 0; i < (end - begin); i++) {
-            nums[i + begin] = vec[i];
+            nums[i + begin] = vecSec[i];
         }
     }
 
@@ -296,11 +296,68 @@ public:
         mergeSecondEdition(nums, begin, mid, end);
     }
 
-    vector<int> vec;
+    vector<int> vecSec;
 
     void mergeSortSecondEdition(vector<int>& nums) {
-        vec = vector<int>(nums.size());
+        vecSec = vector<int>(nums.size());
         mergeSortKernelSecondEdition(nums, 0, nums.size());
+    }
+
+    void mergeThirdEdition(vector<int>& nums, int begin, int mid, int end) {
+        // 定义left指向左区间，right指向右区间，index指向临时数组
+        int left = begin;
+        int right = mid;
+        int index = 0;
+
+        // 备份nums数组，方便直接在nums数组上进行修改
+        for (int i = begin; i < end; i++) {
+            vecThi[i] = nums[i];
+        }
+
+        // 合并两个区间
+        while (left < mid && right < end) {
+            if (vecThi[left] <= vecThi[right]) { // 如果左边元素小于等于右边，则把左边的复制到临时数组
+                nums[index++] = vecThi[left++];
+            } else { // 如果左边元素大于右边，则把右边的复制到临时数组
+                nums[index++] = vecThi[right++];
+            }
+        }
+
+        // 把左边剩余的复制到临时数组
+        while (left < mid) {
+            nums[index++] = vecThi[left++];
+        }
+
+        // 把右边剩余的复制到临时数组
+        while (right < end) {
+            vecThi[index++] = nums[right++];
+        }
+    }
+
+    void mergeSortKernelThirdEdition(vector<int>& nums, int begin, int end) {
+        // 异常情况
+        if (end - begin < 2) {
+            return;
+        }
+
+        // 确定中间位置
+        int mid = (begin + end) >> 1;
+
+        // 对左边进行归并排序
+        mergeSortKernelThirdEdition(nums, begin, mid);
+
+        // 对右边进行归并排序
+        mergeSortKernelThirdEdition(nums, mid, end);
+
+        // 归并，把[begin, mid)和[mid, end)范围的序列合并成一个有序序列
+        mergeThirdEdition(nums, begin, mid, end);
+    }
+
+    vector<int> vecThi;
+
+    void mergeSortThirdEdition(vector<int>& nums) {
+        vecThi = vector<int>(nums.size());
+        mergeSortKernelThirdEdition(nums, 0, nums.size());
     }
 
     vector<int> sortArray(vector<int>& nums) {
@@ -311,7 +368,8 @@ public:
         //shellSort(nums);
         //quickSort(nums);
         //mergeSort(nums);
-        mergeSortSecondEdition(nums);
+        //mergeSortSecondEdition(nums);
+        mergeSortThirdEdition(nums);
         return nums;
     }
 };
