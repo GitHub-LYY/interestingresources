@@ -6,6 +6,8 @@ LeetCode、剑指offer题
 
 #### [912. 排序数组](https://leetcode.cn/problems/sort-an-array/)
 
+#### [54. 螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -121,12 +123,26 @@ LeetCode、剑指offer题
 
 ### 排序
 
-
-
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
+
+#### [剑指 Offer 51. 数组中的逆序对](https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
 
 ### 双指针
 
 #### [15. 三数之和](https://leetcode.cn/problems/3sum/)
+
+### 二分搜索
+
+#### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
+
+#### [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
+
+### 滑动窗口
+
+#### [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
+
+### DFS/BFS
+
+#### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
