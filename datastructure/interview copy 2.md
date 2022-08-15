@@ -8,6 +8,8 @@ LeetCode、剑指offer题
 
 #### [54. 螺旋矩阵](https://leetcode.cn/problems/spiral-matrix/)
 
+#### [41. 缺失的第一个正数](https://leetcode.cn/problems/first-missing-positive/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -69,6 +71,8 @@ LeetCode、剑指offer题
 
 ### 字符串
 
+stringstream学一下，笔试的时候快速做出字符串的题。
+
 #### [344. 反转字符串](https://leetcode.cn/problems/reverse-string/)
 
 #### [541. 反转字符串 II](https://leetcode.cn/problems/reverse-string-ii/)
@@ -113,6 +117,8 @@ LeetCode、剑指offer题
 
 #### [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
 
+#### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
 #### [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
@@ -130,6 +136,8 @@ LeetCode、剑指offer题
 ### 双指针
 
 #### [15. 三数之和](https://leetcode.cn/problems/3sum/)
+
+#### [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
 
 ### 二分搜索
 
