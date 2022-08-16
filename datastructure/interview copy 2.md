@@ -10,6 +10,8 @@ LeetCode、剑指offer题
 
 #### [41. 缺失的第一个正数](https://leetcode.cn/problems/first-missing-positive/)
 
+#### [48. 旋转图像](https://leetcode.cn/problems/rotate-image/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -83,6 +85,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 58 - II. 左旋转字符串](https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
 
+#### [8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi/)
+
+#### [43. 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
+
 ### 栈与队列
 
 ### 单调栈
@@ -127,6 +133,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
 
+#### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
@@ -139,11 +147,17 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
 
+#### [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
 
 #### [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
+
+#### [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
+#### [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
 
 ### 滑动窗口
 
@@ -152,5 +166,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### DFS/BFS
 
 #### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
+
+### 数学
+
+#### [470. 用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
