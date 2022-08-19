@@ -14,6 +14,10 @@ LeetCode、剑指offer题
 
 #### [240. 搜索二维矩阵 II](https://leetcode.cn/problems/search-a-2d-matrix-ii/)
 
+#### [498. 对角线遍历](https://leetcode.cn/problems/diagonal-traverse/)
+
+#### [59. 螺旋矩阵 II](https://leetcode.cn/problems/spiral-matrix-ii/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -72,6 +76,10 @@ LeetCode、剑指offer题
 #### [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/)
 
 #### [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
+
+#### [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/)
+
+#### [61. 旋转链表](https://leetcode.cn/problems/rotate-list/)
 
 ### 字符串
 
@@ -136,6 +144,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
 
 #### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
+
+#### [662. 二叉树最大宽度](https://leetcode.cn/problems/maximum-width-of-binary-tree/)
+
+#### [230. 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
 
 ### 排序
 
