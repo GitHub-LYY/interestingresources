@@ -18,6 +18,8 @@ LeetCode、剑指offer题
 
 #### [59. 螺旋矩阵 II](https://leetcode.cn/problems/spiral-matrix-ii/)
 
+#### [189. 轮转数组](https://leetcode.cn/problems/rotate-array/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -101,6 +103,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 栈与队列
 
+#### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
+
 ### 单调栈
 
 #### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
@@ -133,6 +137,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
 
+#### [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
+
+#### [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
+
+#### [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
+
+#### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
+
+#### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
+
+#### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
+
 #### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
 #### [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
@@ -149,6 +165,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [230. 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
 
+#### [114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
@@ -163,6 +181,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers/)
 
+#### [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -173,9 +193,13 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
 
+#### [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
+
 ### 滑动窗口
 
 #### [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
+
+#### [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/)
 
 ### DFS/BFS
 
