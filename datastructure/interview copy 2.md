@@ -101,6 +101,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [43. 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
 
+#### [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
+
+#### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
+
 ### 栈与队列
 
 #### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
@@ -149,9 +153,31 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
 
+#### [513. 找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value/)
+
+#### [112. 路径总和](https://leetcode.cn/problems/path-sum/)
+
+#### [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii/)
+
+#### [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+
 #### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
+#### [654. 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/)
+
+#### [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees/)
+
+#### [700. 二叉搜索树中的搜索](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
+
+#### [530. 二叉搜索树的最小绝对差](https://leetcode.cn/problems/minimum-absolute-difference-in-bst/)
+
+#### [501. 二叉搜索树中的众数](https://leetcode.cn/problems/find-mode-in-binary-search-tree/)
+
 #### [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+#### [235. 二叉搜索树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+#### [701. 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/)
 
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
@@ -204,6 +230,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### DFS/BFS
 
 #### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
+
+### 动态规划
+
+#### [221. 最大正方形](https://leetcode.cn/problems/maximal-square/)
 
 ### 数学
 
