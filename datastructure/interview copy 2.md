@@ -113,6 +113,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
 
+### 单调队列
+
+#### [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -179,6 +183,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [701. 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/)
 
+#### [450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/)
+
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
 #### [297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
@@ -209,6 +215,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
 
+#### [151. 颠倒字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/)
+
+#### [56. 合并区间](https://leetcode.cn/problems/merge-intervals/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -231,9 +241,29 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
 
+### 回溯
+
+#### [46. 全排列](https://leetcode.cn/problems/permutations/)
+
+#### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/)
+
+#### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
+
+#### [78. 子集](https://leetcode.cn/problems/subsets/)
+
 ### 动态规划
 
 #### [221. 最大正方形](https://leetcode.cn/problems/maximal-square/)
+
+#### [300. 最长递增子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
+
+#### [1143. 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence/)
+
+#### [322. 零钱兑换](https://leetcode.cn/problems/coin-change/)
+
+#### [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
+
+#### [718. 最长重复子数组](https://leetcode.cn/problems/maximum-length-of-repeated-subarray/)
 
 ### 数学
 
