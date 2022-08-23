@@ -3,7 +3,7 @@
 ** Date: 2022-08-14
 ** Description: 200. 岛屿数量
 ** link: https://leetcode.cn/problems/number-of-islands/
-** reference: 题解区，代码随想录，版本一正确，版本二错误
+** reference: 题解区，代码随想录，版本一正确，版本二错误，不要看代码随想录的版本了，看的官方的岛屿的最大面积的题解，这题根据自己的理解写的
 */
 
 #include <iostream>
@@ -12,84 +12,47 @@
 using namespace std;
 
 class Solution {
-public:
-    int dir[4][2] = {0, 1, 1, 0, -1, 0, 0, -1};
-    void dfsOld(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y) {
-        // 递归跳出条件
-        if (grid[x][y] == '0' || visited[x][y] == true) {
-            // 遇到海水或者已经被访问了
-
+private:
+    void dfs(vector<vector<char>>& grid, int i, int j) {
+        // 递归结束条件
+        if (i < 0 || i >= grid.size() || j < 0 || j >= grid[0].size() || grid[i][j] == '0') {
+            // 超出边界了，或者当前格子是0，则结束递归
             return;
         }
 
-        // 标记当前位置已经被访问
-        visited[x][y] = true;
+        // 来到这儿，当前格子是1，但是现在访问了，把它置为0
+        grid[i][j] = '0';
 
-        // 递归访问上下左右四个方向
-        for (int dirIdx = 0; dirIdx < 4; dirIdx++) {
-            // 计算要访问的下一个位置
-            int nextx = x + dir[dirIdx][0];
-            int nexty = y + dir[dirIdx][1];
-
-            // 如果越界，则跳过
-            if (nextx < 0 || nextx >= grid.size() || nexty < 0 || nexty >= grid[0].size()) {
-                continue;
-            }
-
-            // 递归访问下一个位置
-            dfs(grid, visited, nextx, nexty);
-        }
+        // 上下左右四个方向继续递归
+        dfs(grid, i + 1, j);
+        dfs(grid, i - 1, j);
+        dfs(grid, i, j + 1);
+        dfs(grid, i, j - 1);
     }
-    void dfs(vector<vector<char>>& grid, vector<vector<bool>>& visited, int x, int y) {
-        // 递归跳出条件在下边
-
-        for (int i = 0; i < 4; i++) {
-            int nextx = x + dir[i][0];
-            int nexty = y + dir[i][1];
-
-            if (nextx < 0 || nextx >= grid.size() || nexty < 0 || nexty >= grid[0].size()) {
-                continue;
-            }
-
-            if (grid[nextx][nexty] == '1' && visited[nextx][nexty] == false) {
-                visited[nextx][nexty] = true;
-                dfs(grid, visited, nextx, nexty);
-            }
-        }
-    }
-
+public:
     int numIslands(vector<vector<char>>& grid) {
-        // dfs
+        int numRow = grid.size();
+        int numCol = grid[0].size();
 
-        // 计算网格行数和列数
-        int row = grid.size();
-        int col = grid[0].size();
+        // 如果grid为空，则数量是0
+        if (numRow == 0 || numCol == 0) {
+            return 0;
+        }
 
-        // 定义网格有没有被访问过
-        vector<vector<bool>> visited= vector<vector<bool>>(row, vector<bool>(col, false));
+        // 定义变量保存岛屿数量
+        int numIslands = 0;
 
-        // 定义岛屿数量
-        int count = 0;
-
-        // 遍历网格
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                if (grid[i][j] == '1' && visited[i][j] == false) {
-                    // 来这儿，则是一个岛屿
-
-                    // 这个位置已经被访问了
-                    visited[i][j] = true;
-
-                    // 岛屿数量加1
-                    count++;
-
-                    // 递归
-                    dfs(grid, visited, i, j);
+        // 从上到下，从左到右开始遍历grid的每一个格子
+        for (int i = 0; i < numRow; i++) {
+            for (int j = 0; j < numCol; j++) {
+                if (grid[i][j] == '1') { // 这儿必须是1才是岛屿
+                    numIslands++;
+                    dfs(grid, i, j);
                 }
             }
         }
 
-        return count;
+        return numIslands;
     }
 };
 

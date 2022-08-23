@@ -105,6 +105,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
 
+#### [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+
 ### 栈与队列
 
 #### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
@@ -241,6 +243,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
 
+#### [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
+
+#### [79. 单词搜索](https://leetcode.cn/problems/word-search/)
+
 ### 回溯
 
 #### [46. 全排列](https://leetcode.cn/problems/permutations/)
@@ -250,6 +256,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
 
 #### [78. 子集](https://leetcode.cn/problems/subsets/)
+
+#### [39. 组合总和](https://leetcode.cn/problems/combination-sum/)
+
+#### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
+
+#### [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii/)
+
+### 贪心
+
+#### [135. 分发糖果](https://leetcode.cn/problems/candy/)
 
 ### 动态规划
 
@@ -264,6 +280,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [64. 最小路径和](https://leetcode.cn/problems/minimum-path-sum/)
 
 #### [718. 最长重复子数组](https://leetcode.cn/problems/maximum-length-of-repeated-subarray/)
+
+#### [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)
+
+#### [62. 不同路径](https://leetcode.cn/problems/unique-paths/)
+
+#### [198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
 
 ### 数学
 
