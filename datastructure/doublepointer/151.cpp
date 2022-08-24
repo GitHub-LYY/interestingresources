@@ -15,7 +15,7 @@ using namespace std;
 class Solution {
 public:
     string reverseWords(string s) {
-        int k = 0; // 指向生成字符串是位置
+        int k = 0; // 指向生成字符串的位置
 
         int i = 0;
         int j;

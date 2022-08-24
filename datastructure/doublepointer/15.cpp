@@ -46,7 +46,7 @@ public:
                 // 如果三个指针所指元素之和大于0，则right指针左移
                 if (nums[i] + nums[left] + nums[right] > 0) {
                     right--;
-                } else if (nums[i] + nums[left] + nums[right]) {
+                } else if (nums[i] + nums[left] + nums[right] < 0) {
                     // 如果三个指针所指元素之和小于0，则left指针右移
 
                     left++;

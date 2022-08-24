@@ -107,6 +107,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
 
+### KMP
+
+#### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
+
 ### 栈与队列
 
 #### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
@@ -115,9 +119,15 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
 
+#### [402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits/)
+
 ### 单调队列
 
 #### [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+
+### 哈希表、集合、映射
+
+#### [705. 设计哈希集合](https://leetcode.cn/problems/design-hashset/)
 
 ### 二叉树
 
