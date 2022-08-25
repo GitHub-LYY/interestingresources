@@ -129,6 +129,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [705. 设计哈希集合](https://leetcode.cn/problems/design-hashset/)
 
+#### [706. 设计哈希映射](https://leetcode.cn/problems/design-hashmap/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -300,5 +302,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 数学
 
 #### [470. 用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/)
+
+#### [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
