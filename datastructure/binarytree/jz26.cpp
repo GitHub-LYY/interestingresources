@@ -23,7 +23,7 @@ struct TreeNode {
 
 class Solution {
 private:
-    bool traversal(TreeNode* curA, TreeNode* curB) {
+    bool traversalOld(TreeNode* curA, TreeNode* curB) {
         // 递归结束条件
         //if (curA->left == nullptr && curA->right == nullptr && curB->left == nullptr && curB->right == nullptr) {
             // 如果当前节点是叶子节点，且值相等
@@ -47,6 +47,32 @@ private:
         bool res = isSameLeft && isSameRight;
 
         return res;
+    }
+
+    bool traversal(TreeNode* curA, TreeNode* curB) {
+        // 共有四种情况，空空，不空不空，空不空，不空空
+
+        if (curA == nullptr && curB == nullptr) {
+            return true; // 这儿为true，一开始写错了
+        }
+
+        if (curA == nullptr && curB != nullptr) {
+            return false;
+        }
+
+        if (curA != nullptr && curB == nullptr) {
+            return true; // 这儿为true，一开始写错了
+        }
+
+        if (curA->val != curB->val) {
+            return false;
+        }
+
+        if (curA->val == curB->val) {
+            return traversal(curA->left, curB->left) && traversal(curA->right, curB->right);
+        }
+
+        return false;
     }
 public:
     bool isSubStructureOld(TreeNode* A, TreeNode* B) {
