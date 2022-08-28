@@ -115,6 +115,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
 
+#### [剑指 Offer 09. 用两个栈实现队列](https://leetcode.cn/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
+
+#### [剑指 Offer 30. 包含min函数的栈](https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/)
+
+#### [剑指 Offer 31. 栈的压入、弹出序列](https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
+
 ### 单调栈
 
 #### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
@@ -125,6 +131,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
 
+#### [剑指 Offer 59 - I. 滑动窗口的最大值](https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
+
 ### 哈希表、集合、映射
 
 #### [705. 设计哈希集合](https://leetcode.cn/problems/design-hashset/)
@@ -132,6 +140,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [706. 设计哈希映射](https://leetcode.cn/problems/design-hashmap/)
 
 #### [128. 最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/)
+
+#### [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode.cn/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 
 ### 二叉树
 
@@ -223,6 +233,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 27. 二叉树的镜像](https://leetcode.cn/problems/er-cha-shu-de-jing-xiang-lcof/)
 
+#### [剑指 Offer 28. 对称的二叉树](https://leetcode.cn/problems/dui-cheng-de-er-cha-shu-lcof/)
+
 #### [剑指 Offer 32 - I. 从上到下打印二叉树](https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/)
 
 #### [剑指 Offer 32 - II. 从上到下打印二叉树 II](https://leetcode.cn/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/)
@@ -239,11 +251,15 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 37. 序列化二叉树](https://leetcode.cn/problems/xu-lie-hua-er-cha-shu-lcof/)
 
+#### [剑指 Offer 54. 二叉搜索树的第k大节点](https://leetcode.cn/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
 
 #### [剑指 Offer 51. 数组中的逆序对](https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
+
+#### [剑指 Offer 40. 最小的k个数](https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/)
 
 ### 双指针
 
@@ -258,6 +274,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [151. 颠倒字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/)
 
 #### [56. 合并区间](https://leetcode.cn/problems/merge-intervals/)
+
+#### [剑指 Offer 58 - I. 翻转单词顺序](https://leetcode.cn/problems/fan-zhuan-dan-ci-shun-xu-lcof/)
 
 ### 二分搜索
 
@@ -284,6 +302,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
 
 #### [79. 单词搜索](https://leetcode.cn/problems/word-search/)
+
+#### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 ### 回溯
 
@@ -324,6 +344,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [62. 不同路径](https://leetcode.cn/problems/unique-paths/)
 
 #### [198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
+
+#### [剑指 Offer 10- I. 斐波那契数列](https://leetcode.cn/problems/fei-bo-na-qi-shu-lie-lcof/)
+
+#### [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode.cn/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)
 
 ### 数学
 
