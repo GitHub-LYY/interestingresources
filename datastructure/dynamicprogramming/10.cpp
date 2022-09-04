@@ -1,7 +1,7 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-09-04
-** Description: 剑指 Offer 19. 正则表达式匹配
+** Date: 2022-09-03
+** Description: 10. 正则表达式匹配
 ** link: https://leetcode.cn/problems/zheng-ze-biao-da-shi-pi-pei-lcof/?favorite=xb9nqhhg
 ** reference: b站CSON，作者，EdwardShi，这道题说的特别好，我看了许多题解，没有理解，一看这个作者的，立即理解了，
 ** 搜索，【CSON】LeetCode千题讲解HOT热题100，
