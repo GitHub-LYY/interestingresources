@@ -357,10 +357,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 14- I. 剪绳子](https://leetcode.cn/problems/jian-sheng-zi-lcof/)
 
+#### [剑指 Offer 14- II. 剪绳子 II](https://leetcode.cn/problems/jian-sheng-zi-ii-lcof/)
+
 ### 数学
 
 #### [470. 用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/)
 
 #### [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/)
+
+#### [剑指 Offer 16. 数值的整数次方](https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)
+
+### 位运算
+
+#### [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)

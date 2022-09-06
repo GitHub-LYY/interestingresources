@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
     int n = 2;
 
     Solution s;
-    int res = s.integerBreak(n);
+    int res = s.cuttingRope(n);
 
     cout << res << endl;
 
