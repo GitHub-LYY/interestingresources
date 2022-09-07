@@ -107,6 +107,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
 
+#### [剑指 Offer 20. 表示数值的字符串](https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -366,6 +368,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/)
 
 #### [剑指 Offer 16. 数值的整数次方](https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)
+
+#### [剑指 Offer 17. 打印从1到最大的n位数](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
 
 ### 位运算
 
