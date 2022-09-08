@@ -20,6 +20,8 @@ LeetCode、剑指offer题
 
 #### [189. 轮转数组](https://leetcode.cn/problems/rotate-array/)
 
+#### [剑指 Offer 29. 顺时针打印矩阵](https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -109,6 +111,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 20. 表示数值的字符串](https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/)
 
+#### [65. 有效数字](https://leetcode.cn/problems/valid-number/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -128,6 +132,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
 
 #### [402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits/)
+
+### 堆
+
+#### [剑指 Offer 41. 数据流中的中位数](https://leetcode.cn/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/)
+
+#### [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
 
 ### 单调队列
 
@@ -263,6 +273,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 40. 最小的k个数](https://leetcode.cn/problems/zui-xiao-de-kge-shu-lcof/)
 
+#### [剑指 Offer 45. 把数组排成最小的数](https://leetcode.cn/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)
+
 ### 双指针
 
 #### [15. 三数之和](https://leetcode.cn/problems/3sum/)
@@ -278,6 +290,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [56. 合并区间](https://leetcode.cn/problems/merge-intervals/)
 
 #### [剑指 Offer 58 - I. 翻转单词顺序](https://leetcode.cn/problems/fan-zhuan-dan-ci-shun-xu-lcof/)
+
+#### [剑指 Offer 21. 调整数组顺序使奇数位于偶数前面](https://leetcode.cn/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/)
 
 ### 二分搜索
 
@@ -361,6 +375,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 14- II. 剪绳子 II](https://leetcode.cn/problems/jian-sheng-zi-ii-lcof/)
 
+#### [53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
+
+#### [剑指 Offer 42. 连续子数组的最大和](https://leetcode.cn/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/)
+
 ### 数学
 
 #### [470. 用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/)
@@ -374,5 +392,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 位运算
 
 #### [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
+
+摩尔投票法
+
+#### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
