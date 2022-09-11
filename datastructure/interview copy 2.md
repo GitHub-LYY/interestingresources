@@ -155,6 +155,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode.cn/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 
+#### [剑指 Offer 61. 扑克牌中的顺子](https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -295,6 +297,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 57. 和为s的两个数字](https://leetcode.cn/problems/he-wei-sde-liang-ge-shu-zi-lcof/)
 
+#### [剑指 Offer 49. 丑数](https://leetcode.cn/problems/chou-shu-lcof/)
+
+#### [264. 丑数 II](https://leetcode.cn/problems/ugly-number-ii/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -318,6 +324,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/)
 
 #### [剑指 Offer 48. 最长不含重复字符的子字符串](https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)
+
+#### [剑指 Offer 57 - II. 和为s的连续正数序列](https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
 
 ### DFS/BFS
 
@@ -405,9 +413,15 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [233. 数字 1 的个数](https://leetcode.cn/problems/number-of-digit-one/)
 
+#### [剑指 Offer 60. n个骰子的点数](https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/)
+
 ### 位运算
 
 #### [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
+
+#### [剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
+
+#### [剑指 Offer 56 - II. 数组中数字出现的次数 II](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/)
 
 摩尔投票法
 
