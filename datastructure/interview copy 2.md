@@ -113,6 +113,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [65. 有效数字](https://leetcode.cn/problems/valid-number/)
 
+#### [剑指 Offer 67. 把字符串转换成整数](https://leetcode.cn/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -420,6 +422,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 62. 圆圈中最后剩下的数字](https://leetcode.cn/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/)
 
 #### [剑指 Offer 64. 求1+2+…+n](https://leetcode.cn/problems/qiu-12n-lcof/)
+
+#### [剑指 Offer 66. 构建乘积数组](https://leetcode.cn/problems/gou-jian-cheng-ji-shu-zu-lcof/)
 
 ### 位运算
 
