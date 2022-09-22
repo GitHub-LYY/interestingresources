@@ -129,6 +129,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 31. 栈的压入、弹出序列](https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
 
+#### [面试题59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/)
+
 ### 单调栈
 
 #### [42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/)
@@ -338,6 +340,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [79. 单词搜索](https://leetcode.cn/problems/word-search/)
 
 #### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
+
+#### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
 
 ### 回溯
 
