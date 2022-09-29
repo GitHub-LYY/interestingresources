@@ -165,6 +165,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 61. 扑克牌中的顺子](https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/)
 
+#### [414. 第三大的数](https://leetcode.cn/problems/third-maximum-number/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
