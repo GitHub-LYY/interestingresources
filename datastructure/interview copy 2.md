@@ -26,6 +26,8 @@ LeetCode、剑指offer题
 
 #### [495. 提莫攻击](https://leetcode.cn/problems/teemo-attacking/)
 
+#### [628. 三个数的最大乘积](https://leetcode.cn/problems/maximum-product-of-three-numbers/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -166,6 +168,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 61. 扑克牌中的顺子](https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/)
 
 #### [414. 第三大的数](https://leetcode.cn/problems/third-maximum-number/)
+
+#### [645. 错误的集合](https://leetcode.cn/problems/set-mismatch/)
 
 ### 二叉树
 
