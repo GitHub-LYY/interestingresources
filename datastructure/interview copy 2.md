@@ -171,6 +171,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [645. 错误的集合](https://leetcode.cn/problems/set-mismatch/)
 
+#### [697. 数组的度](https://leetcode.cn/problems/degree-of-an-array/)
+
+#### [448. 找到所有数组中消失的数字](https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
