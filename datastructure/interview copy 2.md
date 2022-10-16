@@ -299,6 +299,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 45. 把数组排成最小的数](https://leetcode.cn/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)
 
+#### [274. H 指数](https://leetcode.cn/problems/h-index/)
+
 ### 双指针
 
 #### [15. 三数之和](https://leetcode.cn/problems/3sum/)
