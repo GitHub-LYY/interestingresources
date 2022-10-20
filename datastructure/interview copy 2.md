@@ -28,6 +28,8 @@ LeetCode、剑指offer题
 
 #### [628. 三个数的最大乘积](https://leetcode.cn/problems/maximum-product-of-three-numbers/)
 
+#### [665. 非递减数列](https://leetcode.cn/problems/non-decreasing-array/)
+
 ### 链表
 
 链表的题通常需要注意两点：
