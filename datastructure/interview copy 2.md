@@ -327,6 +327,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [264. 丑数 II](https://leetcode.cn/problems/ugly-number-ii/)
 
+#### [283. 移动零](https://leetcode.cn/problems/move-zeroes/)
+
+#### [27. 移除元素](https://leetcode.cn/problems/remove-element/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
