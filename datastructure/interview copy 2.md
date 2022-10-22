@@ -457,6 +457,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [453. 最小操作次数使数组元素相等](https://leetcode.cn/problems/minimum-moves-to-equal-array-elements/)
 
+#### [118. 杨辉三角](https://leetcode.cn/problems/pascals-triangle/)
+
+#### [119. 杨辉三角 II](https://leetcode.cn/problems/pascals-triangle-ii/)
+
 ### 位运算
 
 #### [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
