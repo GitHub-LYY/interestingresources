@@ -369,6 +369,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
 
+### 方向数组
+
+#### [661. 图片平滑器](https://leetcode.cn/problems/image-smoother/)
+
 ### 回溯
 
 #### [46. 全排列](https://leetcode.cn/problems/permutations/)
