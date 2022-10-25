@@ -4,6 +4,8 @@
 ** Description: 146. LRU 缓存
 ** link: https://leetcode.cn/problems/lru-cache/
 ** reference: LeetCode官方题解
+** 形参列表的参数名字必须不能一样，使用下划线区分可以，包括两个构造函数中的形参列表的参数名字，否则get函数得到的
+** 结果一直是-1，困扰了好久才解决
 */
 
 #include <iostream>
