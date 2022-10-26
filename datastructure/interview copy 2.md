@@ -30,6 +30,8 @@ LeetCode、剑指offer题
 
 #### [665. 非递减数列](https://leetcode.cn/problems/non-decreasing-array/)
 
+#### [419. 甲板上的战舰](https://leetcode.cn/problems/battleships-in-a-board/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -464,6 +466,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [118. 杨辉三角](https://leetcode.cn/problems/pascals-triangle/)
 
 #### [119. 杨辉三角 II](https://leetcode.cn/problems/pascals-triangle-ii/)
+
+#### [598. 范围求和 II](https://leetcode.cn/problems/range-addition-ii/)
 
 ### 位运算
 
