@@ -32,6 +32,10 @@ LeetCode、剑指offer题
 
 #### [419. 甲板上的战舰](https://leetcode.cn/problems/battleships-in-a-board/)
 
+#### [566. 重塑矩阵](https://leetcode.cn/problems/reshape-the-matrix/)
+
+#### [73. 矩阵置零](https://leetcode.cn/problems/set-matrix-zeroes/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -468,6 +472,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [119. 杨辉三角 II](https://leetcode.cn/problems/pascals-triangle-ii/)
 
 #### [598. 范围求和 II](https://leetcode.cn/problems/range-addition-ii/)
+
+#### [396. 旋转函数](https://leetcode.cn/problems/rotate-function/)
 
 ### 位运算
 
