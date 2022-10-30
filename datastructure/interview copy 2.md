@@ -379,6 +379,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [661. 图片平滑器](https://leetcode.cn/problems/image-smoother/)
 
+#### [289. 生命游戏](https://leetcode.cn/problems/game-of-life/)
+
+### 前缀和
+
+#### [303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable/)
+
 ### 回溯
 
 #### [46. 全排列](https://leetcode.cn/problems/permutations/)
