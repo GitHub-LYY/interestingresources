@@ -385,6 +385,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable/)
 
+#### [304. 二维区域和检索 - 矩阵不可变](https://leetcode.cn/problems/range-sum-query-2d-immutable/)
+
 ### 回溯
 
 #### [46. 全排列](https://leetcode.cn/problems/permutations/)
