@@ -337,6 +337,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [27. 移除元素](https://leetcode.cn/problems/remove-element/)
 
+#### [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -471,6 +473,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 64. 求1+2+…+n](https://leetcode.cn/problems/qiu-12n-lcof/)
 
+#### [238. 除自身以外数组的乘积](https://leetcode.cn/problems/product-of-array-except-self/)
+
 #### [剑指 Offer 66. 构建乘积数组](https://leetcode.cn/problems/gou-jian-cheng-ji-shu-zu-lcof/)
 
 #### [453. 最小操作次数使数组元素相等](https://leetcode.cn/problems/minimum-moves-to-equal-array-elements/)
@@ -492,6 +496,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 56 - II. 数组中数字出现的次数 II](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/)
 
 #### [剑指 Offer 65. 不用加减乘除做加法](https://leetcode.cn/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/)
+
+#### [520. 检测大写字母](https://leetcode.cn/problems/detect-capital/)
 
 摩尔投票法
 
