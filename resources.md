@@ -23,5 +23,3 @@ stackedit的twitter：[https://twitter.com/stackedit]()
 GIF图：
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlgy1gexv7af86fg309w05khdv.gif)
-
-玩的嗨：[https://www.wandhi.com/]()
