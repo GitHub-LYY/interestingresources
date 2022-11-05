@@ -74,3 +74,16 @@ map有insert方法。
 
 ![1667470552030](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667470552030.png)
 
+### 模板的泛华、特化、全特化（Full specialization）、偏特化（partial specialization）的概念？
+
+![1667643214241](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667643214241.png)
+
+全特化是全部的模板参数进行某种实例化，偏特化有两种，上图左边是参数数量上的偏特化，右边是类型或者范围上的偏特化。
+
+类模板才有特化，函数模板没有。类模板需要用尖括号<>指定参数类型，而函数模板不用，函数模板有参数推导机制。
+
+### STL中有很多类似allocator\<int>()).的用法，这个圆括号是什么意思？
+
+这是生成了一个临时对象。
+
+![1667644187929](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667644187929.png)

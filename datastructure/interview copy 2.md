@@ -129,6 +129,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 67. 把字符串转换成整数](https://leetcode.cn/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/)
 
+#### [14. 最长公共前缀](https://leetcode.cn/problems/longest-common-prefix/)
+
+#### [434. 字符串中的单词数](https://leetcode.cn/problems/number-of-segments-in-a-string/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
