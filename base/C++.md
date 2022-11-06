@@ -87,3 +87,26 @@ map有insert方法。
 这是生成了一个临时对象。
 
 ![1667644187929](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667644187929.png)
+
+### 哪个编译器的哪个版本的STL易读性好？
+
+![1667725911500](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667725911500.png)
+
+GNU 编译器的2.9版本是最容易阅读的版本。
+
+### GNU编译器的4.9版本的默认allocator没有沿用2.9版本的allocator的优秀设计，2.9的设计还在吗？
+
+![1667727450656](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667727450656.png)
+
+2.9版本的优秀设计还在，作为扩充allocator存在，默认使用的是不优秀的，没有特殊设计的，要使用2.9版本的优秀设计，使用上图中的例子。
+
+### STL的容器之间的关系是什么？
+
+![1667727884431](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667727884431.png)
+
+这个图是侯捷自己总结出来的。缩进代表的是composition而不是inheritance，composition意思是拥有。
+
+### void*指针你能说些什么？
+
+![1667728610797](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667728610797.png)
+
