@@ -110,3 +110,26 @@ GNU 编译器的2.9版本是最容易阅读的版本。
 
 ![1667728610797](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667728610797.png)
 
+### STL的iterator必须要回答algorithm的问题，这些问题必须回答的有哪些？
+
+![1667899815572](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667899815572.png)iterator必须要回答的有5个问题，在上图中，而目前的STL只用了三个，分别是iterator_category，value_type，difference_type。这些问题在iterator traits，iterator traits意思是提取iterator的特征，萃取。
+
+![1667900466869](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667900466869.png)
+
+traits的作用是当algorithm不能直接问出答案的时候，比如iterator不是一个class类型的，是一个指针，则直接问问不出来，需要使用traits了。
+
+![1667900781408](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667900781408.png)
+
+意思是一种类型，则直接问能问出来，没问题，但是若是指针，则问不出来，因此有了traits。在设计的时候，上图，也是用了一个traits来问。
+
+![1667901273410](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667901273410.png)
+
+iterator traits是用来作为媒介存在的，algorithm问iterator问题的时候，traits回答。实现中用了partial specialization应对指针类型的。
+
+### traits有哪些？
+
+![1667901624694](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667901624694.png)
+
+### vector容易理解，有哪些缺点呢？
+
+vector扩容的时候是两倍扩容，因此，数量大的时候会大量调用object的copy constructor和destructor，比较慢。

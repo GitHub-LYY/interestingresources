@@ -133,6 +133,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [434. 字符串中的单词数](https://leetcode.cn/problems/number-of-segments-in-a-string/)
 
+#### [58. 最后一个单词的长度](https://leetcode.cn/problems/length-of-last-word/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -190,6 +192,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [41. 缺失的第一个正数](https://leetcode.cn/problems/first-missing-positive/)
 
 #### [442. 数组中重复的数据](https://leetcode.cn/problems/find-all-duplicates-in-an-array/)
+
+#### [387. 字符串中的第一个唯一字符](https://leetcode.cn/problems/first-unique-character-in-a-string/)
+
+#### [383. 赎金信](https://leetcode.cn/problems/ransom-note/)
+
+#### [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)
 
 ### 二叉树
 
@@ -322,6 +330,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers/)
 
 #### [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
+
+#### [557. 反转字符串中的单词 III](https://leetcode.cn/problems/reverse-words-in-a-string-iii/)
 
 #### [151. 颠倒字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string/)
 
@@ -503,7 +513,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [520. 检测大写字母](https://leetcode.cn/problems/detect-capital/)
 
-摩尔投票法
+#### [389. 找不同](https://leetcode.cn/problems/find-the-difference/)
+
+### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
 
