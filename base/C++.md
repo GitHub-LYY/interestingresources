@@ -133,3 +133,7 @@ iterator traits是用来作为媒介存在的，algorithm问iterator问题的时
 ### vector容易理解，有哪些缺点呢？
 
 vector扩容的时候是两倍扩容，因此，数量大的时候会大量调用object的copy constructor和destructor，比较慢。
+
+### stack和queue是容器吗？有没有iterator？
+
+stack和queue准确来说不叫容器，而叫容器适配器，container adapter。没有iterator。
