@@ -137,3 +137,7 @@ vector扩容的时候是两倍扩容，因此，数量大的时候会大量调�
 ### stack和queue是容器吗？有没有iterator？
 
 stack和queue准确来说不叫容器，而叫容器适配器，container adapter。没有iterator。
+
+### 一个类，没有data member，这个类的大小是多少字节？
+
+理论上是0，但是大多数的编译器在实现的时候分配一个字节的大小，而C/C++使用了内存对齐，则此时的一个字节占用4个字节的空间。
