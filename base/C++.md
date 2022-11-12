@@ -141,3 +141,25 @@ stack和queue准确来说不叫容器，而叫容器适配器，container adapte
 ### 一个类，没有data member，这个类的大小是多少字节？
 
 理论上是0，但是大多数的编译器在实现的时候分配一个字节的大小，而C/C++使用了内存对齐，则此时的一个字节占用4个字节的空间。
+
+### 在associative container中，哪个container有[]运算符？
+
+只有map有[]运算符。unordered_map也有。
+
+### 哈希表的bucket的数量怎么确定的？
+
+在GNU C中，最小的篮子数量是53，是一个质数、素数。如果bucket不够了，也就是说元素的数量大于bucket的数量，此时要rehash，rehash的bucket的数量是多少？采用53的倍数附近的质数作为bucket的数量。
+
+### hash function的功能是什么？
+
+hash function的功能是计算一个object的hash code，hash code用来%上哈希表的长度，从而求出放这个object的位置。
+
+### 函数的名称的理解？
+
+函数的名称也是函数的地址。
+
+### GNU C的hash function计算string的hash code的方式是什么？
+
+![1668248348140](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668248348140.png)
+
+用每个字符的ASCII码加上5倍的自己，不断操作。这个没有标准，但是有一个原则，是要使得计算出来的hash code尽量乱，这也是hash table叫做散列表的原因。
