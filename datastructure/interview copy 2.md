@@ -163,6 +163,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
 
+### 堆排序
+
+#### [451. 根据字符出现频率排序](https://leetcode.cn/problems/sort-characters-by-frequency/)
+
 ### 单调队列
 
 #### [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
@@ -198,6 +202,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [383. 赎金信](https://leetcode.cn/problems/ransom-note/)
 
 #### [242. 有效的字母异位词](https://leetcode.cn/problems/valid-anagram/)
+
+#### [49. 字母异位词分组](https://leetcode.cn/problems/group-anagrams/)
 
 ### 二叉树
 
@@ -500,6 +506,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [598. 范围求和 II](https://leetcode.cn/problems/range-addition-ii/)
 
 #### [396. 旋转函数](https://leetcode.cn/problems/rotate-function/)
+
+#### [423. 从英文中重建数字](https://leetcode.cn/problems/reconstruct-original-digits-from-english/)
 
 ### 位运算
 

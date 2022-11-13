@@ -163,3 +163,15 @@ hash function的功能是计算一个object的hash code，hash code用来%上哈
 ![1668248348140](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668248348140.png)
 
 用每个字符的ASCII码加上5倍的自己，不断操作。这个没有标准，但是有一个原则，是要使得计算出来的hash code尽量乱，这也是hash table叫做散列表的原因。
+
+### STL六大部件分别是什么类型的？是类模板还是函数模板？
+
+![1668331488956](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668331488956.png)
+
+六大部分，算法是函数模板，剩下的全部是类模板。
+
+### STL的iterator的分类有哪些？每种container的iterator是哪种类型的？
+
+![1668332032687](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668332032687.png)
+
+iterator有图上的5种。array的iterator是random access iterator，vector的是random access iterator，deque的是random access iterator，list的是bidirectional iterator，forward list的是forward iterator，rbtree的是bidirectional iterator，hash table的需要知道每个bucket的链表是list还是forward list，是list则是bidirectional iterator，是forward list则是forward iterator。
