@@ -2,15 +2,9 @@
 
 ### 指针常量、常量指针的区别？
 
-
-
 ### 顶层const（top level const）、底层const（low level const）的是什么意思？它们的区别是什么？
 
-
-
 ### 左值、右值分别是什么意思？
-
-
 
 ### STL中deque容器的内存结构是什么？
 
@@ -20,15 +14,11 @@ deque的内存结构是分段连续的，每一个段称为一个buffer，在每
 
 deque在扩充内存的时候，如果内存不够了，则在front后者back端再分配一个buffer，用指针指向这个buffer。每次扩充一个buffer。
 
-
-
 ### STL有哪些构成？
 
 ![1667384079716](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667384079716.png)
 
 container有array，vector，deque，list，forward_list，而stack，queue叫做container adapter。必须指出的是，stack，queue是没有iterator的，否则能修改元素，破坏了它们的结构。没有iterator也意味着没有find函数。
-
-
 
 ### associative container的find和标准库的find的使用例子？
 
@@ -41,8 +31,6 @@ container有array，vector，deque，list，forward_list，而stack，queue叫�
 ![1667467862119](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667467862119.png)
 
 使用的是hash table。而set/multiset,map/multimap底层是RBTree。RBTree有完美的数学证明，但是hash table是一个带有经验用法的结构。当元素数量大于bucket的数量的时候，bucket的数量扩充2倍，一般，bucket的数量是大于元素的数量的。例如，元素有10个，bucket也有10个，此时要扩充bucket到20个，此时的元素也要重新打乱再放入hash table。
-
-
 
 ### multimap有insert方法吗？
 
@@ -175,3 +163,37 @@ hash function的功能是计算一个object的hash code，hash code用来%上哈
 ![1668332032687](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668332032687.png)
 
 iterator有图上的5种。array的iterator是random access iterator，vector的是random access iterator，deque的是random access iterator，list的是bidirectional iterator，forward list的是forward iterator，rbtree的是bidirectional iterator，hash table的需要知道每个bucket的链表是list还是forward list，是list则是bidirectional iterator，是forward list则是forward iterator。
+
+### C++11的关键字final、override、=default、=delete是什么意思？
+
+这几个关键字全部和类有关。
+
+final是标记这个类不能被继承了。
+
+override标记类的函数是重载的，编译器检查一下参数之类的。
+
+=default是使用编译器默认生成的构造函数。
+
+=delete是告诉编译器不要生成默认构造函数，即这个类没有默认的构造函数。
+
+### C++的98/03标准的auto_ptr为什么在C++11中被放弃使用，取而代之的是什么？
+
+鉴于 std：：auto_ptr 的前车之鉴，std：：unique_ptr 禁止复制语义，为了达到这个效果，std：：unique_ptr类的拷贝构造函数和赋值运算符（operator=）均被标记为=delete。
+
+![](C:\Users\Administrator\AppData\Roaming\marktext\images\2022-11-14-11-03-59-image.png)
+
+不过禁止复制语义也存在特例，例如可以通过一个函数返回一个std：：unique_ptr：
+
+![](C:\Users\Administrator\AppData\Roaming\marktext\images\2022-11-14-11-05-26-image.png)
+
+以上代码从func函数中得到一个std：：unique_ptr对象，然后返回给sp1。  
+
+既然 std：：unique_ptr 不能被复制，那么如何将一个 std：：unique_ptr 对象持有的堆内存转移给另外一个呢？答案是使用移动构造，示例代码如下：
+
+![](C:\Users\Administrator\AppData\Roaming\marktext\images\2022-11-14-11-06-14-image.png)
+
+以上代码利用了std：：move将sp1持有的堆内存（值为123）转移给sp2，再将sp2转移给 sp3。最后，sp1 和 sp2 不再持有堆内存的引用，变成一个空的智能指针对象。并不是所有对象的std：：move操作都有意义，只有实现了移动构造函数（Move Constructor）或移动赋值运算符（operator=）的类才行，而std：：unique_ptr正好实现了二者。以下是该实现的伪代码：
+
+![](C:\Users\Administrator\AppData\Roaming\marktext\images\2022-11-14-11-08-40-image.png)
+
+这就是std：：unique_ptr具有移动语义的原因。
