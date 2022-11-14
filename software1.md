@@ -18,8 +18,6 @@ Linux开发
 
 9、TCP和UDP的区别？
 
-
-
 Windows使用xshell登录Linux，命令设置。
 
 sudo atp install openssh-server
