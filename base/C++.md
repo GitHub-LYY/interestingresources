@@ -197,3 +197,7 @@ override标记类的函数是重载的，编译器检查一下参数之类的。
 ![](C:\Users\Administrator\AppData\Roaming\marktext\images\2022-11-14-11-08-40-image.png)
 
 这就是std：：unique_ptr具有移动语义的原因。
+
+### GDB调试中，怎么知道哪个是主线程？
+
+使用info threads命令查看后，有星号的是当前的线程，在当前线程中使用backtrace命令，如果显示的有main函数的堆栈，则当前线程是主线程。
