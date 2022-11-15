@@ -135,6 +135,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [58. 最后一个单词的长度](https://leetcode.cn/problems/length-of-last-word/)
 
+#### [551. 学生出勤记录 I](https://leetcode.cn/problems/student-attendance-record-i/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -409,6 +411,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [304. 二维区域和检索 - 矩阵不可变](https://leetcode.cn/problems/range-sum-query-2d-immutable/)
 
+### 模拟
+
+#### [657. 机器人能否返回原点](https://leetcode.cn/problems/robot-return-to-origin/)
+
 ### 回溯
 
 #### [46. 全排列](https://leetcode.cn/problems/permutations/)
@@ -508,6 +514,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [396. 旋转函数](https://leetcode.cn/problems/rotate-function/)
 
 #### [423. 从英文中重建数字](https://leetcode.cn/problems/reconstruct-original-digits-from-english/)
+
+#### [696. 计数二进制子串](https://leetcode.cn/problems/count-binary-substrings/)
 
 ### 位运算
 

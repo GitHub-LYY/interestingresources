@@ -201,3 +201,18 @@ override标记类的函数是重载的，编译器检查一下参数之类的。
 ### GDB调试中，怎么知道哪个是主线程？
 
 使用info threads命令查看后，有星号的是当前的线程，在当前线程中使用backtrace命令，如果显示的有main函数的堆栈，则当前线程是主线程。
+
+### functor在模板参数和STL的算法中的写法是什么？
+
+functor在模板参数中必须写类名字，如priority_queue<int, vector<int>, Cmp> pri_que。而在算法中的参数必须写一个类的对象，如sort(vec.begin(), vec.end(), Cmp())。
+
+### 类能继承哪些？
+
+类能继承data member，member function等，但是也能继承typedef，这在STL标准库中经常出现。
+
+### algorithm要问iterator问题，有没有类似的别的？
+
+有，adapter要问functor问题，functor回答问题。
+
+### STL的adapter能修饰container、algorithm、functor，它修饰谁，就要形成谁的样子
+
