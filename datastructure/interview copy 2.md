@@ -207,6 +207,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [49. 字母异位词分组](https://leetcode.cn/problems/group-anagrams/)
 
+#### [535. TinyURL 的加密与解密](https://leetcode.cn/problems/encode-and-decode-tinyurl/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -478,6 +480,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 47. 礼物的最大价值](https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/)
 
 #### [剑指 Offer 63. 股票的最大利润](https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/)
+
+#### [467. 环绕字符串中唯一的子字符串](https://leetcode.cn/problems/unique-substrings-in-wraparound-string/)
 
 ### 数学
 
