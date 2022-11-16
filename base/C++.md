@@ -215,4 +215,3 @@ functor在模板参数中必须写类名字，如priority_queue<int, vector<int>
 有，adapter要问functor问题，functor回答问题。
 
 ### STL的adapter能修饰container、algorithm、functor，它修饰谁，就要形成谁的样子
-
