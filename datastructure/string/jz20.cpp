@@ -5,6 +5,11 @@
 ** link: https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/
 ** reference: https://www.bilibili.com/video/BV1bi4y1G7dz?spm_id_from=333.337.search-card.all.click&vd_source=2359173fba44be579729aa03546398fa
 ** 视频是java版本的，java不区分大小写，有一些区别
+** 20221117，再次做，有了自己的理解，本题有三个关键地方，下边有写
+** 第一是说，.号只能出现一次，且只能出现了e之前，因此推出第一个条件
+** 第二是说，e只能出现一次，且e的前边必须出现了数字
+** 第三是说，+-号只能出现了0位置或者e后边第一个位置
+** 根据上边的去理解三个条件，理解了
 */
 
 #include <iostream>
