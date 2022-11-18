@@ -209,6 +209,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [535. TinyURL 的加密与解密](https://leetcode.cn/problems/encode-and-decode-tinyurl/)
 
+#### [299. 猜数字游戏](https://leetcode.cn/problems/bulls-and-cows/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
