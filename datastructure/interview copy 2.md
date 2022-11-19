@@ -137,6 +137,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [551. 学生出勤记录 I](https://leetcode.cn/problems/student-attendance-record-i/)
 
+#### [412. Fizz Buzz](https://leetcode.cn/problems/fizz-buzz/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -168,6 +170,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 堆排序
 
 #### [451. 根据字符出现频率排序](https://leetcode.cn/problems/sort-characters-by-frequency/)
+
+#### [506. 相对名次](https://leetcode.cn/problems/relative-ranks/)
 
 ### 单调队列
 
