@@ -139,6 +139,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [412. Fizz Buzz](https://leetcode.cn/problems/fizz-buzz/)
 
+#### [539. 最小时间差](https://leetcode.cn/problems/minimum-time-difference/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -423,6 +425,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [657. 机器人能否返回原点](https://leetcode.cn/problems/robot-return-to-origin/)
 
+#### [537. 复数乘法](https://leetcode.cn/problems/complex-number-multiplication/)
+
 ### 回溯
 
 #### [46. 全排列](https://leetcode.cn/problems/permutations/)
@@ -526,6 +530,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [423. 从英文中重建数字](https://leetcode.cn/problems/reconstruct-original-digits-from-english/)
 
 #### [696. 计数二进制子串](https://leetcode.cn/problems/count-binary-substrings/)
+
+#### [553. 最优除法](https://leetcode.cn/problems/optimal-division/)
 
 ### 位运算
 
