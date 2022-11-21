@@ -37,3 +37,9 @@ v2ray订阅链接：https://git.io/emzv2ray
 以上每12小时flush一次。
 
 项目地址：[https://github.com/ermaozi/get_subscribe]()
+
+https://yikm.net 街机游戏
+
+slow roads：[https://slowroads.io]()
+
+cpp insights：[https://cppinsights.io]()
