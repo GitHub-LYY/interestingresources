@@ -8,6 +8,8 @@
 
 ### STL中deque容器的内存结构是什么？
 
+[![zligG6.png](https://s1.ax1x.com/2022/11/21/zligG6.png)](https://imgse.com/i/zligG6)
+
 ![1667383132368](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667383132368.png)
 
 deque的内存结构是分段连续的，每一个段称为一个buffer，在每一个buffer中内存是连续的，buffer之间的内存是不连续的，但是deque号称是连续内存的，这个连续内存是在使用层面虚拟出来的连续，本质上是不连续的，仅仅在buffer内是连续的。
@@ -16,11 +18,15 @@ deque在扩充内存的时候，如果内存不够了，则在front后者back端
 
 ### STL有哪些构成？
 
+[![zlivLQ.png](https://s1.ax1x.com/2022/11/21/zlivLQ.png)](https://imgse.com/i/zlivLQ)
+
 ![1667384079716](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667384079716.png)
 
 container有array，vector，deque，list，forward_list，而stack，queue叫做container adapter。必须指出的是，stack，queue是没有iterator的，否则能修改元素，破坏了它们的结构。没有iterator也意味着没有find函数。
 
 ### associative container的find和标准库的find的使用例子？
+
+[![zlizZj.png](https://s1.ax1x.com/2022/11/21/zlizZj.png)](https://imgse.com/i/zlizZj)
 
 ![1667384722880](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667384722880.png)
 
@@ -28,11 +34,15 @@ container有array，vector，deque，list，forward_list，而stack，queue叫�
 
 ### unordered_set/unordered_map底层用什么数据结构实现的？
 
+[![zlFSds.png](https://s1.ax1x.com/2022/11/21/zlFSds.png)](https://imgse.com/i/zlFSds)
+
 ![1667467862119](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667467862119.png)
 
 使用的是hash table。而set/multiset,map/multimap底层是RBTree。RBTree有完美的数学证明，但是hash table是一个带有经验用法的结构。当元素数量大于bucket的数量的时候，bucket的数量扩充2倍，一般，bucket的数量是大于元素的数量的。例如，元素有10个，bucket也有10个，此时要扩充bucket到20个，此时的元素也要重新打乱再放入hash table。
 
 ### multimap有insert方法吗？
+
+[![zlFCiq.png](https://s1.ax1x.com/2022/11/21/zlFCiq.png)](https://imgse.com/i/zlFCiq)
 
 ![1667468406493](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667468406493.png)
 
@@ -44,11 +54,15 @@ map有insert方法。
 
 ### unordered_set/unordered_map/unordered_multiset/unordered_multimap的从什么演变来的？
 
+[![zlFiWV.png](https://s1.ax1x.com/2022/11/21/zlFiWV.png)](https://imgse.com/i/zlFiWV)
+
 ![1667468678278](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667468678278.png)
 
 从GNU C编译器的标准库的这几个哈希表演变来的。
 
 ### STL的allocator一般不直接使用，因为直接使用container，能直接使用吗？
+
+[![zlFFzT.png](https://s1.ax1x.com/2022/11/21/zlFFzT.png)](https://imgse.com/i/zlFFzT)
 
 ![1667469281376](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667469281376.png)
 
@@ -58,11 +72,17 @@ map有insert方法。
 
 ### STL没有很多的OOP的内容，有很多的GP泛型编程的内容。OOP和GP的区别是什么？
 
+[![zlFEyF.png](https://s1.ax1x.com/2022/11/21/zlFEyF.png)](https://imgse.com/i/zlFEyF)
+
 ![1667470536626](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667470536626.png)
+
+[![zlFVL4.png](https://s1.ax1x.com/2022/11/21/zlFVL4.png)](https://imgse.com/i/zlFVL4)
 
 ![1667470552030](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667470552030.png)
 
 ### 模板的泛华、特化、全特化（Full specialization）、偏特化（partial specialization）的概念？
+
+[![zlFeeJ.png](https://s1.ax1x.com/2022/11/21/zlFeeJ.png)](https://imgse.com/i/zlFeeJ)
 
 ![1667643214241](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667643214241.png)
 
@@ -74,9 +94,13 @@ map有insert方法。
 
 这是生成了一个临时对象。
 
+[![zlFaFI.png](https://s1.ax1x.com/2022/11/21/zlFaFI.png)](https://imgse.com/i/zlFaFI)
+
 ![1667644187929](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667644187929.png)
 
 ### 哪个编译器的哪个版本的STL易读性好？
+
+[![zlF4pV.png](https://s1.ax1x.com/2022/11/21/zlF4pV.png)](https://imgse.com/i/zlF4pV)
 
 ![1667725911500](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667725911500.png)
 
@@ -84,11 +108,15 @@ GNU 编译器的2.9版本是最容易阅读的版本。
 
 ### GNU编译器的4.9版本的默认allocator没有沿用2.9版本的allocator的优秀设计，2.9的设计还在吗？
 
+[![zlFff0.png](https://s1.ax1x.com/2022/11/21/zlFff0.png)](https://imgse.com/i/zlFff0)
+
 ![1667727450656](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667727450656.png)
 
 2.9版本的优秀设计还在，作为扩充allocator存在，默认使用的是不优秀的，没有特殊设计的，要使用2.9版本的优秀设计，使用上图中的例子。
 
 ### STL的容器之间的关系是什么？
+
+[![zlFI6U.png](https://s1.ax1x.com/2022/11/21/zlFI6U.png)](https://imgse.com/i/zlFI6U)
 
 ![1667727884431](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667727884431.png)
 
@@ -96,25 +124,37 @@ GNU 编译器的2.9版本是最容易阅读的版本。
 
 ### void*指针你能说些什么？
 
+[![zlF5lT.png](https://s1.ax1x.com/2022/11/21/zlF5lT.png)](https://imgse.com/i/zlF5lT)
+
 ![1667728610797](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667728610797.png)
 
 ### STL的iterator必须要回答algorithm的问题，这些问题必须回答的有哪些？
 
+[![zlFoXF.png](https://s1.ax1x.com/2022/11/21/zlFoXF.png)](https://imgse.com/i/zlFoXF)
+
 ![1667899815572](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667899815572.png)iterator必须要回答的有5个问题，在上图中，而目前的STL只用了三个，分别是iterator_category，value_type，difference_type。这些问题在iterator traits，iterator traits意思是提取iterator的特征，萃取。
+
+[![zlF7m4.png](https://s1.ax1x.com/2022/11/21/zlF7m4.png)](https://imgse.com/i/zlF7m4)
 
 ![1667900466869](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667900466869.png)
 
 traits的作用是当algorithm不能直接问出答案的时候，比如iterator不是一个class类型的，是一个指针，则直接问问不出来，需要使用traits了。
 
+[![zlF6mQ.png](https://s1.ax1x.com/2022/11/21/zlF6mQ.png)](https://imgse.com/i/zlF6mQ)
+
 ![1667900781408](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667900781408.png)
 
 意思是一种类型，则直接问能问出来，没问题，但是若是指针，则问不出来，因此有了traits。在设计的时候，上图，也是用了一个traits来问。
+
+[![zlFRkn.png](https://s1.ax1x.com/2022/11/21/zlFRkn.png)](https://imgse.com/i/zlFRkn)
 
 ![1667901273410](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667901273410.png)
 
 iterator traits是用来作为媒介存在的，algorithm问iterator问题的时候，traits回答。实现中用了partial specialization应对指针类型的。
 
 ### traits有哪些？
+
+[![zlFsOg.png](https://s1.ax1x.com/2022/11/21/zlFsOg.png)](https://imgse.com/i/zlFsOg)
 
 ![1667901624694](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1667901624694.png)
 
@@ -148,17 +188,23 @@ hash function的功能是计算一个object的hash code，hash code用来%上哈
 
 ### GNU C的hash function计算string的hash code的方式是什么？
 
+[![zlFcwj.png](https://s1.ax1x.com/2022/11/21/zlFcwj.png)](https://imgse.com/i/zlFcwj)
+
 ![1668248348140](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668248348140.png)
 
 用每个字符的ASCII码加上5倍的自己，不断操作。这个没有标准，但是有一个原则，是要使得计算出来的hash code尽量乱，这也是hash table叫做散列表的原因。
 
 ### STL六大部件分别是什么类型的？是类模板还是函数模板？
 
+[![zlFgTs.png](https://s1.ax1x.com/2022/11/21/zlFgTs.png)](https://imgse.com/i/zlFgTs)
+
 ![1668331488956](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668331488956.png)
 
 六大部分，算法是函数模板，剩下的全部是类模板。
 
 ### STL的iterator的分类有哪些？每种container的iterator是哪种类型的？
+
+[![zlFWYq.png](https://s1.ax1x.com/2022/11/21/zlFWYq.png)](https://imgse.com/i/zlFWYq)
 
 ![1668332032687](C:\Users\nsus\AppData\Roaming\Typora\typora-user-images\1668332032687.png)
 
