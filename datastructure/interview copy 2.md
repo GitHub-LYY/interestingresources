@@ -141,6 +141,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [539. 最小时间差](https://leetcode.cn/problems/minimum-time-difference/)
 
+#### [38. 外观数列](https://leetcode.cn/problems/count-and-say/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -534,6 +536,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [553. 最优除法](https://leetcode.cn/problems/optimal-division/)
 
 #### [592. 分数加减运算](https://leetcode.cn/problems/fraction-addition-and-subtraction/)
+
+#### [640. 求解方程](https://leetcode.cn/problems/solve-the-equation/)[640. 求解方程](https://leetcode.cn/problems/solve-the-equation/)
 
 ### 位运算
 
