@@ -33,10 +33,10 @@ public:
         string res = "";
 
         // 遍历的是对组
-        for (const auto& [value, symbol] : valueSymbol) {
-            while (num >= value) {
-                num -= value; // 不断减去value最大值
-                res += symbol; // 插入
+        for (const auto& valueSymbolPair : valueSymbol) { // 一开始写位了[value, symbol]，这是C++17的写法，一直存在warning，因此改为以前的写法
+            while (num >= valueSymbolPair.first) {
+                num -= valueSymbolPair.first; // 不断减去value最大值
+                res += valueSymbolPair.second; // 插入
             }
 
             if (num == 0) {
