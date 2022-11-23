@@ -373,6 +373,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/)
 
+#### [443. 压缩字符串](https://leetcode.cn/problems/string-compression/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -537,7 +539,11 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [592. 分数加减运算](https://leetcode.cn/problems/fraction-addition-and-subtraction/)
 
-#### [640. 求解方程](https://leetcode.cn/problems/solve-the-equation/)[640. 求解方程](https://leetcode.cn/problems/solve-the-equation/)
+#### [640. 求解方程](https://leetcode.cn/problems/solve-the-equation/)
+
+#### [13. 罗马数字转整数](https://leetcode.cn/problems/roman-to-integer/)
+
+#### [12. 整数转罗马数字](https://leetcode.cn/problems/integer-to-roman/)
 
 ### 位运算
 

@@ -261,3 +261,9 @@ functor在模板参数中必须写类名字，如priority_queue<int, vector<int>
 有，adapter要问functor问题，functor回答问题。
 
 ### STL的adapter能修饰container、algorithm、functor，它修饰谁，就要形成谁的样子
+
+### 类的constructor、copy constructor、copy assignment、move constructor、move assignment能有几个？
+
+[![z86sI0.png](https://s1.ax1x.com/2022/11/23/z86sI0.png)](https://imgse.com/i/z86sI0)
+
+类的constructor可以有多个，但是别的一旦定义，不能有多个了。
