@@ -143,6 +143,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [38. 外观数列](https://leetcode.cn/problems/count-and-say/)
 
+#### [273. 整数转换英文表示](https://leetcode.cn/problems/integer-to-english-words/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
