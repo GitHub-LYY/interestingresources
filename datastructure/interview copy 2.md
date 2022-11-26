@@ -143,8 +143,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [38. 外观数列](https://leetcode.cn/problems/count-and-say/)
 
-#### [273. 整数转换英文表示](https://leetcode.cn/problems/integer-to-english-words/)
-
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
@@ -220,6 +218,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [535. TinyURL 的加密与解密](https://leetcode.cn/problems/encode-and-decode-tinyurl/)
 
 #### [299. 猜数字游戏](https://leetcode.cn/problems/bulls-and-cows/)
+
+#### [467. 环绕字符串中唯一的子字符串](https://leetcode.cn/problems/unique-substrings-in-wraparound-string/)
+
+#### [273. 整数转换英文表示](https://leetcode.cn/problems/integer-to-english-words/)
 
 ### 二叉树
 
@@ -377,6 +379,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [443. 压缩字符串](https://leetcode.cn/problems/string-compression/)
 
+#### [481. 神奇字符串](https://leetcode.cn/problems/magical-string/)
+
+#### [392. 判断子序列](https://leetcode.cn/problems/is-subsequence/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -496,8 +502,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 47. 礼物的最大价值](https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/)
 
 #### [剑指 Offer 63. 股票的最大利润](https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof/)
-
-#### [467. 环绕字符串中唯一的子字符串](https://leetcode.cn/problems/unique-substrings-in-wraparound-string/)
 
 ### 数学
 
