@@ -385,6 +385,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [524. 通过删除字母匹配到字典里最长单词](https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/)
 
+#### [522. 最长特殊序列 II](https://leetcode.cn/problems/longest-uncommon-subsequence-ii/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -554,6 +556,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [12. 整数转罗马数字](https://leetcode.cn/problems/integer-to-roman/)
 
 #### [521. 最长特殊序列 Ⅰ](https://leetcode.cn/problems/longest-uncommon-subsequence-i/)
+
+#### [66. 加一](https://leetcode.cn/problems/plus-one/)
 
 ### 位运算
 
