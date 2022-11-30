@@ -559,6 +559,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [66. 加一](https://leetcode.cn/problems/plus-one/)
 
+#### [67. 二进制求和](https://leetcode.cn/problems/add-binary/)
+
 ### 位运算
 
 #### [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
