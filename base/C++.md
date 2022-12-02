@@ -267,3 +267,13 @@ functor在模板参数中必须写类名字，如priority_queue<int, vector<int>
 [![z86sI0.png](https://s1.ax1x.com/2022/11/23/z86sI0.png)](https://imgse.com/i/z86sI0)
 
 类的constructor可以有多个，但是别的一旦定义，不能有多个了。
+
+
+
+### 内存管理的目标是什么？
+
+两个，一个是速度，一个是空间。即时间和空间。
+
+### new有那些？
+
+new，array new，placement new。operator new。
