@@ -115,8 +115,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi/)
 
-#### [43. 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
-
 #### [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
 
 #### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
@@ -386,6 +384,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [524. 通过删除字母匹配到字典里最长单词](https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/)
 
 #### [522. 最长特殊序列 II](https://leetcode.cn/problems/longest-uncommon-subsequence-ii/)
+
+#### [415. 字符串相加](https://leetcode.cn/problems/add-strings/)
+
+#### [43. 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
 
 ### 二分搜索
 
