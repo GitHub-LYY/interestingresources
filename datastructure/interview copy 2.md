@@ -141,6 +141,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [38. 外观数列](https://leetcode.cn/problems/count-and-say/)
 
+#### [482. 密钥格式化](https://leetcode.cn/problems/license-key-formatting/)
+
 ### KMP
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
