@@ -4,6 +4,12 @@
  * Copyright (C) Nginx, Inc.
  */
 
+/*
+ * Author: Yangyang Liu
+ * E-mail: liuyangyangx@foxmail.com
+ * Description: Annotation edition of Nginx 1.22.1 nginx.c file.
+ */
+
 
 #include <ngx_config.h>
 #include <ngx_core.h>
@@ -376,10 +382,19 @@ main(int argc, char *const *argv)
 
     ngx_use_stderr = 0;
 
-    if (ngx_process == NGX_PROCESS_SINGLE) {
+    if (ngx_process == NGX_PROCESS_SINGLE) { // 使用单进程模式，走这儿
         ngx_single_process_cycle(cycle);
 
-    } else {
+    } else { // 默认是多进程，即一般是走这个逻辑
+        /*
+         * 分析nginx多进程模型的入口是父进程的ngx_master_process_cycle()函数，在该函数做完信号处理设置等等之后，
+         * 会调用ngx_start_worker_processes()函数用于fork()产生出子进程（子进程数量通过函数调用第二个实参指定），
+         * 子进程作为一个新的实体开始充当工作进程的角色执行ngx_worker_process_cycle()函数，该函数主体是一个
+         * for(;;)循环，持续不断地处理客户端的服务请求，而父进程继续执行ngx_master_process_cycle()函数，即作为
+         * 监控进程执行主体的for(;;)循环，这是一个无限循环，直到进程终止才退出。
+         * note：服务进程基本全是这种写法，监控进程和每个进程各有一个无限for(;;)循环，以便进程持续地等待和处理
+         * 自己负责的事务，直到进程退出
+         */
         ngx_master_process_cycle(cycle);
     }
 
