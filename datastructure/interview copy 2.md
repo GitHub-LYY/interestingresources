@@ -149,6 +149,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
 
+#### [686. 重复叠加字符串匹配](https://leetcode.cn/problems/repeated-string-match/)
+
 ### 栈与队列
 
 #### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
@@ -418,6 +420,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 48. 最长不含重复字符的子字符串](https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)
 
 #### [剑指 Offer 57 - II. 和为s的连续正数序列](https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
+
+#### [68. 文本左右对齐](https://leetcode.cn/problems/text-justification/)
 
 ### DFS/BFS
 
