@@ -4,6 +4,12 @@
  * Copyright (C) Nginx, Inc.
  */
 
+/*
+ * Author: Yangyang Liu
+ * E-mail: liuyangyangx@foxmail.com
+ * Description: Annotation edition of Nginx 1.22.1 ngx_process_cycle.c file.
+ */
+
 
 #include <ngx_config.h>
 #include <ngx_core.h>
@@ -69,7 +75,19 @@ static ngx_cycle_t      ngx_exit_cycle;
 static ngx_log_t        ngx_exit_log;
 static ngx_open_file_t  ngx_exit_log_file;
 
-
+/*
+ * ngx_master_process_cycle()函数调用ngx_start_worker_processes()函数生成多个工作子进程，
+ * ngx_start_worker_processes()函数调用ngx_worker_process_cycle()函数创建工作内容，如果
+ * 进程有多个子进程，这里也会初始化子进程和创建子进程的工作内容，初始化完成后，
+ * ngx_worker_process_cycle()函数会进入处理循环，调用ngx_process_events_and_timers()函数，
+ * 该函数调用ngx_process_events()函数监听事件，并把事件投递到事件队列ngx_posted_events中，
+ * 最终会在ngx_event_thread_process_posted()函数中处理事件
+ * 
+ * master进程不需要处理网络事件，它不负责业务的执行，只会通过管理worker等子进程来实现重启服务、
+ * 平滑升级、更换日志文件、配置文件实时生效等功能
+ * 
+ * 如果是以多进程的方式启动，就会调用ngx_master_process_cycle()函数完成最后的启动动作
+ */
 void
 ngx_master_process_cycle(ngx_cycle_t *cycle)
 {
@@ -160,6 +178,19 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
 
         ngx_log_debug0(NGX_LOG_DEBUG_EVENT, cycle->log, 0, "sigsuspend");
 
+        /*
+         * 监控进程（父进程）的无限循环的这个地方有一个关键的sigsuspend()函数调用，该函数调用使得监控进程的大部分时间都处于
+         * 挂起等待状态，直到监控进程接收到信号为止。当监控进程接收到信号时，信号处理函数ngx_signal_handler()就会被执行。
+         * 一般来说，信号处理函数都要求足够简单，所有在该函数内执行的动作主要也就是根据当前信号值对相应的旗标变量做设置而已，
+         * 而实际的处理逻辑必须放在监控进程的主体代码里来进行，所以该for(;;)循环接下来的代码逻辑就是判断有哪些旗标变量被设置
+         * 而需要处理的，例如，
+         * ngx_reap（有子进程退出吗？）、
+         * ngx_quit或者ngx_terminate（进程要退出或者终止？值得一道的是，这两个旗标都是表示结束nginx，但是ngx_quit的结束更
+         * 优雅，它会让nginx监控进程做一些清理工作且等待子进程也完全清理并退出之后才终止，而ngx_terminate更为粗暴，但是它
+         * 通过使用SIGKILL信号能保证在一段时间后必定被结束掉）、
+         * ngx_reconfigure（重新加载配置）。
+         * 当所有信号都处理完时又挂起在函数sigsuspend()函数调用处继续等待新的信号，如此反复，构成监控进程的主要执行体。
+         */
         sigsuspend(&set);
 
         ngx_time_update();
@@ -718,6 +749,18 @@ ngx_worker_process_cycle(ngx_cycle_t *cycle, void *data)
 
         ngx_log_debug0(NGX_LOG_DEBUG_EVENT, cycle->log, 0, "worker cycle");
 
+        /*
+         * 这是工作进程的执行主体的for(;;)无限循环中的要阻塞的地方了，工作进行的执行主体与监控进程类似，但是工作
+         * 进程既然名字叫做工作进程，那么它的主要关注点是与客户端或者后端真实服务器（此时nginx作为中间代理）之间
+         * 的数据可读/可写等I/O交互事件，而不是进程信号，所以工作进程的阻塞点是在像select()、epoll_wait()等这样
+         * 的I/O多路复用函数调用处，以等待发生数据可读/可写事件，当然了，也可能被新接收到的进程信号中断。
+         * 在for(;;)无线循环中，通过函数ngx_process_events_and_timers()调到对应的事件监控阻塞点，即
+         * ngx_process_events_and_timers()->ngx_process_events()->epoll_wait()
+         * 或者
+         * ngx_process_events_and_timers()->ngx_epoll_process_events()->epoll_wait()，
+         * 函数epoll_wait()会阻塞等待，一旦有事件发生或者收到信号就会立即返回，工作进程也就开始对发生的时间进行
+         * 逐个处理。
+         */
         ngx_process_events_and_timers(cycle);
 
         if (ngx_terminate) {
