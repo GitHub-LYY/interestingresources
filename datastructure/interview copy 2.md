@@ -151,6 +151,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [686. 重复叠加字符串匹配](https://leetcode.cn/problems/repeated-string-match/)
 
+#### [459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/)
+
 ### 栈与队列
 
 #### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
