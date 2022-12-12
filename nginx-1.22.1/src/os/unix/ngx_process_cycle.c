@@ -147,6 +147,16 @@ ngx_master_process_cycle(ngx_cycle_t *cycle)
 
     ngx_start_worker_processes(cycle, ccf->worker_processes,
                                NGX_PROCESS_RESPAWN);
+    /*
+     * 总结来说，cache管理进程的任务就是清理超时缓存文件，限制缓存文件总大小，这个
+     * 过程反反复复，直到nginx整个进程退出为止
+     * 
+     * 这儿是开启cache管理进程
+     * 
+     * cache进程不处理客户端请求，也就没有监控的I/O事件，而其处理的是超时事件，
+     * 在ngx_process_events_and_timers()函数内执行的事件处理函数只有
+     * ngx_event_expire_timers()函数
+     */
     ngx_start_cache_manager_processes(cycle, 0);
 
     ngx_new_binary = 0;
@@ -1136,7 +1146,27 @@ ngx_channel_handler(ngx_event_t *ev)
     }
 }
 
-
+/*
+ * 总结来说，cache管理进程的任务就是清理超时缓存文件，限制缓存文件总大小，这个
+ * 过程反反复复，直到nginx整个进程退出为止
+ * 
+ * cache管理进程与cache加载进程的主流程都是ngx_cache_manager_process_cycle()
+ * 函数，但是它们附带的参数不同。管理进程执行到函数ngx_cache_manager_process_cycle()
+ * 内时，传递的data为ngx_cache_manager_ctx（参见文件开始的定义部分）
+ * 
+ * 使用cache，则nginx在一开始会有四个进程，分别是
+ * 1、master process
+ * 2、worker process
+ * 3、cache manager process
+ * 4、cache loader process
+ * 但在一段时间后，cache加载进程将消失，这是因为cache加载进程的功能是在nginx正常启动后
+ * （具体是60秒）将磁盘中上次缓存的对象加载到内存中。可以看到，这个过程是一次性的，所以
+ * 当cache加载进程完成它的加载任务后也就自动退出了
+ * 
+ * cache加载进程执行的到ngx_cache_manager_process_cycle()函数为止的上层函数调用与
+ * cache管理进程的一致，但在该函数内设置的事件对象回调函数为ngx_cache_loader_process_handler()，
+ * cache加载进程也是执行的这个函数
+ */
 static void
 ngx_cache_manager_process_cycle(ngx_cycle_t *cycle, void *data)
 {
@@ -1151,6 +1181,10 @@ ngx_cache_manager_process_cycle(ngx_cycle_t *cycle, void *data)
      */
     ngx_process = NGX_PROCESS_HELPER;
 
+    /*
+     * cache管理进程不接收客户端请求，所以接下来使用ngx_close_listening_sockets()
+     * 函数关闭了监听套接字。其他代码创建了一个事件对象并设置了对应的超时事件。
+     */
     ngx_close_listening_sockets(cycle);
 
     /* Set a moderate number of connections for a helper process. */
@@ -1162,6 +1196,10 @@ ngx_cache_manager_process_cycle(ngx_cycle_t *cycle, void *data)
     ev.handler = ctx->handler;
     ev.data = ident;
     ev.log = cycle->log;
+    /*
+     * 此处并没有特别的设定功能，仅仅只是因为事件对象的data字段一般挂载的是connect对象，
+     * 此处设置为-1刚好是把connect对象的fd字段设置为-1，以避免在其他代码里走到异常逻辑
+     */
     ident[3] = (void *) -1;
 
     ngx_use_accept_mutex = 0;
@@ -1183,6 +1221,15 @@ ngx_cache_manager_process_cycle(ngx_cycle_t *cycle, void *data)
             ngx_reopen_files(cycle, -1);
         }
 
+        /*
+         * cache进程不处理客户端请求，也就没有监控的I/O事件，而其处理的是超时事件，
+         * 在ngx_process_events_and_timers()函数内执行的事件处理函数只有
+         * ngx_event_expire_timers()函数
+         * 
+         * cache管理进程和cache加载进程在此处的执行逻辑开始有区别，cache管理进程
+         * 最终调用的是ngx_cache_manager_process_handler()函数，而cache加载
+         * 进程最终调用的是ngx_cache_loader_process_handler()函数
+         */
         ngx_process_events_and_timers(cycle);
     }
 }
@@ -1239,5 +1286,5 @@ ngx_cache_loader_process_handler(ngx_event_t *ev)
         }
     }
 
-    exit(0);
+    exit(0); // cache加载进程的执行逻辑是一次性的
 }

@@ -12,8 +12,8 @@
 
 
 typedef struct {
-    int     signo;
-    char   *signame;
+    int     signo; // 信号值，例如SIGHUP、SIGINT等，当然这是宏，其具体在库头文件signal.h有定义，例如SIGHUP就是数值1
+    char   *signame; // 信号名，信号值所对应宏的字符串，例如"SIGHUP"
     char   *name;
     void  (*handler)(int signo, siginfo_t *siginfo, void *ucontext);
 } ngx_signal_t;
@@ -82,7 +82,15 @@ ngx_signal_t  signals[] = {
     { 0, NULL, "", NULL }
 };
 
-
+/*
+ * 在该函数进行fork()之前，先调用了socketpair()创建一对socket描述符存放在
+ * 变量ngx_processes[s].channel内（其中s标志在ngx_processes数组内第一个
+ * 可用元素的下标，比如最开始产生第一个工作进程时，可用元素的下标为0），而
+ * 在fork()之后，由于子进程继承了父进程的资源，那么父子进程就都有了这一对
+ * socket描述符，而nginx将channel[0]给父进程使用，channel[1]给子进程使用，
+ * 这样分别错开地使用不同socket描述符，即可实现父子进程之间的双向通信，如图
+ * master process(channel[0])<------>(channel[1])worker process
+ */
 ngx_pid_t
 ngx_spawn_process(ngx_cycle_t *cycle, ngx_spawn_proc_pt proc, void *data,
     char *name, ngx_int_t respawn)

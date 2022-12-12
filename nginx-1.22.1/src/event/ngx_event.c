@@ -190,7 +190,11 @@ ngx_module_t  ngx_event_core_module = {
     NGX_MODULE_V1_PADDING
 };
 
-
+/*
+ * cache进程不处理客户端请求，也就没有监控的I/O事件，而其处理的是超时事件，
+ * 在ngx_process_events_and_timers()函数内执行的事件处理函数只有
+ * ngx_event_expire_timers()函数
+ */
 void
 ngx_process_events_and_timers(ngx_cycle_t *cycle)
 {
