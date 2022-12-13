@@ -119,8 +119,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
 
-#### [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
-
 #### [剑指 Offer 20. 表示数值的字符串](https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/)
 
 #### [65. 有效数字](https://leetcode.cn/problems/valid-number/)
@@ -143,15 +141,33 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [482. 密钥格式化](https://leetcode.cn/problems/license-key-formatting/)
 
+### 字符串变换
+
 #### [6. Z 字形变换](https://leetcode.cn/problems/zigzag-conversion/)
 
-### KMP
+### KMP、字符串匹配
 
 #### [28. 实现 strStr()](https://leetcode.cn/problems/implement-strstr/)
 
 #### [686. 重复叠加字符串匹配](https://leetcode.cn/problems/repeated-string-match/)
 
 #### [459. 重复的子字符串](https://leetcode.cn/problems/repeated-substring-pattern/)
+
+#### [214. 最短回文串](https://leetcode.cn/problems/shortest-palindrome/)
+
+### 子序列
+
+#### [392. 判断子序列](https://leetcode.cn/problems/is-subsequence/)
+
+#### [524. 通过删除字母匹配到字典里最长单词](https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/)
+
+#### [522. 最长特殊序列 II](https://leetcode.cn/problems/longest-uncommon-subsequence-ii/)
+
+### 中心扩散法
+
+#### [5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/)
+
+#### [647. 回文子串](https://leetcode.cn/problems/palindromic-substrings/)
 
 ### 栈与队列
 
@@ -386,12 +402,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [443. 压缩字符串](https://leetcode.cn/problems/string-compression/)
 
 #### [481. 神奇字符串](https://leetcode.cn/problems/magical-string/)
-
-#### [392. 判断子序列](https://leetcode.cn/problems/is-subsequence/)
-
-#### [524. 通过删除字母匹配到字典里最长单词](https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/)
-
-#### [522. 最长特殊序列 II](https://leetcode.cn/problems/longest-uncommon-subsequence-ii/)
 
 #### [415. 字符串相加](https://leetcode.cn/problems/add-strings/)
 
