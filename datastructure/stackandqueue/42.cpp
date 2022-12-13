@@ -3,7 +3,8 @@
 ** Date: 2022-08-07
 ** Description: 42. 接雨水
 ** link: https://leetcode.cn/problems/trapping-rain-water/
-** reference: 
+** reference: 题解区，代码随想录
+** 20221213，官方题解容易写，不复杂
 */
 
 #include <iostream>
@@ -14,6 +15,42 @@ using namespace std;
 
 class Solution {
 public:
+    // 20221213，参考官方题解写的
+    int trap(vector<int>& height) {
+        // 定义栈保存索引
+        stack<int> st;
+
+        // 定义变量保存height的长度
+        int n = height.size();
+
+        // 定义变量保存结果
+        int res = 0;
+
+        for (int i = 0; i < n; i++) {
+            while (!st.empty() && height[i] > height[st.top()]) {
+                // 栈不位空且当前遍历的数字大于栈顶数字，则求
+
+                // 保存栈顶，出栈
+                int stTop = st.top();
+                st.pop();
+                if (st.empty()) {
+                    break;
+                }
+
+                int curWidth = i - st.top() - 1;
+                int curHeight = min(height[i], height[st.top()]) - height[stTop];
+
+                res += curWidth * curHeight;
+            }
+
+            // 不满足while的条件，则要进栈了
+            st.push(i); // 栈保存的是索引
+        }
+
+        return res;
+    }
+
+    // 代码随想录版本，比较复杂，不容易写
     int trapMonotonicStack(vector<int>& height) {
         // 异常情况
         if (height.size() < 3) {
@@ -107,7 +144,8 @@ int main(int argc, char** argv) {
 
     Solution s;
     //int capacity = s.trapMonotonicStack(height);
-    int capacity = s.trapDynamicProgramming(height);
+    //int capacity = s.trapDynamicProgramming(height);
+    int capacity = s.trap(height);
 
     cout << "capacity is: " << capacity << endl;
 
