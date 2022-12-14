@@ -585,6 +585,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [67. 二进制求和](https://leetcode.cn/problems/add-binary/)
 
+### 数字的位操作
+
+#### [7. 整数反转](https://leetcode.cn/problems/reverse-integer/)
+
+#### [9. 回文数](https://leetcode.cn/problems/palindrome-number/)
+
+#### [479. 最大回文数乘积](https://leetcode.cn/problems/largest-palindrome-product/)
+
 ### 位运算
 
 #### [剑指 Offer 15. 二进制中1的个数](https://leetcode.cn/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
