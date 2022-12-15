@@ -39,18 +39,18 @@ public:
             // 至此，求出回文数
 
             // 判断回文数是否被整除
-            for (long z = upper; z * z >= p; z--) {
-                if (p % z == 0) {
-                    return p % 1337;
-                }
-            }
-            //long z = upper;
-            //while (true) {
+            //for (long z = upper; z * z >= p; z--) {
             //    if (p % z == 0) {
             //        return p % 1337;
             //    }
-            //    z--;
             //}
+            long z = upper;
+            while (z * z >= p) { // 这个条件是关键，仔细思考才理解，保证了下边求的一定是n位数
+                if (p % z == 0) {
+                    return p % 1337;
+                }
+                z--;
+            }
         }
     }
 };

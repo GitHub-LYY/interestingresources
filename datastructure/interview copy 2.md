@@ -614,3 +614,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 39. 数组中出现次数超过一半的数字](https://leetcode.cn/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/)
 
 ![image.png](https://pic.leetcode-cn.com/1617425519-BCKwIu-image.png)
+
+### 现阶段做不出来
+
+#### [306. 累加数](https://leetcode.cn/problems/additive-number/)
+
+#### [564. 寻找最近的回文数](https://leetcode.cn/problems/find-the-closest-palindrome/)
