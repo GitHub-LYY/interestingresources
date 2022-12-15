@@ -20,19 +20,32 @@ typedef pid_t       ngx_pid_t;
 typedef void (*ngx_spawn_proc_pt) (ngx_cycle_t *cycle, void *data);
 
 typedef struct {
-    ngx_pid_t           pid;
-    int                 status;
+    ngx_pid_t           pid; // 进程ID
+    int                 status; // 由waitpid系统调用获取到的进程状态
+    /*
+     * 这是由socketpair系统调用产生出的用于进程间通信的socket句柄，这一对socket
+     * 句柄可以互相通信，目前用于master父进程与worker子进程间的通信，详细参考
+     * 14.4节
+     */
     ngx_socket_t        channel[2];
 
-    ngx_spawn_proc_pt   proc;
+    ngx_spawn_proc_pt   proc; // 子进程的循环执行方法，当父进程调用ngx_spawn_process生成子进程时使用
+    /*
+     * 上边的ngx_spawn_proc_pt方法中第2个参数需要传递1个指针，它是可选的。
+     * 例如，worker子进程就不需要，而cache manage进程就需要ngx_cache_manager_ctx
+     * 上下文成员。这时，data一般与ngx_spawn_proc_pt方法中第2个参数是等价的
+     */
     void               *data;
+    /*
+     * 进程名称。操作系统中显示的进程名称与name相同
+     */
     char               *name;
 
-    unsigned            respawn:1;
-    unsigned            just_spawn:1;
-    unsigned            detached:1;
-    unsigned            exiting:1;
-    unsigned            exited:1;
+    unsigned            respawn:1; // 标志位，为1时表示在重新生成子进程
+    unsigned            just_spawn:1; // 标志位，为1时表示正在生成子进程
+    unsigned            detached:1; // 标志位，为1时表示在进程父、子进程分离
+    unsigned            exiting:1; // 标志位，为1时表示进程正在退出
+    unsigned            exited:1; // 标志位，为1时表示进程已经退出
 } ngx_process_t;
 
 
@@ -43,7 +56,9 @@ typedef struct {
     char *const  *envp;
 } ngx_exec_ctx_t;
 
-
+/*
+ * 定义1024个元素的ngx_processes数组，也就是最多只能有1024个子进程
+ */
 #define NGX_MAX_PROCESSES         1024
 
 #define NGX_PROCESS_NORESPAWN     -1
