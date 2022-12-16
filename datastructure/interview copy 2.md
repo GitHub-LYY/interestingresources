@@ -585,6 +585,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [67. 二进制求和](https://leetcode.cn/problems/add-binary/)
 
+#### [326. 3 的幂](https://leetcode.cn/problems/power-of-three/)
+
+#### [504. 七进制数](https://leetcode.cn/problems/base-7/)
+
+#### [263. 丑数](https://leetcode.cn/problems/ugly-number/)
+
 ### 数字的位操作
 
 #### [7. 整数反转](https://leetcode.cn/problems/reverse-integer/)
@@ -606,6 +612,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [520. 检测大写字母](https://leetcode.cn/problems/detect-capital/)
 
 #### [389. 找不同](https://leetcode.cn/problems/find-the-difference/)
+
+#### [231. 2 的幂](https://leetcode.cn/problems/power-of-two/)
+
+#### [342. 4的幂](https://leetcode.cn/problems/power-of-four/)
+
+#### [190. 颠倒二进制位](https://leetcode.cn/problems/reverse-bits/)
+
+#### [191. 位1的个数](https://leetcode.cn/problems/number-of-1-bits/)
+
+#### [476. 数字的补数](https://leetcode.cn/problems/number-complement/)
+
+#### [1009. 十进制整数的反码](https://leetcode.cn/problems/complement-of-base-10-integer/)
 
 ### 摩尔投票法
 
