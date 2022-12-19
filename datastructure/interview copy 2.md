@@ -625,6 +625,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [1009. 十进制整数的反码](https://leetcode.cn/problems/complement-of-base-10-integer/)
 
+#### [461. 汉明距离](https://leetcode.cn/problems/hamming-distance/)
+
+#### [477. 汉明距离总和](https://leetcode.cn/problems/total-hamming-distance/)
+
+#### [693. 交替位二进制数](https://leetcode.cn/problems/binary-number-with-alternating-bits/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
