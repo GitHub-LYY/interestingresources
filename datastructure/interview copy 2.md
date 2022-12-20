@@ -591,6 +591,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [263. 丑数](https://leetcode.cn/problems/ugly-number/)
 
+#### [172. 阶乘后的零](https://leetcode.cn/problems/factorial-trailing-zeroes/)
+
+#### [458. 可怜的小猪](https://leetcode.cn/problems/poor-pigs/)
+
+#### [319. 灯泡开关](https://leetcode.cn/problems/bulb-switcher/)
+
+#### [171. Excel 表列序号](https://leetcode.cn/problems/excel-sheet-column-number/)
+
 ### 数字的位操作
 
 #### [7. 整数反转](https://leetcode.cn/problems/reverse-integer/)
@@ -598,6 +606,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [9. 回文数](https://leetcode.cn/problems/palindrome-number/)
 
 #### [479. 最大回文数乘积](https://leetcode.cn/problems/largest-palindrome-product/)
+
+#### [258. 各位相加](https://leetcode.cn/problems/add-digits/)
 
 ### 位运算
 
@@ -630,6 +640,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [477. 汉明距离总和](https://leetcode.cn/problems/total-hamming-distance/)
 
 #### [693. 交替位二进制数](https://leetcode.cn/problems/binary-number-with-alternating-bits/)
+
+#### [405. 数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/)
 
 ### 摩尔投票法
 
