@@ -599,6 +599,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [171. Excel 表列序号](https://leetcode.cn/problems/excel-sheet-column-number/)
 
+#### [168. Excel表列名称](https://leetcode.cn/problems/excel-sheet-column-title/)
+
+#### [492. 构造矩形](https://leetcode.cn/problems/construct-the-rectangle/)
+
 ### 数字的位操作
 
 #### [7. 整数反转](https://leetcode.cn/problems/reverse-integer/)
@@ -608,6 +612,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [479. 最大回文数乘积](https://leetcode.cn/problems/largest-palindrome-product/)
 
 #### [258. 各位相加](https://leetcode.cn/problems/add-digits/)
+
+#### [670. 最大交换](https://leetcode.cn/problems/maximum-swap/)
+
+#### [400. 第 N 位数字](https://leetcode.cn/problems/nth-digit/)
 
 ### 位运算
 
@@ -656,3 +664,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [306. 累加数](https://leetcode.cn/problems/additive-number/)
 
 #### [564. 寻找最近的回文数](https://leetcode.cn/problems/find-the-closest-palindrome/)
+
+#### [357. 统计各位数字都不同的数字个数](https://leetcode.cn/problems/count-numbers-with-unique-digits/)
