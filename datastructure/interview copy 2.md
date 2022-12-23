@@ -603,6 +603,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [492. 构造矩形](https://leetcode.cn/problems/construct-the-rectangle/)
 
+#### [29. 两数相除](https://leetcode.cn/problems/divide-two-integers/)
+
 ### 数字的位操作
 
 #### [7. 整数反转](https://leetcode.cn/problems/reverse-integer/)
