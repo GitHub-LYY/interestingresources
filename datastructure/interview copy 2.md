@@ -187,6 +187,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits/)
 
+### 用栈访问最后若干元素
+
+#### [682. 棒球比赛](https://leetcode.cn/problems/baseball-game/)
+
 ### 堆
 
 #### [剑指 Offer 41. 数据流中的中位数](https://leetcode.cn/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/)
@@ -537,6 +541,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [50. Pow(x, n)](https://leetcode.cn/problems/powx-n/)
 
+#### [372. 超级次方](https://leetcode.cn/problems/super-pow/)
+
 #### [剑指 Offer 16. 数值的整数次方](https://leetcode.cn/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/)
 
 #### [剑指 Offer 17. 打印从1到最大的n位数](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
@@ -604,6 +610,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [492. 构造矩形](https://leetcode.cn/problems/construct-the-rectangle/)
 
 #### [29. 两数相除](https://leetcode.cn/problems/divide-two-integers/)
+
+#### [507. 完美数](https://leetcode.cn/problems/perfect-number/)
 
 ### 数字的位操作
 
