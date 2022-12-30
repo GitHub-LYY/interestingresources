@@ -193,6 +193,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [71. 简化路径](https://leetcode.cn/problems/simplify-path/)
 
+#### [388. 文件的最长绝对路径](https://leetcode.cn/problems/longest-absolute-file-path/)
+
+### 栈与计算器
+
+#### [150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
+
+#### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
+
+#### [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
+
 ### 堆
 
 #### [剑指 Offer 41. 数据流中的中位数](https://leetcode.cn/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/)
