@@ -171,8 +171,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 栈与队列
 
-#### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
-
 #### [剑指 Offer 09. 用两个栈实现队列](https://leetcode.cn/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
 #### [剑指 Offer 30. 包含min函数的栈](https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/)
@@ -202,6 +200,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
 
 #### [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
+
+### 栈与括号匹配
+
+#### [20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/)
+
+#### [636. 函数的独占时间](https://leetcode.cn/problems/exclusive-time-of-functions/)
+
+#### [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/)
 
 ### 堆
 
@@ -688,3 +694,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [564. 寻找最近的回文数](https://leetcode.cn/problems/find-the-closest-palindrome/)
 
 #### [357. 统计各位数字都不同的数字个数](https://leetcode.cn/problems/count-numbers-with-unique-digits/)
+
+#### [591. 标签验证器](https://leetcode.cn/problems/tag-validator/)
+
+#### [385. 迷你语法分析器](https://leetcode.cn/problems/mini-parser/)
+
+#### [341. 扁平化嵌套列表迭代器](https://leetcode.cn/problems/flatten-nested-list-iterator/)
