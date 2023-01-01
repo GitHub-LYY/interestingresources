@@ -99,6 +99,12 @@ LeetCode、剑指offer题
 
 #### [61. 旋转链表](https://leetcode.cn/problems/rotate-list/)
 
+### 链表的删除
+
+#### [203. 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
+
+#### [237. 删除链表中的节点](https://leetcode.cn/problems/delete-node-in-a-linked-list/)
+
 ### 字符串
 
 stringstream学一下，笔试的时候快速做出字符串的题。
@@ -178,6 +184,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 31. 栈的压入、弹出序列](https://leetcode.cn/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
 
 #### [面试题59 - II. 队列的最大值](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/)
+
+#### [394. 字符串解码](https://leetcode.cn/problems/decode-string/)
 
 ### 单调栈
 
