@@ -57,21 +57,11 @@ LeetCode、剑指offer题
 
 #### [剑指 Offer 18. 删除链表的节点](https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
 
-#### [203. 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
-
 #### [707. 设计链表](https://leetcode.cn/problems/design-linked-list/)
-
-#### [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
-
-#### [24. 两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/)
-
-#### [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
 
 #### [面试题 02.07. 链表相交](https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/)
 
 #### [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
-
-#### [25. K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
 
 #### [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
 
@@ -81,13 +71,9 @@ LeetCode、剑指offer题
 
 #### [23. 合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
 
-#### [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/)
-
 #### [143. 重排链表](https://leetcode.cn/problems/reorder-list/)
 
 #### [148. 排序链表](https://leetcode.cn/problems/sort-list/)
-
-#### [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/)
 
 #### [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)
 
@@ -97,13 +83,35 @@ LeetCode、剑指offer题
 
 #### [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/)
 
-#### [61. 旋转链表](https://leetcode.cn/problems/rotate-list/)
-
 ### 链表的删除
 
 #### [203. 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
 
 #### [237. 删除链表中的节点](https://leetcode.cn/problems/delete-node-in-a-linked-list/)
+
+#### [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
+
+### 链表的遍历
+
+#### [430. 扁平化多级双向链表](https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/)
+
+### 链表的旋转与反转
+
+#### [61. 旋转链表](https://leetcode.cn/problems/rotate-list/)
+
+#### [24. 两两交换链表中的节点](https://leetcode.cn/problems/swap-nodes-in-pairs/)
+
+#### [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+
+#### [92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/)
+
+#### [25. K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
+
+### 链表高精度加法
+
+#### [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/)
+
+#### [445. 两数相加 II](https://leetcode.cn/problems/add-two-numbers-ii/)
 
 ### 字符串
 
@@ -120,10 +128,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 58 - II. 左旋转字符串](https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
 
 #### [8. 字符串转换整数 (atoi)](https://leetcode.cn/problems/string-to-integer-atoi/)
-
-#### [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
-
-#### [227. 基本计算器 II](https://leetcode.cn/problems/basic-calculator-ii/)
 
 #### [剑指 Offer 20. 表示数值的字符串](https://leetcode.cn/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/)
 
