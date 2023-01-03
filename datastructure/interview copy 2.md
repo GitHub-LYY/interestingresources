@@ -63,13 +63,9 @@ LeetCode、剑指offer题
 
 #### [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
 
-#### [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
-
 #### [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/)
 
 #### [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
-
-#### [23. 合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
 
 #### [143. 重排链表](https://leetcode.cn/problems/reorder-list/)
 
@@ -112,6 +108,12 @@ LeetCode、剑指offer题
 #### [2. 两数相加](https://leetcode.cn/problems/add-two-numbers/)
 
 #### [445. 两数相加 II](https://leetcode.cn/problems/add-two-numbers-ii/)
+
+### 链表的合并
+
+#### [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+
+#### [23. 合并K个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
 
 ### 字符串
 
@@ -245,8 +247,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [706. 设计哈希映射](https://leetcode.cn/problems/design-hashmap/)
 
-#### [128. 最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/)
-
 #### [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode.cn/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 
 #### [剑指 Offer 61. 扑克牌中的顺子](https://leetcode.cn/problems/bu-ke-pai-zhong-de-shun-zi-lcof/)
@@ -278,6 +278,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [467. 环绕字符串中唯一的子字符串](https://leetcode.cn/problems/unique-substrings-in-wraparound-string/)
 
 #### [273. 整数转换英文表示](https://leetcode.cn/problems/integer-to-english-words/)
+
+### 哈希表的查找、插入及删除
+
+#### [217. 存在重复元素](https://leetcode.cn/problems/contains-duplicate/)
+
+#### [349. 两个数组的交集](https://leetcode.cn/problems/intersection-of-two-arrays/)
+
+#### [128. 最长连续序列](https://leetcode.cn/problems/longest-consecutive-sequence/)
+
+#### [202. 快乐数](https://leetcode.cn/problems/happy-number/)
+
+#### [500. 键盘行](https://leetcode.cn/problems/keyboard-row/)
 
 ### 二叉树
 
@@ -440,6 +452,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [415. 字符串相加](https://leetcode.cn/problems/add-strings/)
 
 #### [43. 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
+
+#### [633. 平方数之和](https://leetcode.cn/problems/sum-of-square-numbers/)
 
 ### 二分搜索
 
