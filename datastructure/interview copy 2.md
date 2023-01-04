@@ -291,6 +291,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [500. 键盘行](https://leetcode.cn/problems/keyboard-row/)
 
+#### [290. 单词规律](https://leetcode.cn/problems/word-pattern/)
+
+#### [532. 数组中的 k-diff 数对](https://leetcode.cn/problems/k-diff-pairs-in-an-array/)
+
+#### [205. 同构字符串](https://leetcode.cn/problems/isomorphic-strings/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
