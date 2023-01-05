@@ -297,6 +297,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [205. 同构字符串](https://leetcode.cn/problems/isomorphic-strings/)
 
+#### [166. 分数到小数](https://leetcode.cn/problems/fraction-to-recurring-decimal/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -732,3 +734,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [385. 迷你语法分析器](https://leetcode.cn/problems/mini-parser/)
 
 #### [341. 扁平化嵌套列表迭代器](https://leetcode.cn/problems/flatten-nested-list-iterator/)
+
+#### [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions/)
