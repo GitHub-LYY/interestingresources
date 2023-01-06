@@ -51,8 +51,6 @@ LeetCode、剑指offer题
 
 #### [剑指 Offer 25. 合并两个排序的链表](https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)
 
-#### [剑指 Offer 35. 复杂链表的复制](https://leetcode.cn/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
-
 #### [剑指 Offer 52. 两个链表的第一个公共节点](https://leetcode.cn/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)
 
 #### [剑指 Offer 18. 删除链表的节点](https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
@@ -299,6 +297,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [166. 分数到小数](https://leetcode.cn/problems/fraction-to-recurring-decimal/)
 
+#### [剑指 Offer 35. 复杂链表的复制](https://leetcode.cn/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
+
+#### [138. 复制带随机指针的链表](https://leetcode.cn/problems/copy-list-with-random-pointer/)
+
+### 哈希表与索引
+
+#### [1. 两数之和](https://leetcode.cn/problems/two-sum/)
+
+#### [599. 两个列表的最小索引总和](https://leetcode.cn/problems/minimum-index-sum-of-two-lists/)
+
+#### [219. 存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -462,6 +472,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [43. 字符串相乘](https://leetcode.cn/problems/multiply-strings/)
 
 #### [633. 平方数之和](https://leetcode.cn/problems/sum-of-square-numbers/)
+
+#### [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/)
 
 ### 二分搜索
 
@@ -736,3 +748,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [341. 扁平化嵌套列表迭代器](https://leetcode.cn/problems/flatten-nested-list-iterator/)
 
 #### [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions/)
+
+#### [220. 存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/)
