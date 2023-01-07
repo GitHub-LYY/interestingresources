@@ -309,6 +309,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [219. 存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/)
 
+### 哈希表与统计
+
+#### [594. 最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence/)
+
+#### [350. 两个数组的交集 II](https://leetcode.cn/problems/intersection-of-two-arrays-ii/)
+
+#### [554. 砖墙](https://leetcode.cn/problems/brick-wall/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
