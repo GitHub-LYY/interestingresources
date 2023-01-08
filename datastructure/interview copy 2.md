@@ -317,6 +317,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [554. 砖墙](https://leetcode.cn/problems/brick-wall/)
 
+#### [609. 在系统中查找重复文件](https://leetcode.cn/problems/find-duplicate-file-in-system/)
+
+#### [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -442,6 +446,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 双指针
 
 #### [15. 三数之和](https://leetcode.cn/problems/3sum/)
+
+#### [18. 四数之和](https://leetcode.cn/problems/4sum/)
 
 #### [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
 
