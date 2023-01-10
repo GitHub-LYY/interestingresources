@@ -321,6 +321,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii/)
 
+### 哈希表与前缀和
+
+#### [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
