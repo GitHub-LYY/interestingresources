@@ -325,6 +325,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)
 
+#### [523. 连续的子数组和](https://leetcode.cn/problems/continuous-subarray-sum/)
+
+#### [525. 连续数组](https://leetcode.cn/problems/contiguous-array/)
+
 ### 二叉树
 
 #### [144. 二叉树的前序遍历](https://leetcode.cn/problems/binary-tree-preorder-traversal/)
@@ -492,6 +496,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [633. 平方数之和](https://leetcode.cn/problems/sum-of-square-numbers/)
 
 #### [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/)
+
+### 头尾指针
+
+#### [345. 反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/)
 
 ### 二分搜索
 
@@ -768,3 +776,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions/)
 
 #### [220. 存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/)
+
+#### 七. 贪心算法
