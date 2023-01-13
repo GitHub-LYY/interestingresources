@@ -4,6 +4,7 @@
 ** Description: 27. 移除元素
 ** link: https://leetcode.cn/problems/remove-element/
 ** reference: 代码随想录，数组题的移除元素
+** 20210113，官方题解，容易理解，不要参考代码随想录了
 */
 
 #include <iostream>
@@ -13,7 +14,7 @@ using namespace std;
 
 class Solution {
 public:
-    int removeElement(vector<int>& nums, int val) {
+    int removeElementOld(vector<int>& nums, int val) {
         // 定义慢指针
         int slow = 0;
 
@@ -27,6 +28,20 @@ public:
         }
 
         return slow;
+    }
+
+    int removeElement(vector<int>& nums, int val) {
+        int len = nums.size(); // 定义变量保存数组长度
+        int left = 0; // left指向要被赋值的位置，也指向最终的结果位置
+
+        for (int right = 0; right < len; right++) {
+            if (nums[right] != val) { // right位置遍历的数字不等于val了，则要更新left位置的数字了
+                nums[left] = nums[right]; // 更新left位置的数字
+                left++; // left指针右移
+            }
+        }
+
+        return left;
     }
 };
 

@@ -85,6 +85,8 @@ LeetCode、剑指offer题
 
 #### [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
 
+#### [83. 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)
+
 ### 链表的遍历
 
 #### [430. 扁平化多级双向链表](https://leetcode.cn/problems/flatten-a-multilevel-doubly-linked-list/)
@@ -453,15 +455,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 双指针
 
-#### [15. 三数之和](https://leetcode.cn/problems/3sum/)
-
-#### [18. 四数之和](https://leetcode.cn/problems/4sum/)
-
 #### [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
 
 #### [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers/)
-
-#### [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
 
 #### [557. 反转字符串中的单词 III](https://leetcode.cn/problems/reverse-words-in-a-string-iii/)
 
@@ -481,8 +477,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [283. 移动零](https://leetcode.cn/problems/move-zeroes/)
 
-#### [27. 移除元素](https://leetcode.cn/problems/remove-element/)
-
 #### [125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/)
 
 #### [443. 压缩字符串](https://leetcode.cn/problems/string-compression/)
@@ -495,11 +489,29 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [633. 平方数之和](https://leetcode.cn/problems/sum-of-square-numbers/)
 
-#### [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/)
-
 ### 头尾指针
 
 #### [345. 反转字符串中的元音字母](https://leetcode.cn/problems/reverse-vowels-of-a-string/)
+
+#### [680. 验证回文串 II](https://leetcode.cn/problems/valid-palindrome-ii/)
+
+#### [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/)
+
+#### [15. 三数之和](https://leetcode.cn/problems/3sum/)
+
+#### [16. 最接近的三数之和](https://leetcode.cn/problems/3sum-closest/)
+
+#### [18. 四数之和](https://leetcode.cn/problems/4sum/)
+
+#### [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
+
+### 同向双指针、滑动窗口
+
+#### [27. 移除元素](https://leetcode.cn/problems/remove-element/)
+
+#### [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
+
+#### [80. 删除有序数组中的重复项 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/)
 
 ### 二分搜索
 
