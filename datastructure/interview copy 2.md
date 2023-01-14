@@ -69,8 +69,6 @@ LeetCode、剑指offer题
 
 #### [148. 排序链表](https://leetcode.cn/problems/sort-list/)
 
-#### [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)
-
 #### [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/)
 
 #### [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
@@ -86,6 +84,8 @@ LeetCode、剑指offer题
 #### [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/)
 
 #### [83. 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/)
+
+#### [82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/)
 
 ### 链表的遍历
 
@@ -323,6 +323,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii/)
 
+#### [187. 重复的DNA序列](https://leetcode.cn/problems/repeated-dna-sequences/)
+
 ### 哈希表与前缀和
 
 #### [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/)
@@ -505,6 +507,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/)
 
+#### [611. 有效三角形的个数](https://leetcode.cn/problems/valid-triangle-number/)
+
 ### 同向双指针、滑动窗口
 
 #### [27. 移除元素](https://leetcode.cn/problems/remove-element/)
@@ -540,6 +544,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 57 - II. 和为s的连续正数序列](https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
 
 #### [68. 文本左右对齐](https://leetcode.cn/problems/text-justification/)
+
+#### [643. 子数组最大平均数 I](https://leetcode.cn/problems/maximum-average-subarray-i/)
 
 ### DFS/BFS
 
