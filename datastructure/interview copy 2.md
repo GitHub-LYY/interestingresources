@@ -73,8 +73,6 @@ LeetCode、剑指offer题
 
 #### [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
 
-#### [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/)
-
 ### 链表的删除
 
 #### [203. 移除链表元素](https://leetcode.cn/problems/remove-linked-list-elements/)
@@ -519,8 +517,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 滑动窗口
 
-#### [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/)
-
 #### [剑指 Offer 48. 最长不含重复字符的子字符串](https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)
 
 #### [剑指 Offer 57 - II. 和为s的连续正数序列](https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
@@ -538,6 +534,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [438. 找到字符串中所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/)
 
 #### [567. 字符串的排列](https://leetcode.cn/problems/permutation-in-string/)
+
+#### [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/)
+
+#### [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/)
+
+### 分段双指针
+
+#### [86. 分隔链表](https://leetcode.cn/problems/partition-list/)
+
+#### [328. 奇偶链表](https://leetcode.cn/problems/odd-even-linked-list/)
+
+#### [88. 合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/)
 
 ### 二分搜索
 
@@ -804,3 +812,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [220. 存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/)
 
 #### 七. 贪心算法
+
+#### [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words/)
