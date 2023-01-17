@@ -59,13 +59,7 @@ LeetCode、剑指offer题
 
 #### [面试题 02.07. 链表相交](https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/)
 
-#### [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
-
-#### [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/)
-
 #### [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
-
-#### [143. 重排链表](https://leetcode.cn/problems/reorder-list/)
 
 #### [148. 排序链表](https://leetcode.cn/problems/sort-list/)
 
@@ -547,6 +541,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [88. 合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/)
 
+#### [475. 供暖器](https://leetcode.cn/problems/heaters/)
+
+### 快慢指针
+
+#### [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/)
+
+#### [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/)
+
+#### [143. 重排链表](https://leetcode.cn/problems/reorder-list/)
+
+#### [234. 回文链表](https://leetcode.cn/problems/palindrome-linked-list/)
+
 ### 二分搜索
 
 #### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
@@ -814,3 +820,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### 七. 贪心算法
 
 #### [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words/)
+
+#### [457. 环形数组是否存在循环](https://leetcode.cn/problems/circular-array-loop/)
