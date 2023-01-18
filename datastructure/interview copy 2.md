@@ -357,8 +357,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
 
-#### [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
-
 #### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
 
 #### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
@@ -434,6 +432,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 37. 序列化二叉树](https://leetcode.cn/problems/xu-lie-hua-er-cha-shu-lcof/)
 
 #### [剑指 Offer 54. 二叉搜索树的第k大节点](https://leetcode.cn/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)
+
+### 树与递归
+
+#### [100. 相同的树](https://leetcode.cn/problems/same-tree/)
+
+#### [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
 
 ### 排序
 
@@ -552,6 +556,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [143. 重排链表](https://leetcode.cn/problems/reorder-list/)
 
 #### [234. 回文链表](https://leetcode.cn/problems/palindrome-linked-list/)
+
+#### [287. 寻找重复数](https://leetcode.cn/problems/find-the-duplicate-number/)
 
 ### 二分搜索
 

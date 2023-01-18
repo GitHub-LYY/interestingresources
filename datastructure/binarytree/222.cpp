@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-20
+** Date: 2022-08-20, 2023-01-18
 ** Description: 222. 完全二叉树的节点个数
 ** link: https://leetcode.cn/problems/count-complete-tree-nodes/
 ** reference: 代码随想录
+** 20230118，参考官方题解
 */
 
 #include <iostream>
@@ -56,7 +57,7 @@ public:
         return count;
     }
 
-    int countNodes(TreeNode* root) {
+    int countNodesRecursive(TreeNode* root) {
         // 根据完全二叉树的特点
 
         // 如果根节点为空，则节点个数是0
@@ -91,6 +92,48 @@ public:
         }
 
         return countNodes(root->left) + countNodes(root->right) + 1;
+    }
+
+    bool exist(TreeNode* root, int level, int mid) {
+        int bits = 1 << (level - 1); // 位运算要用
+        TreeNode* node = root; // 哨兵节点
+
+        while (node != nullptr && bits > 0) {
+            if (!(bits & mid)) { // 当前位是0，表示要往左走
+                node = node->left;
+            } else { // 当前位是1，表示要往右走
+                node = node->right;
+            }
+            bits >>= 1; // 一开始忘了，错的，每次bits要往右走一位
+        }
+
+        return node != nullptr; // 不是空，则意味着存在，是true
+    }
+    
+    int countNodes(TreeNode* root) {
+        if (root == nullptr) { // 空的树，节点个数是0
+            return 0;
+        }
+
+        int level = 0; // 定义变量保存节点的深度，根节点是第0层
+        TreeNode* node = root; // 定义哨兵节点遍历树
+        while (node->left) { // 先一路走到叶子节点最左边节点方便求出个数的范围
+            level++; // 每遍历一层，层数加一
+            node = node->left; // 遍历
+        }
+
+        int low = 1 << level; // 相当于是2的level次方，这是节点个数范围的最小值
+        int high = (1 << (level + 1)) - 1; // 相当于是2的level+1次方减去一，这是节点个数范围的最大值
+        while (low < high) {
+            int mid = (high - low + 1) / 2 + low; // 求出叶子节点层中间节点，再判断是否存在，方便缩小范围
+            if (exist(root, level, mid)) { // 中间节点存在，则左边界往右走
+                low = mid; 
+            } else { // 中间节点不存在，则右边界往左右
+                high = mid - 1; 
+            }
+        }
+
+        return low; // 此时low=high
     }
 };
 
