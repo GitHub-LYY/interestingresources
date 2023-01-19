@@ -355,8 +355,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
 
-#### [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
-
 #### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
 
 #### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
@@ -438,6 +436,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [100. 相同的树](https://leetcode.cn/problems/same-tree/)
 
 #### [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
+
+#### [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
+
+#### [437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii/)
 
 ### 排序
 

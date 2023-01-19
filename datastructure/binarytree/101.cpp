@@ -1,12 +1,14 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-20
+** Date: 2022-08-20，2023-01-19
 ** Description: 101. 对称二叉树
 ** link: https://leetcode.cn/problems/symmetric-tree/
 ** reference: 代码随想录
+** 20230119，官方题解，方法二，迭代
 */
 
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -45,11 +47,42 @@ public:
         return isSame;
     }
 
-    bool isSymmetric(TreeNode* root) {
+    bool isSymmetricOld(TreeNode* root) {
         if (root == nullptr) {
             return true;
         }
         return traversal(root->left, root->right);
+    }
+
+    bool check(TreeNode* p, TreeNode* q) {
+        queue<TreeNode*> que; // 定义队列保存树节点
+        que.push(p); // 树节点入队
+        que.push(q); // 树节点入队
+
+        while (!que.empty()) {
+            p = que.front(); // 拿出队列中的树节点，这不能定义node1使用，必须是p来接收，仔细思考，巧妙
+            que.pop();
+            q = que.front(); // 拿出队列中的树节点
+            que.pop();
+
+            if (p == nullptr && q == nullptr) { // 两个节点都是空
+                continue; // 一开始写成return true了，错的
+            }
+            if ((p == nullptr || q == nullptr) || (p->val != q->val)) { // 一个是空，一个是非空，或，值不相等
+                return false;
+            }
+
+            que.push(p->left); // 左的左
+            que.push(q->right); // 右的右
+            que.push(p->right); // 左的右
+            que.push(q->left); // 右的左
+        }
+
+        return true;
+    }
+
+    bool isSymmetric(TreeNode* root) {
+        return check(root, root); // 参数是两个节点
     }
 };
 

@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-20
+** Date: 2022-08-20,2023-01-19
 ** Description: 226. 翻转二叉树
 ** link: https://leetcode.cn/problems/invert-binary-tree/
 ** reference: 代码随想录
+** 官方题解
 */
 
 #include <iostream>
@@ -71,6 +72,19 @@ public:
             }
         }
 
+        return root;
+    }
+
+    TreeNode* invertTree(TreeNode* root) { // 考虑三个节点的例子，容易理解
+        if (root == nullptr) { // 当前节点是空
+            return nullptr;
+        }
+
+        TreeNode* left = invertTree(root->left);
+        TreeNode* right = invertTree(root->right); 
+
+        root->left = right; // 交换位置
+        root->right = left; // 交换位置
         return root;
     }
 };
