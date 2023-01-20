@@ -441,6 +441,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii/)
 
+#### [563. 二叉树的坡度](https://leetcode.cn/problems/binary-tree-tilt/)
+
+#### [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees/)
+
+#### [508. 出现次数最多的子树元素和](https://leetcode.cn/problems/most-frequent-subtree-sum/)
+
+#### [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree/)
+
+#### [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)

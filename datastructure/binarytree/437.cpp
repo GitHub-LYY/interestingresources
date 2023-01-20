@@ -42,8 +42,8 @@ public:
         }
 
         int res = rootSum(root, targetSum);
-        res += rootSum(root->left, targetSum);
-        res += rootSum(root->right, targetSum);
+        res += pathSum(root->left, targetSum); // 一开始写成rootSum了，错的
+        res += pathSum(root->right, targetSum);
 
         return res;
     }
