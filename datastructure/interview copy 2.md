@@ -371,10 +371,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
-#### [654. 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/)
-
-#### [617. 合并二叉树](https://leetcode.cn/problems/merge-two-binary-trees/)
-
 #### [700. 二叉搜索树中的搜索](https://leetcode.cn/problems/search-in-a-binary-search-tree/)
 
 #### [530. 二叉搜索树的最小绝对差](https://leetcode.cn/problems/minimum-absolute-difference-in-bst/)
@@ -450,6 +446,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree/)
 
 #### [543. 二叉树的直径](https://leetcode.cn/problems/diameter-of-binary-tree/)
+
+#### [654. 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/)
+
+#### [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path/)
+
+### 树的层次遍历
+
+#### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
+
+#### [429. N 叉树的层序遍历](https://leetcode.cn/problems/n-ary-tree-level-order-traversal/)
 
 ### 排序
 
@@ -840,3 +846,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [30. 串联所有单词的子串](https://leetcode.cn/problems/substring-with-concatenation-of-all-words/)
 
 #### [457. 环形数组是否存在循环](https://leetcode.cn/problems/circular-array-loop/)
+
+#### [87. 扰乱字符串](https://leetcode.cn/problems/scramble-string/)

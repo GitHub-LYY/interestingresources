@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-08
+** Date: 2022-08-08,2023-01-20
 ** Description: 102. 二叉树的层序遍历
 ** link: https://leetcode.cn/problems/binary-tree-level-order-traversal/
 ** reference: 代码随想录
+** 20230120，官方题解
 */
 
 #include <iostream>
@@ -24,7 +25,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
+    vector<vector<int>> levelOrderOld(TreeNode* root) {
         // 定义队列，保存树节点
         queue<TreeNode*> que;
 
@@ -68,6 +69,33 @@ public:
             res.push_back(vec);
         }
 
+        return res;
+    }
+
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        vector<vector<int>> res; // 定义变量保存结果
+        if (root == nullptr) {
+            return res;
+        }
+
+        queue<TreeNode*> que; // 定义队列保存每一层的树节点
+        que.push(root); // 执行到这儿，则意味着root不是空的，能插入
+
+        while (!que.empty()) {
+            int currentLevelSize = que.size(); // 求出当前层的节点的数量用来遍历
+            res.push_back(vector<int> ()); // 直接先插入一个空的vector用来保存本层节点的值
+            for (int i = 0; i < currentLevelSize; i++) {
+                TreeNode* node = que.front(); // 取出节点
+                que.pop();
+                res.back().push_back(node->val); // 当前节点值插入vector中
+                if (node->left) { // 下一层的节点
+                    que.push(node->left);
+                }
+                if (node->right) { // 下一层的节点
+                    que.push(node->right);
+                }
+            }
+        }
         return res;
     }
 };

@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-08
+** Date: 2022-08-08,2023-01-20
 ** Description: 429. N 叉树的层序遍历
 ** link: https://leetcode.cn/problems/n-ary-tree-level-order-traversal/
 ** reference: 代码随想录
+** 20230120，官方题解
 */
 
 #include <iostream>
@@ -32,7 +33,7 @@ public:
 
 class Solution {
 public:
-    vector<vector<int>> levelOrder(Node* root) {
+    vector<vector<int>> levelOrderOld(Node* root) {
         // 定义队列，保存树节点
         queue<Node*> que;
 
@@ -73,6 +74,31 @@ public:
             res.push_back(vec);
         }
 
+        return res;
+    }
+
+    vector<vector<int>> levelOrder(Node* root) {
+        vector<vector<int>> res; // 定义变量保存结果
+        if (!root) { // 根节点是空
+            return res;
+        }
+
+        queue<Node*> que; // 定义队列保存节点
+        que.push(root);
+
+        while(!que.empty()) {
+            int currentLevelSize = que.size(); // 求出当前层的节点数量
+            vector<int> level; // 定义中间vector保存每一层的节点值
+            for (int i = 0; i < currentLevelSize; i++) {
+                Node* node = que.front(); // 取出节点
+                que.pop();
+                level.push_back(node->val); // 插入节点值
+                for (Node* child : node->children) { // 遍历每个子节点
+                    que.push(child);
+                }
+            }
+            res.push_back(::move(level)); // 每一层的节点值插入结果
+        }
         return res;
     }
 };
