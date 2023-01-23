@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21,2023-01-23
 ** Description: 513. 找树左下角的值
 ** link: https://leetcode.cn/problems/find-bottom-left-tree-value/
 ** reference: 代码随想录
+** 20230123，自己理解的写的
 */
 
 #include <iostream>
@@ -23,7 +24,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    int findBottomLeftValue(TreeNode* root) {
+    int findBottomLeftValueOld(TreeNode* root) {
         // 定义队列保存树节点
         queue<TreeNode*> que;
 
@@ -63,6 +64,30 @@ public:
             }
         }
 
+        return res;
+    }
+
+    int findBottomLeftValue(TreeNode* root) {
+        int res = 0; // 定义变量保存结果
+        queue<TreeNode*> que; // 定义队列保存树节点
+        que.push(root);
+
+        while (!que.empty()) {
+            int size = que.size(); // 求出当前层节点数量
+            for (int i = 0; i < size; i++) {
+                TreeNode* node = que.front(); // 取出节点
+                que.pop();
+                if (i == 0) { // 是当前层第一个节点
+                    res = node->val;
+                }
+                if (node->left) {
+                    que.push(node->left);
+                }
+                if (node->right) {
+                    que.push(node->right);
+                }
+            }
+        }
         return res;
     }
 };

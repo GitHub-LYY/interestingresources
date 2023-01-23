@@ -1,6 +1,6 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-19
+** Date: 2022-08-19，2023-01-23
 ** Description: 662. 二叉树最大宽度
 ** link: https://leetcode.cn/problems/maximum-width-of-binary-tree/
 ** reference: 题解区，官方题解讨论区，作者，zjh1443
@@ -23,7 +23,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    int widthOfBinaryTree(TreeNode* root) {
+    int widthOfBinaryTreeOld(TreeNode* root) {
         // 定义变量保存结果
         int res = 0;
 
@@ -65,6 +65,30 @@ public:
             if (res < (end - start + 1)) {
                 res = end - start + 1;
             }
+        }
+
+        return res;
+    }
+
+    int widthOfBinaryTree(TreeNode* root) {
+        unsigned long long res = 1; // 定义变量保存结果
+        vector<pair<TreeNode*, unsigned long long>> arr; // 定义vector模拟队列
+        arr.emplace_back(root, 1L); // 插入根节点
+        
+        while (!arr.empty()) {
+            vector<pair<TreeNode*, unsigned long long>> tmp; // 定义临时变量用来替换原来的arr
+            for (auto pairTmp : arr) { // 遍历数组中的节点
+                TreeNode* node = pairTmp.first; // 取出节点
+                unsigned long long index = pairTmp.second; // 取出当前节点的编号
+                if (node->left) { // 插入左子节点
+                    tmp.emplace_back(node->left, index * 2); 
+                }
+                if (node->right) { // 插入右子节点
+                    tmp.emplace_back(node->right, index * 2 + 1);
+                }
+            }
+            res = max(res, arr.back().second - arr[0].second + 1); // 求出最大的宽度
+            arr = tmp; // 替换为下一层的节点
         }
 
         return res;

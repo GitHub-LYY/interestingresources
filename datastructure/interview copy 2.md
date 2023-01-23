@@ -343,8 +343,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [429. N 叉树的层序遍历](https://leetcode.cn/problems/n-ary-tree-level-order-traversal/)
 
-#### [515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row/)
-
 #### [116. 填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
 
 #### [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/)
@@ -360,8 +358,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
 
 #### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
-
-#### [513. 找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value/)
 
 #### [112. 路径总和](https://leetcode.cn/problems/path-sum/)
 
@@ -392,8 +388,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
 
 #### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
-
-#### [662. 二叉树最大宽度](https://leetcode.cn/problems/maximum-width-of-binary-tree/)
 
 #### [230. 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
 
@@ -456,6 +450,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
 
 #### [429. N 叉树的层序遍历](https://leetcode.cn/problems/n-ary-tree-level-order-traversal/)
+
+#### [690. 员工的重要性](https://leetcode.cn/problems/employee-importance/)
+
+#### [559. N 叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-n-ary-tree/)
+
+#### [662. 二叉树最大宽度](https://leetcode.cn/problems/maximum-width-of-binary-tree/)
+
+#### [671. 二叉树中第二小的节点](https://leetcode.cn/problems/second-minimum-node-in-a-binary-tree/)
+
+#### [513. 找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value/)
+
+#### [515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row/)
 
 ### 排序
 

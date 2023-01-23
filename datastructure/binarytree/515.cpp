@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-08
+** Date: 2022-08-08,2023-01-23
 ** Description: 515. 在每个树行中找最大值
 ** link: https://leetcode.cn/problems/find-largest-value-in-each-tree-row/
 ** reference: 代码随想录
+** 20230123，自己理解写的
 */
 
 #include <iostream>
@@ -25,7 +26,7 @@ struct TreeNode {
 
 class Solution {
 public:
-    vector<int> largestValues(TreeNode* root) {
+    vector<int> largestValuesOld(TreeNode* root) {
         // 定义队列，保存树节点
         queue<TreeNode*> que;
 
@@ -67,6 +68,37 @@ public:
 
             // 将每层的最大值保存到结果中
             res.push_back(maxValue);
+        }
+
+        return res;
+    }
+
+    vector<int> largestValues(TreeNode* root) {
+        if (root == nullptr) {
+            return {};
+        }
+
+        vector<int> res; // 定义变量保存结果
+        queue<TreeNode*> que; // 定义队列保存树节点
+        que.push(root);
+
+        while (!que.empty()) {
+            int size = que.size(); // 求出每一层节点数量
+            int maxValue = INT_MIN; // 定义变量保存每一层最大值
+            for (int i = 0; i < size; i++) {
+                TreeNode* node = que.front(); // 取出节点
+                que.pop();
+                if (node->val > maxValue) { // 求出最大值
+                    maxValue = node->val;
+                }
+                if (node->left) {
+                    que.push(node->left);
+                }
+                if (node->right) {
+                    que.push(node->right);
+                }
+            }
+            res.push_back(maxValue); // 插入每一层最大值
         }
 
         return res;
