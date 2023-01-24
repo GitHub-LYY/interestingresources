@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-08
+** Date: 2022-08-08，2023-01-24
 ** Description: 637. 二叉树的层平均值
 ** link: https://leetcode.cn/problems/average-of-levels-in-binary-tree/
 ** reference: 代码随想录
+** 20230124，官方题解
 */
 
 #include <iostream>

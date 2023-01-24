@@ -335,11 +335,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
 
-#### [107. 二叉树的层序遍历 II](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/)
-
 #### [199. 二叉树的右视图](https://leetcode.cn/problems/binary-tree-right-side-view/)
-
-#### [637. 二叉树的层平均值](https://leetcode.cn/problems/average-of-levels-in-binary-tree/)
 
 #### [429. N 叉树的层序遍历](https://leetcode.cn/problems/n-ary-tree-level-order-traversal/)
 
@@ -354,8 +350,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
 
 #### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
-
-#### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
 
 #### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
 
@@ -384,8 +378,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
 #### [297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
-
-#### [103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
 
 #### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
 
@@ -445,6 +437,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [687. 最长同值路径](https://leetcode.cn/problems/longest-univalue-path/)
 
+#### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
+
 ### 树的层次遍历
 
 #### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
@@ -462,6 +456,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [513. 找树左下角的值](https://leetcode.cn/problems/find-bottom-left-tree-value/)
 
 #### [515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row/)
+
+#### [637. 二叉树的层平均值](https://leetcode.cn/problems/average-of-levels-in-binary-tree/)
+
+#### [103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
+
+#### [107. 二叉树的层序遍历 II](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/)
 
 ### 排序
 

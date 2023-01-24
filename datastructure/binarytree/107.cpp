@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-08
+** Date: 2022-08-08，2023-01-24
 ** Description: 107. 二叉树的层序遍历 II
 ** link: https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/
 ** reference: 代码随想录
+** 20230124，官方题解
 */
 
 #include <iostream>

@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-20
+** Date: 2022-08-20，2023-01-24
 ** Description: 257. 二叉树的所有路径
 ** link: https://leetcode.cn/problems/binary-tree-paths/
 ** reference: 代码随想录
+** 20230124，官方题解
 */
 
 #include <iostream>
@@ -56,11 +57,30 @@ public:
         }
     }
 
-    vector<string> binaryTreePaths(TreeNode* root) {
+    vector<string> binaryTreePathsOld(TreeNode* root) {
         vector<string> res;
         vector<int> path;
         traversal(root, path, res);
         return res;
+    }
+
+    void construct_path(TreeNode* root, string path, vector<string>& paths) {
+        if (root) { // 非空再去求路径
+            path += to_string(root->val); // 把当前非空节点插入路径之一
+            if (!root->left && !root->right) { // 当前是叶子节点
+                paths.emplace_back(path); // 收割
+            } else { // 当前不是叶子节点，继续递归遍历
+                path += "->"; // 后边还有节点，因此节点之间要有箭头分割
+                construct_path(root->left, path, paths); // 递归左子节点
+                construct_path(root->right, path, paths); // 递归右子节点
+            }
+        }
+    }
+
+    vector<string> binaryTreePaths(TreeNode* root) {
+        vector<string> paths; // 定义变量保存结果
+        construct_path(root, "", paths); // 递归求路径
+        return paths;
     }
 };
 
