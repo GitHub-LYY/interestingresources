@@ -343,17 +343,11 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/)
 
-#### [104. 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
-
-#### [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
-
 #### [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
 
 #### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
 
 #### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
-
-#### [112. 路径总和](https://leetcode.cn/problems/path-sum/)
 
 #### [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii/)
 
@@ -439,6 +433,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/)
 
+#### [112. 路径总和](https://leetcode.cn/problems/path-sum/)
+
+#### [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii/)
+
+#### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
+
 ### 树的层次遍历
 
 #### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
@@ -462,6 +462,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/)
 
 #### [107. 二叉树的层序遍历 II](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/)
+
+#### [623. 在二叉树中增加一行](https://leetcode.cn/problems/add-one-row-to-tree/)
+
+#### [653. 两数之和 IV - 输入二叉搜索树](https://leetcode.cn/problems/two-sum-iv-input-is-a-bst/)
+
+#### [104. 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/)
+
+#### [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
+
+#### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
 
 ### 排序
 

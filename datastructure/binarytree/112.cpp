@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-01-26
 ** Description: 112. 路径总和
 ** link: https://leetcode.cn/problems/path-sum/
 ** reference: 代码随想录
+** 20230126，官方题解
 */
 
 #include <iostream>
@@ -55,11 +56,24 @@ public:
         return false;
     }
 
-    bool hasPathSum(TreeNode* root, int targetSum) {
+    bool hasPathSumOld(TreeNode* root, int targetSum) {
         if (root == nullptr) {
             return false;
         }
         return traversal(root, targetSum - root->val);
+    }
+
+    bool hasPathSum(TreeNode* root, int targetSum) {
+        if (root == nullptr) { // 当前节点是空，则一定是false
+            return false;
+        }
+
+        if (!root->left && !root->right) { // 当前节点是叶子节点
+            return targetSum == root->val;
+        }
+
+        // 当前节点不是叶子节点
+        return hasPathSum(root->left, targetSum - root->val) || hasPathSum(root->right, targetSum - root->val);
     }
 };
 

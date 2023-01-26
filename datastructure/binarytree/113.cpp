@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-01-26
 ** Description: 113. 路径总和 II
 ** link: https://leetcode.cn/problems/path-sum-ii/
 ** reference: 代码随想录
+** 20230126，官方题解
 */
 
 #include <iostream>
@@ -21,7 +22,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 private:
     vector<vector<int>> res;
     vector<int> path;
@@ -65,6 +66,31 @@ public:
         }
         path.push_back(root->val);
         traversal(root, targetSum - root->val);
+        return res;
+    }
+};
+
+class Solution {
+public:
+    vector<vector<int>> res; // 定义变量保存结果
+    vector<int> path; // 定义变量保存路径的值
+    void dfs(TreeNode* root, int sum) {
+        if (root == nullptr) { // 如果当前遍历的节点是空的，则什么也不做
+            return;
+        }
+
+        path.emplace_back(root->val); // 把当前遍历的节点插入路径
+        sum -= root->val; // 把当前遍历节点的值从sum中去掉，遍历下一个节点了
+        // 遍历下一个节点前，先判断一下是否是叶子节点且sum是0了
+        if (!root->left && !root->right && sum == 0) {
+            res.emplace_back(path); // 该收割结果了
+        }
+        dfs(root->left, sum); // 递归遍历左节点
+        dfs(root->right, sum); // 递归遍历右节点
+        path.pop_back(); // 不要忘了当前节点弹出路径
+    }
+    vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
+        dfs(root, targetSum);
         return res;
     }
 };

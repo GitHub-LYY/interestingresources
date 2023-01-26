@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-16
+** Date: 2022-08-16，2023-01-26
 ** Description: 129. 求根节点到叶节点数字之和
 ** link: https://leetcode.cn/problems/sum-root-to-leaf-numbers/
 ** reference: 题解区，官方题解
+** 20230126，官方题解
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     int traversal(TreeNode* cur, int prevSum) {
         // 递归结束条件
@@ -51,6 +52,26 @@ public:
         res = traversal(root, 0);
 
         return res;
+    }
+};
+
+class Solution {
+public:
+    int dfs(TreeNode* root, int preSum) {
+        if (!root) {
+            return 0;
+        }
+
+        int sum = preSum * 10 + root->val; // 求出当前节点合并的值
+
+        if (!root->left && !root->right) { // 当前节点是叶子节点
+            return sum;
+        } else { // 不是叶子节点
+            return dfs(root->left, sum) + dfs(root->right, sum);
+        }
+    }
+    int sumNumbers(TreeNode* root) {
+        return dfs(root, 0);
     }
 };
 
