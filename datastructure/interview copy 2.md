@@ -335,10 +335,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
 
-#### [199. 二叉树的右视图](https://leetcode.cn/problems/binary-tree-right-side-view/)
-
-#### [429. N 叉树的层序遍历](https://leetcode.cn/problems/n-ary-tree-level-order-traversal/)
-
 #### [116. 填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/)
 
 #### [117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/)
@@ -472,6 +468,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [111. 二叉树的最小深度](https://leetcode.cn/problems/minimum-depth-of-binary-tree/)
 
 #### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
+
+#### [199. 二叉树的右视图](https://leetcode.cn/problems/binary-tree-right-side-view/)
+
+#### [655. 输出二叉树](https://leetcode.cn/problems/print-binary-tree/)
 
 ### 排序
 
