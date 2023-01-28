@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-07
+** Date: 2022-08-07，2023-01-28
 ** Description: 144. 二叉树的前序遍历
 ** link: https://leetcode.cn/problems/binary-tree-preorder-traversal/
 ** reference: 代码随想录
+** 20230128，官方题解
 */
 
 #include <iostream>
@@ -22,7 +23,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     void traversal(TreeNode* cur, vector<int>& res) {
         // 递归终止条件
@@ -77,6 +78,24 @@ public:
             }
         }
 
+        return res;
+    }
+};
+
+class Solution {
+public:
+    void preorder(TreeNode* root, vector<int>& res) {
+        if (!root) {
+            return;
+        }
+
+        res.push_back(root->val);
+        preorder(root->left, res);
+        preorder(root->right, res);
+    }
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> res; // 定义变量保存结果
+        preorder(root, res); // 递归遍历
         return res;
     }
 };
