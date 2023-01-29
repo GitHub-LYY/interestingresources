@@ -477,6 +477,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [589. N 叉树的前序遍历](https://leetcode.cn/problems/n-ary-tree-preorder-traversal/)
 
+### 树的前序序列化
+
+#### [606. 根据二叉树创建字符串](https://leetcode.cn/problems/construct-string-from-binary-tree/)
+
+#### [331. 验证二叉树的前序序列化](https://leetcode.cn/problems/verify-preorder-serialization-of-a-binary-tree/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
