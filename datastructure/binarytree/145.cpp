@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-07
+** Date: 2022-08-07，2023-02-01
 ** Description: 145. 二叉树的后序遍历
 ** link: https://leetcode.cn/problems/binary-tree-postorder-traversal/
 ** reference: 代码随想录
+** 20230201，官方题解
 */
 
 #include <iostream>
@@ -23,7 +24,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     void traversal(TreeNode* cur, vector<int>& res) {
         // 递归终止条件
@@ -81,6 +82,24 @@ public:
         // 对中右左顺序的结果进行反转
         reverse(res.begin(), res.end());
 
+        return res;
+    }
+};
+
+class Solution {
+public:
+    void postorder(TreeNode* root, vector<int>& res) {
+        if (!root) {
+            return;
+        }
+
+        postorder(root->left, res);
+        postorder(root->right, res);
+        res.push_back(root->val);
+    }
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> res; // 定义变量保存结果
+        postorder(root, res); // 后序遍历
         return res;
     }
 };

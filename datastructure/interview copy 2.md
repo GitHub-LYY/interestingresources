@@ -361,8 +361,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
-#### [297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
-
 #### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
 
 #### [230. 二叉搜索树中第K小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/)
@@ -482,6 +480,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [606. 根据二叉树创建字符串](https://leetcode.cn/problems/construct-string-from-binary-tree/)
 
 #### [331. 验证二叉树的前序序列化](https://leetcode.cn/problems/verify-preorder-serialization-of-a-binary-tree/)
+
+#### [652. 寻找重复的子树](https://leetcode.cn/problems/find-duplicate-subtrees/)
+
+#### [297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/)
+
+### 树的后序遍历
+
+#### [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
 
 ### 排序
 
@@ -874,3 +880,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [457. 环形数组是否存在循环](https://leetcode.cn/problems/circular-array-loop/)
 
 #### [87. 扰乱字符串](https://leetcode.cn/problems/scramble-string/)
+
+#### [449. 序列化和反序列化二叉搜索树](https://leetcode.cn/problems/serialize-and-deserialize-bst/)
