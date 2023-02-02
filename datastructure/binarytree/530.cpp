@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-02-02
 ** Description: 530. 二叉搜索树的最小绝对差
 ** link: https://leetcode.cn/problems/minimum-absolute-difference-in-bst/
 ** reference: 代码随想录
+** 20230202，官方题解
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     // 定义一个前驱节点用来比较和当前节点的大小
     TreeNode* pre = nullptr;
@@ -45,6 +46,30 @@ public:
     int getMinimumDifference(TreeNode* root) {
         traversal(root);
         return minDiff;
+    }
+};
+
+class Solution {
+public:
+    void dfs(TreeNode* root, int& pre, int& res) {
+        if (!root) { // 当前节点是空
+            return;
+        }
+
+        dfs(root->left, pre, res);
+        if (pre == -1) { // 当前节点是第一个节点
+            pre = root->val;
+        } else {
+            res = min(res, root->val - pre); // 不断求最小的差
+            pre = root->val; // 不要忘了前驱节点的值
+        }
+        dfs(root->right, pre, res);
+    }
+    int getMinimumDifference(TreeNode* root) {
+        int res = INT_MAX; // 定义变量保存结果
+        int pre = -1; // 定义变量保存前驱节点的值
+        dfs(root, pre, res);
+        return res;
     }
 };
 

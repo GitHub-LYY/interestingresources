@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-02-02
 ** Description: 700. 二叉搜索树中的搜索
 ** link: https://leetcode.cn/problems/search-in-a-binary-search-tree/
 ** reference: 代码随想录
+** 20230202，官方题解
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
         if (root == nullptr || root->val == val) {
@@ -34,6 +35,21 @@ public:
         }
 
         return nullptr;
+    }
+};
+
+class Solution {
+public:
+    TreeNode* searchBST(TreeNode* root, int val) {
+        if (!root) { // 节点是空，则一定不存在节点值等于val
+            return nullptr;
+        }
+
+        if (root->val == val) { // 当前节点的值等于val，则直接输出这个节点便是子树了
+            return root; 
+        }
+
+        return searchBST(val < root->val ? root->left : root->right, val);
     }
 };
 

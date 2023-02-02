@@ -1,9 +1,9 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-07
+** Date: 2022-08-07，2023-02-02
 ** Description: 94. 二叉树的中序遍历
 ** link: https://leetcode.cn/problems/binary-tree-inorder-traversal/
-** reference: 
+** reference: 20230202，官方题解
 */
 
 #include <iostream>
@@ -22,7 +22,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     void traversal(TreeNode* cur, vector<int>& res) {
         // 递归终止条件
@@ -65,6 +65,24 @@ public:
             }
         }
 
+        return res;
+    }
+};
+
+class Solution {
+public:
+    void inorder(TreeNode* root, vector<int>& res) {
+        if (!root) {
+            return;
+        }
+
+        inorder(root->left, res);
+        res.push_back(root->val);
+        inorder(root->right, res);
+    }
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res; // 定义变量保存结果
+        inorder(root, res);
         return res;
     }
 };
