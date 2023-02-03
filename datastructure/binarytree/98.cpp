@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-02-03
 ** Description: 98. 验证二叉搜索树
 ** link: https://leetcode.cn/problems/validate-binary-search-tree/
 ** reference: 代码随想录
+** 20230203，官方题解不容易理解，自己理解后写的
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     // 定义一个前驱节点用来比较和当前节点的大小
     TreeNode* pre = nullptr;
@@ -41,6 +42,25 @@ public:
         bool right = isValidBST(root->right);
 
         return left && right;
+    }
+};
+
+class Solution {
+public:
+    long pre = LONG_MIN; // 定义变量保存前驱节点的值
+    bool isValidBST(TreeNode* root) {
+        if (!root) { // 节点是空，一定是二叉搜索树
+            return true;
+        }
+
+        bool left = isValidBST(root->left); // 保存左子树是否是二叉搜索树
+        if (root->val <= pre) { // 不满足二叉搜索树的条件，则false
+            return false;
+        }
+        pre = root->val; // 不要忘了修改前驱节点的值
+        bool right = isValidBST(root->right); // 保存右子树是否是二叉搜索树
+
+        return left && right; // 根节点已经在上边输出了，现在要输出的是左子树右子树是否是二叉搜索树
     }
 };
 

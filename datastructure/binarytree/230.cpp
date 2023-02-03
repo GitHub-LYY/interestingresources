@@ -1,9 +1,9 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-19
+** Date: 2022-08-19，2023-02-03
 ** Description: 230. 二叉搜索树中第K小的元素
 ** link: https://leetcode.cn/problems/kth-smallest-element-in-a-bst/
-** reference: 
+** reference: 20230203，官方题解
 */
 
 #include <iostream>
@@ -22,7 +22,7 @@ public:
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     vector<int> res;
 
@@ -39,6 +39,24 @@ public:
     int kthSmallest(TreeNode* root, int k) {
         traversal(root);
         return res[k - 1];
+    }
+};
+
+class Solution {
+public:
+    void inorder(TreeNode* root, vector<int>& res) {
+        if (!root) { // 节点是空
+            return;
+        }
+
+        inorder(root->left, res);
+        res.emplace_back(root->val);
+        inorder(root->right, res);
+    }
+    int kthSmallest(TreeNode* root, int k) {
+        vector<int> res; // 定义变量保存中序遍历的数组
+        inorder(root, res); // 中序遍历
+        return res[k - 1]; // 输出第k小的数
     }
 };
 
