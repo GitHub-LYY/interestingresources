@@ -351,15 +351,11 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [701. 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/)
 
-#### [450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/)
-
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
 
 #### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
 
 #### [114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
-
-#### [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/)
 
 #### [剑指 Offer 07. 重建二叉树](https://leetcode.cn/problems/zhong-jian-er-cha-shu-lcof/)
 
@@ -502,6 +498,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/)
 
 #### [173. 二叉搜索树迭代器](https://leetcode.cn/problems/binary-search-tree-iterator/)
+
+#### [669. 修剪二叉搜索树](https://leetcode.cn/problems/trim-a-binary-search-tree/)
+
+#### [450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/)
 
 ### 排序
 

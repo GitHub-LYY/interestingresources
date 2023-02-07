@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-24
+** Date: 2022-08-24，2023-02-07
 ** Description: 429. N 叉树的层序遍历
 ** link: https://leetcode.cn/problems/n-ary-tree-level-order-traversal/
 ** reference: 代码随想录
+** 20230207，官方题解
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     TreeNode* deleteNode(TreeNode* root, int key) {
         // 第一种情况，要删除的节点为空
@@ -60,6 +61,48 @@ public:
 
         if (root->val < key) {
             root->right = deleteNode(root->right, key);
+        }
+
+        return root;
+    }
+};
+
+class Solution {
+public:
+    TreeNode* deleteNode(TreeNode* root, int key) {
+        if (!root) { // 当前节点是空，则输出空
+            return nullptr;
+        }
+
+        if (root->val < key) { // 当前节点的值小于key，则删除右子树
+            root->right = deleteNode(root->right, key);
+            return root;
+        }
+
+        if (root->val > key) { // 当前节点的值大于key，则删除左子树
+            root->left = deleteNode(root->left, key);
+            return root;
+        }
+
+        if (root->val == key) { // 当前节点的值等于key
+            if (!root->left && !root->right) { // 当前节点是叶子节点，直接删除
+                return nullptr;
+            }
+            if (!root->right) { // 当前节点仅有左子树
+                return root->left;
+            }
+            if (!root->left) { // 当前节点仅有右子树
+                return root->right;
+            }
+            // 来到这，则有左右子树
+            TreeNode* successor = root->right; // 求出当前节点右子树中最左边的节点
+            while (successor->left != nullptr) {
+                successor = successor->left;
+            }
+            root->right = deleteNode(root->right, successor->val); // 输出删除successor后的右子树
+            successor->right = root->right; // 把当前节点的右子树赋值到successor
+            successor->left = root->left; // 把当前节点的左子树赋值到successor
+            return successor; // 输出这个节点
         }
 
         return root;
