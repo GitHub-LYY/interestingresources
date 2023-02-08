@@ -327,14 +327,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 二叉树
 
-#### [145. 二叉树的后序遍历](https://leetcode.cn/problems/binary-tree-postorder-traversal/)
-
-#### [102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/)
-
-#### [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
-
-#### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
-
 #### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
 
 #### [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii/)
@@ -390,6 +382,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [222. 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
 
 #### [101. 对称二叉树](https://leetcode.cn/problems/symmetric-tree/)
+
+#### [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/)
 
 #### [437. 路径总和 III](https://leetcode.cn/problems/path-sum-iii/)
 
@@ -502,6 +496,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [669. 修剪二叉搜索树](https://leetcode.cn/problems/trim-a-binary-search-tree/)
 
 #### [450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/)
+
+#### [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree/)
+
+#### [95. 不同的二叉搜索树 II](https://leetcode.cn/problems/unique-binary-search-trees-ii/)
+
+#### [108. 将有序数组转换为二叉搜索树](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/)
+
+#### [109. 有序链表转换二叉搜索树](https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/)
 
 ### 排序
 

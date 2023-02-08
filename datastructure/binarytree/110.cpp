@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-20
+** Date: 2022-08-20，2023-02-08
 ** Description: 110. 平衡二叉树
 ** link: https://leetcode.cn/problems/balanced-binary-tree/
 ** reference: 代码随想录
+** 20230208，官方题解
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     int getHeight(TreeNode* root) {
         // 递归结束条件
@@ -58,6 +59,24 @@ public:
     bool isBalanced(TreeNode* root) {
         int height = getHeight(root);
         return height == -1 ? false : true;
+    }
+};
+
+class Solution {
+public:
+    int height(TreeNode* root) {
+        if (!root) { // 当前节点是空，则高度是0
+            return 0;
+        } else { // 当前节点不空，则求高度
+            return max(height(root->left), height(root->right)) + 1; // 左右子树中较高的再多1
+        }
+    }
+    bool isBalanced(TreeNode* root) {
+        if (!root) { // 当前节点是空，则一定是平衡二叉树
+            return true;
+        } else { // 当前节点不是空，则按题意来
+            return (abs(height(root->left) - height(root->right)) <= 1) && isBalanced(root->left) && isBalanced(root->right);
+        }
     }
 };
 
