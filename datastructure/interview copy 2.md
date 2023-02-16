@@ -327,13 +327,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 二叉树
 
-#### [404. 左叶子之和](https://leetcode.cn/problems/sum-of-left-leaves/)
-
-#### [113. 路径总和 II](https://leetcode.cn/problems/path-sum-ii/)
-
 #### [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
-
-#### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
 #### [501. 二叉搜索树中的众数](https://leetcode.cn/problems/find-mode-in-binary-search-tree/)
 
@@ -344,8 +338,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [701. 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/)
 
 #### [124. 二叉树中的最大路径和](https://leetcode.cn/problems/binary-tree-maximum-path-sum/)
-
-#### [129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/)
 
 #### [114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/)
 
@@ -504,6 +496,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [108. 将有序数组转换为二叉搜索树](https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/)
 
 #### [109. 有序链表转换二叉搜索树](https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/)
+
+### 重构二叉树
+
+#### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 
 ### 排序
 

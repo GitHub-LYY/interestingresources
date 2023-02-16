@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-15
+** Date: 2022-08-15，2023-02-16
 ** Description: 105. 从前序与中序遍历序列构造二叉树
 ** link: https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
 ** reference: 代码随想录
+** 2023-02-16，官方题解
 */
 
 #include <iostream>
@@ -21,7 +22,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     TreeNode* traversal(vector<int>& preorder, int preorderBegin, int preorderEnd, vector<int>& inorder, int inorderBegin, int inorderEnd) {
         if (preorderBegin == preorderEnd) {
@@ -75,6 +76,36 @@ public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         TreeNode* root = traversal(preorder, 0, preorder.size(), inorder, 0, inorder.size());
         return root;
+    }
+};
+
+class Solution {
+private:
+    unordered_map<int, int> val2index; // 节点值-索引哈希表
+public:
+    TreeNode* myBuildTree(vector<int>& preorder, vector<int>& inorder, int preorder_left, int preorder_right, int inorder_left, int inorder_right) {
+        if (preorder_left > preorder_right) { // 不满足了
+            return nullptr;
+        }
+
+        int preorder_root = preorder_left; // 从前序数组求出根节点的位置
+        int inorder_root = val2index[preorder[preorder_root]]; // 利用哈希表求出中序数组根节点的位置
+        int size_left_subtree = inorder_root - inorder_left; // 从中序根节点的位置求出左子树的节点数量
+
+        TreeNode* root = new TreeNode(preorder[preorder_root]); // 求出根节点
+        root->left = myBuildTree(preorder, inorder, preorder_left + 1, preorder_left + size_left_subtree, inorder_left, inorder_root - 1); // 递归求左子树
+        root->right = myBuildTree(preorder, inorder, preorder_left + size_left_subtree + 1, preorder_right, inorder_root + 1, inorder_right); // 递归求右子树
+
+        return root;
+    }
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        int len = preorder.size(); // 求出树的节点个数
+
+        for (int i = 0; i < inorder.size(); i++) { // 把中序遍历数组填充哈希表
+            val2index[inorder[i]] = i;
+        }
+        
+        return myBuildTree(preorder, inorder, 0, len - 1, 0, len - 1);
     }
 };
 
