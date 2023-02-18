@@ -327,8 +327,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 二叉树
 
-#### [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
-
 #### [501. 二叉搜索树中的众数](https://leetcode.cn/problems/find-mode-in-binary-search-tree/)
 
 #### [236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
@@ -500,6 +498,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 重构二叉树
 
 #### [105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+#### [106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
 ### 排序
 
