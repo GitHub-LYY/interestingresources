@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-02-19
 ** Description: 235. 二叉搜索树的最近公共祖先
 ** link: https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/
 ** reference: 代码随想录
+** 20230219，官方题解，方法二，不要参考代码随想录了
 */
 
 #include <iostream>
@@ -20,7 +21,7 @@ struct TreeNode {
     TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
         if (root == nullptr) {
@@ -42,6 +43,25 @@ public:
         }
 
         return root;
+    }
+};
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        TreeNode* ancestor = root; // 定义哨兵节点遍历二叉搜索树
+
+        while (1) {
+            if (ancestor->val > p->val && ancestor->val > q->val) { // 当前结点的值大于p和q的值，则往左孩子走
+                ancestor = ancestor->left;
+            } else if (ancestor->val < p->val && ancestor->val < q->val) { // 当前节点的值小于p和q的值，则往右孩子走
+                ancestor = ancestor->right;
+            } else { // 当前节点是最近公共祖先了
+                break;
+            }
+        }
+
+        return ancestor;
     }
 };
 

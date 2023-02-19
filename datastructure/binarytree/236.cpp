@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-13
+** Date: 2022-08-13，2023-02-19
 ** Description: 236. 二叉树的最近公共祖先
 ** link: https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/
 ** reference: 代码随想录
+** 20230219，官方题解
 */
 
 #include <iostream>
@@ -18,7 +19,7 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-class Solution {
+class SolutionOld {
 public:
     TreeNode* traversal(TreeNode* cur, TreeNode* p, TreeNode* q) {
         // 递归返回值
@@ -50,6 +51,29 @@ public:
         TreeNode* node = traversal(root, p, q);
 
         return node;
+    }
+};
+
+class Solution {
+public:
+    TreeNode* res;
+    bool dfs(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (!root) { // 当前节点是空
+            return false;
+        }
+
+        bool lson = dfs(root->left, p, q);
+        bool rson = dfs(root->right, p, q);
+
+        if (lson && rson || ((root->val == p->val || root->val == q->val) && (lson || rson))) {
+            res = root;
+        }
+
+        return lson || rson || (root->val == p->val || root->val == q->val);
+    }
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        dfs(root, p, q);
+        return res;
     }
 };
 
