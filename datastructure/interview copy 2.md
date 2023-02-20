@@ -507,6 +507,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [501. 二叉搜索树中的众数](https://leetcode.cn/problems/find-mode-in-binary-search-tree/)
 
+### 四叉树
+
+#### [558. 四叉树交集](https://leetcode.cn/problems/logical-or-of-two-binary-grids-represented-as-quad-trees/)
+
+#### [427. 建立四叉树](https://leetcode.cn/problems/construct-quad-tree/)
+
+### 图与搜索
+
+### 图的建立与应用
+
+#### [565. 数组嵌套](https://leetcode.cn/problems/array-nesting/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
@@ -902,3 +914,4 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [449. 序列化和反序列化二叉搜索树](https://leetcode.cn/problems/serialize-and-deserialize-bst/)
 
 #### [99. 恢复二叉搜索树](https://leetcode.cn/problems/recover-binary-search-tree/)
+
