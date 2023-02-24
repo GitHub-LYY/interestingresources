@@ -36,6 +36,8 @@ LeetCode、剑指offer题
 
 #### [73. 矩阵置零](https://leetcode.cn/problems/set-matrix-zeroes/)
 
+#### [36. 有效的数独](https://leetcode.cn/problems/valid-sudoku/)
+
 ### 链表
 
 链表的题通常需要注意两点：
@@ -529,6 +531,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [526. 优美的排列](https://leetcode.cn/problems/beautiful-arrangement/)
 
+#### [401. 二进制手表](https://leetcode.cn/problems/binary-watch/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
@@ -925,3 +929,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [99. 恢复二叉搜索树](https://leetcode.cn/problems/recover-binary-search-tree/)
 
+#### [37. 解数独](https://leetcode.cn/problems/sudoku-solver/)
+
+#### [51. N 皇后](https://leetcode.cn/problems/n-queens/)
+
+#### [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii/)
