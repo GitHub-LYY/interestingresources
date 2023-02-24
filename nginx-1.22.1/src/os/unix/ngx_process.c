@@ -30,10 +30,10 @@ int              ngx_argc;
 char           **ngx_argv;
 char           **ngx_os_argv;
 
-ngx_int_t        ngx_process_slot;
+ngx_int_t        ngx_process_slot; // 当前操作的进程在ngx_processes数组中的下标
 ngx_socket_t     ngx_channel;
-ngx_int_t        ngx_last_process;
-ngx_process_t    ngx_processes[NGX_MAX_PROCESSES];
+ngx_int_t        ngx_last_process; // ngx_processes数组中有意义的ngx_process_t元素中最大的下标
+ngx_process_t    ngx_processes[NGX_MAX_PROCESSES]; // 存储所有子进程的数组，master进程中所有子进程相关的状态信息都保存在ngx_processes数组中
 
 
 ngx_signal_t  signals[] = {
