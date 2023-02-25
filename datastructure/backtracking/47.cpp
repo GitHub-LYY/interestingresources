@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-23
+** Date: 2022-08-23，2023-02-25
 ** Description: 47. 全排列 II
 ** link: https://leetcode.cn/problems/permutations-ii/
 ** reference: 代码随想录
+** 20230225，忍者算法
 */
 
 #include <iostream>
@@ -12,7 +13,7 @@
 
 using namespace std;
 
-class Solution {
+class SolutionOld {
 private:
     vector<vector<int>> res;
     vector<int> path;
@@ -43,6 +44,40 @@ public:
         sort(nums.begin(), nums.end());
         vector<bool> used(nums.size(), false);
         backtracking(nums, used);
+        return res;
+    }
+};
+
+class Solution {
+private:
+    vector<vector<int>> res; // 定义变量保存结果
+    vector<int> path; // 定义变量保存路径
+    vector<bool> visited; // 定义变量保存是否访问的标志
+public:
+    void backtrack(vector<int>& nums) {
+        if (path.size() == nums.size()) { // 排列大小满足要求了
+            res.emplace_back(path);
+            return;
+        }
+
+        for (int i = 0; i < nums.size(); i++) {
+            if (i > 0 && nums[i] == nums[i - 1] && !visited[i - 1]) { // 去重，两个条件，当前和前边相等，且前边的没有被访问
+                continue; 
+            }
+
+            if (!visited[i]) { // 没有被访问才可以访问
+                path.emplace_back(nums[i]);
+                visited[i] = true; // 已经被访问
+                backtrack(nums); // 递归
+                visited[i] = false; 
+                path.pop_back();
+            }
+        }
+    }
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        sort(nums.begin(), nums.end()); // 一开始忘了
+        visited.resize(nums.size()); // 标志数组大小
+        backtrack(nums); // 回溯
         return res;
     }
 };

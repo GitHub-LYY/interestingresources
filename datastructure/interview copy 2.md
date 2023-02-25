@@ -533,6 +533,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [401. 二进制手表](https://leetcode.cn/problems/binary-watch/)
 
+#### [77. 组合](https://leetcode.cn/problems/combinations/)
+
+#### [39. 组合总和](https://leetcode.cn/problems/combination-sum/)
+
+#### [216. 组合总和 III](https://leetcode.cn/problems/combination-sum-iii/)
+
+#### [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii/)
+
+#### [46. 全排列](https://leetcode.cn/problems/permutations/)
+
+#### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
@@ -701,19 +713,13 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 回溯
 
-#### [46. 全排列](https://leetcode.cn/problems/permutations/)
-
 #### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/)
 
 #### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
 
 #### [78. 子集](https://leetcode.cn/problems/subsets/)
 
-#### [39. 组合总和](https://leetcode.cn/problems/combination-sum/)
-
 #### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
-
-#### [40. 组合总和 II](https://leetcode.cn/problems/combination-sum-ii/)
 
 ### 贪心
 
