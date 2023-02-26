@@ -12,6 +12,12 @@
 #include <ngx_config.h>
 
 
+/*
+ * ngx_module_t表示nginx模块的基本接口，而针对于每一种不同类型的模块，都有一个结构体
+ * 来描述这一类模块的通用接口，这个接口保存在ngx_module_t结构体的ctx成员中。例如，核心
+ * 模块的通用接口是ngx_core_module_t结构体，而事件模块的通用接口则是ngx_event_module_t
+ * 结构体
+ */
 typedef struct ngx_module_s          ngx_module_t;
 typedef struct ngx_conf_s            ngx_conf_t;
 typedef struct ngx_cycle_s           ngx_cycle_t;
@@ -21,8 +27,21 @@ typedef struct ngx_log_s             ngx_log_t;
 typedef struct ngx_open_file_s       ngx_open_file_t;
 typedef struct ngx_command_s         ngx_command_t;
 typedef struct ngx_file_s            ngx_file_t;
+/* 在nginx中，每一个事件都由ngx_event_t结构体来表示 */
 typedef struct ngx_event_s           ngx_event_t; // 和ngx_connection_t是处理TCP连接的基础数据结构
 typedef struct ngx_event_aio_s       ngx_event_aio_t;
+/*
+ * 作为web服务器，每一个用户请求至少对应着一个TCP连接，为了及时处理这个连接，
+ * 至少需要一个读事件和一个写事件，使得epoll可以有效地根据触发的事件调度相应
+ * 模块读取请求或者发送响应。因此，nginx中定义了基本的数据结构ngx_connection_t
+ * 来表示连接，这个连接表示是客户端主动发起的、nginx服务器被动接受的TCP连接，
+ * 我们可以简单称其为被动连接。同时，在有些请求的处理过程中，nginx会试图主动
+ * 向其他上游服务器建立连接，并以此连接与上游服务器通信，因此，这样的连接与
+ * ngx_connection_t又是不同的，nginx定义了ngx_peer_connection_t结构体来
+ * 表示主动连接，当然，ngx_peer_connection_t主动连接是以ngx_connection_t
+ * 结构体为基础实现的。这两种连接都不可以随意创建，必须从连接池中获取，在
+ * 9.3.3节中会说明连接池的用法
+ */
 typedef struct ngx_connection_s      ngx_connection_t; // 和ngx_event_t是处理TCP连接的基础数据结构
 typedef struct ngx_thread_task_s     ngx_thread_task_t;
 typedef struct ngx_ssl_s             ngx_ssl_t;
@@ -30,6 +49,9 @@ typedef struct ngx_proxy_protocol_s  ngx_proxy_protocol_t;
 typedef struct ngx_ssl_connection_s  ngx_ssl_connection_t;
 typedef struct ngx_udp_connection_s  ngx_udp_connection_t;
 
+/* 所有的nginx模块只要处理事件就必然要设置handler回调方法
+   每一个事件最核心的部分是handler回调方法，它将由每一个事件消费模块实现，
+   以此决定这个事件究竟如何“消费” */
 typedef void (*ngx_event_handler_pt)(ngx_event_t *ev);
 typedef void (*ngx_connection_handler_pt)(ngx_connection_t *c);
 

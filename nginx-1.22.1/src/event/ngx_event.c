@@ -268,6 +268,21 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
 }
 
 
+/* 那么，怎么把事件添加到epoll等事件驱动模块中呢？需要调用9.1.1节中提到的
+ngx_event_actions_t结构体的add方法或者del方法吗？答案是nginx为我们封装了
+两个简单的方法用于在事件驱动模块中添加或者移除事件，当前，也可以调用ngx_event_actions_t
+结构体的add或者del等方法，但并不推荐这样做，因为nginx提供的
+ngx_handle_read_event和ngx_handle_write_event方法还是做了许多通用性的工作的。
+
+ngx_handle_read_event方法会将读事件添加到事件驱动模块中，这样该事件对应的
+TCP连接上一旦出现可读事件（如接收到TCP连接另一端发送来的字符流）就会回调该事件
+的handler方法 
+
+参数rev是要操作的事件，flags将会指定事件的驱动方式。对于不同的事件驱动模块，
+flags的取值范围并不同，以linux下的epoll为例，对于ngx_epoll_module来说，
+flags的取值范围可以是0或者NGX_CLOSE_EVENT(NGX_CLOSE_EVENT仅在epoll的LT
+水平触发模式下有效)，nginx主要工作在ET模式下，一般可以忽略flags这个参数。
+该方法返回NGX_OK表示成功，返回NGX_ERROR表示失败 */
 ngx_int_t
 ngx_handle_read_event(ngx_event_t *rev, ngx_uint_t flags)
 {
@@ -336,6 +351,12 @@ ngx_handle_read_event(ngx_event_t *rev, ngx_uint_t flags)
 }
 
 
+/* ngx_handle_write_event方法会将写事件添加到事件驱动模块中。
+
+wev是要操作的事件，而lowat则表示只有当连接对应的套接字缓冲区中必须有lowat
+大小的可用空间时，事件收集器（如select或者epoll_wait调用）才能处理这个
+可写事件（lowat参数为0时表示不考虑可写缓冲区的大小）。该方法返回
+NGX_OK表示成功，返回NGX_ERROR表示失败 */
 ngx_int_t
 ngx_handle_write_event(ngx_event_t *wev, size_t lowat)
 {

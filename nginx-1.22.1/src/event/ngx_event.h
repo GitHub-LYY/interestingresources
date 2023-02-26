@@ -26,52 +26,88 @@ typedef struct {
 
 #endif
 
-
+/* 在nginx中，每一个事件都由ngx_event_t结构体来表示 */
 struct ngx_event_s {
+    /* 事件相关的对象。通常data都是指向ngx_connection_t连接对象。开启文件异步I/O时，
+       它可能会指向ngx_event_aio_t结构体 */
     void            *data;
 
+    /* 标志位，为1时表示事件是可写的。通常情况下，它表示对应的TCP连接目前状态是可写的，
+       也就是连接处于可以发送网络包的状态 */
     unsigned         write:1;
 
+    /* 标志位，为1时表示为此事件可以建立新的连接。通常情况下，在ngx_cycle_t中的
+       listening动态数组中，每一个监听对象ngx_listening_t对应的读事件中的accept
+       标志位才会是1 */
     unsigned         accept:1;
 
     /* used to detect the stale events in kqueue and epoll */
+    /* 这个标志位用于区分当前事件是否是过期的，它仅仅是给事件驱动模块使用的，而事件
+       消费模块可不用关心。为什么需要这个标志位呢？当开始处理一批事件时，处理前边的
+       事件可能会关闭一些链接，而这些链接有可能影响这批事件中还未处理到的后边的事件。
+       这时，可通过instance标志位来避免处理后边的已经过期的事件。在9.6节中，将详细
+       描述ngx_epoll_module是如何使用instance标志位区分过期事件的，这是一个巧妙的
+       设计方法 */
     unsigned         instance:1;
 
     /*
      * the event was passed or would be passed to a kernel;
      * in aio mode - operation was posted.
      */
+    /* 标志位，为1时表示当前事件是活跃的，为0时表示事件是不活跃的。这个状态对应着事件
+       驱动模块处理方式的不同。例如，在添加事件、删除事件和处理事件时，active标志位
+       的不同都会对应着不同的处理方式。在使用事件时，一般不会直接改变active标志位 */
     unsigned         active:1;
 
+    /* 标志位，为1时表示禁用事件，仅在kqueue或者rtsig事件驱动模块中有效，而对于epoll事件
+       驱动模块则无意义，这里不再详述 */
     unsigned         disabled:1;
 
     /* the ready event; in aio mode 0 means that no operation can be posted */
+    /* 标志位，为1时表示当前事件已经准备就绪，也就是说，允许这个事件的消费模块处理这个
+       事件。在HTTP框架中，经常会检查事件的ready标志位以确定是否可以接收请求或者发送
+       响应 */
     unsigned         ready:1;
 
+    /* 该标志位仅对kqueue，eventport等模块有意义，而对于linux上的epoll事件驱动模块
+       则是无意义的，限于篇幅，不再详细说明 */
     unsigned         oneshot:1;
 
     /* aio operation is complete */
+    /* 该标志位用于异步AIO事件的处理，在9.9节中会详细描述 */
     unsigned         complete:1;
 
+    /* 标志位，为1时表示当前处理的字符流已经结束 */
     unsigned         eof:1;
+    /* 标志位，为1时表示事件在处理过程中出现错误 */
     unsigned         error:1;
 
+    /* 标志位，为1时表示这个事件已经超时，用以提示事件的消费模块做超时处理，它与timer_set都
+       用于9.7节将要介绍的定时器 */
     unsigned         timedout:1;
+    /* 标志位，为1时表示这个事件存在于定时器中 */
     unsigned         timer_set:1;
 
+    /* 标志位，delayed为1时表示需要延迟处理这个事件，它仅用于限速功能 */
     unsigned         delayed:1;
 
+    /* 标志位，为1时表示延迟建立TCP连接，也就是说，经过TCP三次握手后并不建立连接，
+       而是要等到真正收到数据包后才会建立TCP连接 */
     unsigned         deferred_accept:1;
 
     /* the pending eof reported by kqueue, epoll or in aio chain operation */
+    /* 标志位，为1时表示等待字符流结束，它只与kqueue和aio事件驱动机制有关，不再详述 */
     unsigned         pending_eof:1;
 
     unsigned         posted:1;
 
+    // 标志位，为1时表示当前事件已经关闭，epoll模块没有使用它
     unsigned         closed:1;
 
     /* to test on worker exit */
+    // 该标志位目前无实际意义
     unsigned         channel:1;
+    // 该标志位目前无实际意义
     unsigned         resolver:1;
 
     unsigned         cancelable:1;
@@ -100,17 +136,24 @@ struct ngx_event_s {
 
     int              available;
 
+    /* 这个事件发生时的处理方法，每个事件消费模块都会重新实现它 
+       每一个事件最核心的部分是handler回调方法，它将由每一个事件消费模块实现，
+       以此决定这个事件究竟如何“消费” */
     ngx_event_handler_pt  handler;
 
 
 #if (NGX_HAVE_IOCP)
+    // Windows系统下的一种事件驱动模型，这里不再详述
     ngx_event_ovlp_t ovlp;
 #endif
 
+    // 由于epoll事件驱动方式不使用index，所以这里不再说明
     ngx_uint_t       index;
 
+    // 可用于记录error_log日志的ngx_log_t对象
     ngx_log_t       *log;
 
+    // 定时器节点，用于定时器红黑树中，在9.7节会详细介绍
     ngx_rbtree_node_t   timer;
 
     /* the posted queue */
@@ -164,21 +207,37 @@ struct ngx_event_aio_s {
 
 
 typedef struct {
+    /* 添加事件方法，它将负责把1个感兴趣的事件添加到操作系统提供的时间驱动机制（如
+       epoll、kqueue等）中，这样，在事件发生后，将可以在调用下边的process_events
+       时获取这个事件 */
     ngx_int_t  (*add)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);
+    /* 删除事件方法，它将把1个已经存在于事件驱动机制中的事件移除，这样以后即使这个
+       事件发生，调用process_events方法时也无法再获取这个事件 */
     ngx_int_t  (*del)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);
 
+    /* 启用1个事件，目前事件处理框架不会调用这个方法，大部分事件驱动模块对于该方法
+       的实现都是与上边的add方法完全一致的 */
     ngx_int_t  (*enable)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);
+    /* 禁用1个事件，目前事件处理框架不会调用这个方法，大部分事件驱动模块对于该方法
+       的实现都是与上边的del方法完全一致的 */
     ngx_int_t  (*disable)(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags);
 
+    /* 向事件驱动机制中添加一个新的连接，这意味着连接上的读写事件都添加到事件驱动机制中了 */
     ngx_int_t  (*add_conn)(ngx_connection_t *c);
+    /* 从事件驱动机制中移除一个连接的读写事件 */
     ngx_int_t  (*del_conn)(ngx_connection_t *c, ngx_uint_t flags);
 
     ngx_int_t  (*notify)(ngx_event_handler_pt handler);
 
+    /* 在正常的工作循环中，将通过调用process_events方法来处理事件。这个方法仅在
+       第8章中提到的ngx_process_events_and_timers方法中调用，它是处理、分发
+       事件的核心 */
     ngx_int_t  (*process_events)(ngx_cycle_t *cycle, ngx_msec_t timer,
                                  ngx_uint_t flags);
 
+    /* 初始化事件驱动模块的方法 */
     ngx_int_t  (*init)(ngx_cycle_t *cycle, ngx_msec_t timer);
+    /* 退出事件驱动模块前调用的方法 */
     void       (*done)(ngx_cycle_t *cycle);
 } ngx_event_actions_t;
 
@@ -400,6 +459,11 @@ extern ngx_uint_t            ngx_use_epoll_rdhup;
 #define ngx_process_events   ngx_event_actions.process_events
 #define ngx_done_events      ngx_event_actions.done
 
+/* 一般在向epoll中添加可读或者可写事件时，都是使用ngx_handle_read_event
+或者ngx_handle_write_event方法的。对于事件驱动模块实现的
+ngx_event_actions结构体中的事件设置方法，最好不要直接调用，下面这4个方法
+直接使用时都会与具体的事件驱动机制强相关，而使用ngx_handle_read_event
+或者ngx_handle_write_event方法则可以屏蔽这种差异 */
 #define ngx_add_event        ngx_event_actions.add
 #define ngx_del_event        ngx_event_actions.del
 #define ngx_add_conn         ngx_event_actions.add_conn
@@ -443,13 +507,17 @@ typedef struct {
 } ngx_event_conf_t;
 
 
+/* 事件模块的通用接口 */
 typedef struct {
-    ngx_str_t              *name;
+    ngx_str_t              *name; // 事件模块的名称
 
+    // create_conf和init_conf方法的调用可参见图9-3
+    // 在解析配置项前，这个回调方法用于创建存储配置项参数的结构体
     void                 *(*create_conf)(ngx_cycle_t *cycle);
+    // 在解析配置项完成后，init_conf方法会被调用，用以综合处理当前事件模块感兴趣的全部配置项
     char                 *(*init_conf)(ngx_cycle_t *cycle, void *conf);
 
-    ngx_event_actions_t     actions;
+    ngx_event_actions_t     actions; // 对于事件驱动机制，每个事件模块需要实现的10个抽象方法
 } ngx_event_module_t;
 
 
@@ -509,6 +577,15 @@ void ngx_debug_accepted_connection(ngx_event_conf_t *ecf, ngx_connection_t *c);
 
 
 void ngx_process_events_and_timers(ngx_cycle_t *cycle);
+/* 那么，怎么把事件添加到epoll等事件驱动模块中呢？需要调用9.1.1节中提到的
+ngx_event_actions_t结构体的add方法或者del方法吗？答案是nginx为我们封装了
+两个简单的方法用于在事件驱动模块中添加或者移除事件，当前，也可以调用ngx_event_actions_t
+结构体的add或者del等方法，但并不推荐这样做，因为nginx提供的
+ngx_handle_read_event和ngx_handle_write_event方法还是做了许多通用性的工作的。
+
+ngx_handle_read_event方法会将读事件添加到事件驱动模块中，这样该事件对应的
+TCP连接上一旦出现可读事件（如接收到TCP连接另一端发送来的字符流）就会回调该事件
+的handler方法 */
 ngx_int_t ngx_handle_read_event(ngx_event_t *rev, ngx_uint_t flags);
 ngx_int_t ngx_handle_write_event(ngx_event_t *wev, size_t lowat);
 

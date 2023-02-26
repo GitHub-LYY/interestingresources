@@ -219,6 +219,12 @@
 #define NGX_MODULE_V1_PADDING  0, 0, 0, 0, 0, 0, 0, 0
 
 
+/*
+ * ngx_module_t表示nginx模块的基本接口，而针对于每一种不同类型的模块，都有一个结构体
+ * 来描述这一类模块的通用接口，这个接口保存在ngx_module_t结构体的ctx成员中。例如，核心
+ * 模块的通用接口是ngx_core_module_t结构体，而事件模块的通用接口则是ngx_event_module_t
+ * 结构体
+ */
 struct ngx_module_s {
     ngx_uint_t            ctx_index;
     ngx_uint_t            index;
