@@ -545,6 +545,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
 
+#### [491. 递增子序列](https://leetcode.cn/problems/non-decreasing-subsequences/)
+
+#### [78. 子集](https://leetcode.cn/problems/subsets/)
+
+#### [90. 子集 II](https://leetcode.cn/problems/subsets-ii/)
+
 ### 排序
 
 #### [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
@@ -560,6 +566,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 双指针
 
 #### [31. 下一个排列](https://leetcode.cn/problems/next-permutation/)
+
+#### [556. 下一个更大元素 III](https://leetcode.cn/problems/next-greater-element-iii/)
 
 #### [165. 比较版本号](https://leetcode.cn/problems/compare-version-numbers/)
 
@@ -716,8 +724,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/)
 
 #### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
-
-#### [78. 子集](https://leetcode.cn/problems/subsets/)
 
 #### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
 
@@ -940,3 +946,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [51. N 皇后](https://leetcode.cn/problems/n-queens/)
 
 #### [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii/)
+
+#### [60. 排列序列](https://leetcode.cn/problems/permutation-sequence/)

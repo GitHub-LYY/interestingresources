@@ -1,9 +1,10 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-22
+** Date: 2022-08-22，2023-02-26
 ** Description: 78. 子集
 ** link: https://leetcode.cn/problems/subsets/
 ** reference: 代码随想录
+** 20230226，子集理解后写的
 */
 
 #include <iostream>
@@ -11,7 +12,7 @@
 
 using namespace std;
 
-class Solution {
+class SolutionOld {
 public:
     vector<vector<int>> res;
     vector<int> path;
@@ -37,6 +38,26 @@ public:
             return res;
         }
         backtracking(nums, 0);
+        return res;
+    }
+};
+
+class Solution {
+private:
+    vector<vector<int>> res; // 定义变量保存结果
+    vector<int> path; // 定义变量保存子集
+public:
+    void backtrack(vector<int>& nums, int startIndex) {
+        res.emplace_back(path); // 子集不用判断条件
+
+        for (int i = startIndex; i < nums.size(); i++) {
+            path.emplace_back(nums[i]);
+            backtrack(nums, i + 1);
+            path.pop_back();
+        }
+    }
+    vector<vector<int>> subsets(vector<int>& nums) {
+        backtrack(nums, 0);
         return res;
     }
 };
