@@ -529,6 +529,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 回溯法
 
+回溯法的题，官方题解不是特别容易理解。
+
 #### [526. 优美的排列](https://leetcode.cn/problems/beautiful-arrangement/)
 
 #### [401. 二进制手表](https://leetcode.cn/problems/binary-watch/)
@@ -550,6 +552,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [78. 子集](https://leetcode.cn/problems/subsets/)
 
 #### [90. 子集 II](https://leetcode.cn/problems/subsets-ii/)
+
+#### [79. 单词搜索](https://leetcode.cn/problems/word-search/)
+
+#### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/)
 
 ### 排序
 
@@ -695,8 +701,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
 
-#### [79. 单词搜索](https://leetcode.cn/problems/word-search/)
-
 #### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 #### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
@@ -721,11 +725,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 回溯
 
-#### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/)
-
 #### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
-
-#### [47. 全排列 II](https://leetcode.cn/problems/permutations-ii/)
 
 ### 贪心
 
@@ -948,3 +948,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [52. N 皇后 II](https://leetcode.cn/problems/n-queens-ii/)
 
 #### [60. 排列序列](https://leetcode.cn/problems/permutation-sequence/)
+
+#### [332. 重新安排行程](https://leetcode.cn/problems/reconstruct-itinerary/)
