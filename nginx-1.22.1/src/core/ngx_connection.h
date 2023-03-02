@@ -140,30 +140,44 @@ typedef enum {
 
 
 struct ngx_connection_s {
+    /*
+     * 连接未使用时，data成员用于充当连接池中空闲连接链表中的next指针。
+     * 当连接被使用时，data的意义由使用它的Nginx模块而定，如在HTTP
+     * 框架中，data指向ngx_http_request_t请求。
+     */
     void               *data;
-    ngx_event_t        *read;
-    ngx_event_t        *write;
+    ngx_event_t        *read; // 连接对应的读事件
+    ngx_event_t        *write; // 连接对应的写事件
 
-    ngx_socket_t        fd;
+    ngx_socket_t        fd; // 套接字句柄
 
-    ngx_recv_pt         recv;
-    ngx_send_pt         send;
-    ngx_recv_chain_pt   recv_chain;
-    ngx_send_chain_pt   send_chain;
+    ngx_recv_pt         recv; // 直接接收网络字符流的方法
+    ngx_send_pt         send; // 直接发送网络字符流的方法
+    ngx_recv_chain_pt   recv_chain; // 以ngx_chain_t链表为参数来接收网络字符流的方法
+    ngx_send_chain_pt   send_chain; // 以ngx_chain_t链表为参数来发送网络字符流的方法
 
+    /*
+     * 这个连接对应的ngx_listening_t监听对象，此连接由listening监听端口的事件建立
+     */
     ngx_listening_t    *listening;
 
-    off_t               sent;
+    off_t               sent; // 这个连接上已经发送出去的字节数
 
-    ngx_log_t          *log;
+    ngx_log_t          *log; // 可以记录日志的ngx_log_t对象
 
+    /*
+     * 内存池。一般在accept一个新连接时，会创建一个内存池，而在这个连接结束时会
+     * 销毁内存池。注意，这里所说的连接是指成功建立的TCP连接，所有的
+     * ngx_connection_t结构体都是预分配的。这个内存池的大小将由上面的listening
+     * 监听对象中的pool_size成员决定
+     */
     ngx_pool_t         *pool;
 
     int                 type;
 
-    struct sockaddr    *sockaddr;
-    socklen_t           socklen;
-    ngx_str_t           addr_text;
+    struct sockaddr    *sockaddr; // 连接客户端的sockaddr结构体
+    socklen_t           socklen; // sockaddr结构体的长度
+    ngx_str_t           addr_text; // 连接客户端字符串形式的IP地址
 
     ngx_proxy_protocol_t  *proxy_protocol;
 
@@ -173,18 +187,51 @@ struct ngx_connection_s {
 
     ngx_udp_connection_t  *udp;
 
+    /*
+     * 本机的监听端口对应的sockaddr结构体，也就是listening监听对象中的sockaddr成员
+     */
     struct sockaddr    *local_sockaddr;
     socklen_t           local_socklen;
 
+    /*
+     * 用于接收、缓存客户端发来的字符流，每个事件消费模块可自由决定从连接池中分配
+     * 多大的空间给buffer这个接收缓存字段。例如，在HTTP模块中，它的大小决定于
+     * client_header_size配置项
+     */
     ngx_buf_t          *buffer;
 
+    /*
+     * 该字段用来将当前连接以双向链表元素的形式添加到ngx_cycle_t核心结构体的
+     * reusable_connections_queue双向链表中，表示可以重用的连接
+     */
     ngx_queue_t         queue;
 
+    // 连接使用次数。ngx_connection_t结构体每次建立一条来自客户端的连接，或者
+    // 用于主动向后端服务器发起连接时（ngx_peer_connection_t也使用它），
+    // number都会加1
     ngx_atomic_uint_t   number;
 
     ngx_msec_t          start_time;
-    ngx_uint_t          requests;
+    // 处理的请求次数
+    ngx_uint_t          requests; 
 
+    /*
+     * 缓存中的业务类型。任何事件消费模块都可以自定义需要的标志位。这个buffered字段有
+     * 8位，最多可以同时表示8个不同的业务。第三方模块在自定义buffered标志位时注意不要
+     * 与可能使用的模块定义的标志位冲突。目前openssl模块定义了一个标志位：
+     * #define NGX_SSL_BUFFERED        0x01
+     * HTTP官方模块定义了以下标志位：
+     * #define NGX_HTTP_LOWLEVEL_BUFFERED    0xf0
+     * #define NGX_HTTP_WRITE_BUFFERED       0x10
+     * #define NGX_HTTP_GZIP_BUFFERED        0x20
+     * #define NGX_HTTP_SSI_BUFFERED         0x01
+     * #define NGX_HTTP_SUB_BUFFERED         0x02
+     * #define NGX_HTTP_COPY_BUFFERED        0x04
+     * #define NGX_HTTP_IMAGE_BUFFERED       0x08
+     * 同时，对弈HTTP模块而言，buffered的低4位要慎用，在实际发送响应的ngx_http_write_filter_module
+     * 过滤模块中，低4位标志位为1则意味着nginx会一直认为有HTTP模块还需要处理这个请求，
+     * 必须等待HTTP模块将低4位全置为0才会正常结束请
+     */
     unsigned            buffered:8;
 
     unsigned            log_error:3;     /* ngx_connection_log_error_e */
