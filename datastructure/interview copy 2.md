@@ -521,11 +521,23 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [565. 数组嵌套](https://leetcode.cn/problems/array-nesting/)
 
-### 深度优先搜索
+### 深度优先搜索DFS/广度优先搜索BFS
 
 #### [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
 
 #### [397. 整数替换](https://leetcode.cn/problems/integer-replacement/)
+
+#### [133. 克隆图](https://leetcode.cn/problems/clone-graph/)
+
+#### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
+
+#### [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
+
+#### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
+
+#### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
+
+#### [463. 岛屿的周长](https://leetcode.cn/problems/island-perimeter/)
 
 ### 回溯法
 
@@ -556,6 +568,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [79. 单词搜索](https://leetcode.cn/problems/word-search/)
 
 #### [93. 复原 IP 地址](https://leetcode.cn/problems/restore-ip-addresses/)
+
+### 回溯法与表达式
+
+#### [241. 为运算表达式设计优先级](https://leetcode.cn/problems/different-ways-to-add-parentheses/)
+
+### 回溯法与括号
+
+#### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
 
 ### 排序
 
@@ -695,16 +715,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [剑指 Offer 53 - II. 0～n-1中缺失的数字](https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/)
 
-### DFS/BFS
-
-#### [200. 岛屿数量](https://leetcode.cn/problems/number-of-islands/)
-
-#### [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
-
-#### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
-
-#### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
-
 ### 方向数组
 
 #### [661. 图片平滑器](https://leetcode.cn/problems/image-smoother/)
@@ -722,10 +732,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [657. 机器人能否返回原点](https://leetcode.cn/problems/robot-return-to-origin/)
 
 #### [537. 复数乘法](https://leetcode.cn/problems/complex-number-multiplication/)
-
-### 回溯
-
-#### [22. 括号生成](https://leetcode.cn/problems/generate-parentheses/)
 
 ### 贪心
 
@@ -950,3 +956,11 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [60. 排列序列](https://leetcode.cn/problems/permutation-sequence/)
 
 #### [332. 重新安排行程](https://leetcode.cn/problems/reconstruct-itinerary/)
+
+#### [282. 给表达式添加运算符](https://leetcode.cn/problems/expression-add-operators/)
+
+#### [679. 24 点游戏](https://leetcode.cn/problems/24-game/)
+
+#### [301. 删除无效的括号](https://leetcode.cn/problems/remove-invalid-parentheses/)
+
+#### [488. 祖玛游戏](https://leetcode.cn/problems/zuma-game/)
