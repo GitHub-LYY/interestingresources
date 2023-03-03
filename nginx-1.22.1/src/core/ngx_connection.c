@@ -1093,6 +1093,11 @@ ngx_close_listening_sockets(ngx_cycle_t *cycle)
 }
 
 
+/*
+ * s是这条连接的套接字句柄
+ * log则是记录日志的对象
+ * 执行意义：从连接池中获取一个ngx_connection_t结构体，同时获取相应的读/写事件
+ */
 ngx_connection_t *
 ngx_get_connection(ngx_socket_t s, ngx_log_t *log)
 {
@@ -1159,6 +1164,10 @@ ngx_get_connection(ngx_socket_t s, ngx_log_t *log)
 }
 
 
+/*
+ * c是需要回收的连接
+ * 执行意义：将这个连接回收到连接池中
+ */
 void
 ngx_free_connection(ngx_connection_t *c)
 {

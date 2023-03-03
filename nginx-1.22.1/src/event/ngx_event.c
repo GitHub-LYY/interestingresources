@@ -79,6 +79,11 @@ ngx_atomic_t         *ngx_stat_waiting = &ngx_stat_waiting0;
 
 
 
+/*
+ * ngx_events_commands数组决定了ngx_events_module模块是如何定制其功能的
+ * 可以看到，ngx_events_module模块只对一个块配置项感兴趣，也就是nginx.conf
+ * 中必须有的events{...}配置项。
+ */
 static ngx_command_t  ngx_events_commands[] = {
 
     { ngx_string("events"),
@@ -92,13 +97,37 @@ static ngx_command_t  ngx_events_commands[] = {
 };
 
 
+/*
+ * 作为核心模块，ngx_events_module还需要实现核心模块的
+ * 共同接口ngx_core_module_t
+ * 
+ * 可以看到，ngx_events_module_ctx实现的接口只是定义
+ * 了模块名字而已，ngx_core_module_t接口中定义的
+ * create_conf方法和init_conf方法都没有实习（NULL
+ * 空指针即为不实现），为什么呢？这是因为ngx_events_module模块
+ * 并不会解析配置项的参数，只是在出现events配置项后
+ * 会调用各事件模块去解析events{...}块内的配置项，自然
+ * 就不需要实现create_conf方法来创建存储培训证参数的结构体，
+ * 也不需要实现init_conf方法处理解析出的配置项
+ */
 static ngx_core_module_t  ngx_events_module_ctx = {
     ngx_string("events"),
     NULL,
     ngx_event_init_conf
 };
 
-
+/*
+ * 定义一个nginx模块就是在实现ngx_module_t结构体。
+ * 这里需要先定义好ngx_command_t（决定这个模块如何
+ * 处理自己感兴趣的配置项）数组，因为任何模块都是以
+ * 配置项来定制功能的。ngx_events_commands数组决定
+ * 了ngx_events_module模块是如何定制其功能的。
+ * 
+ * 作为核心模块，ngx_events_module还需要实现核心模块的
+ * 共同接口ngx_core_module_t
+ * 
+ * 可见，除了对events配置项的解析外，该模块没有做任何事情。
+ */
 ngx_module_t  ngx_events_module = {
     NGX_MODULE_V1,
     &ngx_events_module_ctx,                /* module context */

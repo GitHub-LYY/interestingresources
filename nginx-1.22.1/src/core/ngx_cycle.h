@@ -117,6 +117,7 @@ struct ngx_cycle_s {
 
     /*
      * 指向当前进程中的所有连接对象，与connection_n配合使用
+     * 连接池详细参考317页的9.3.3节的图9-1
      */
     ngx_connection_t         *connections;
     /*

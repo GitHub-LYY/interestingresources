@@ -230,24 +230,68 @@ struct ngx_connection_s {
      * #define NGX_HTTP_IMAGE_BUFFERED       0x08
      * 同时，对弈HTTP模块而言，buffered的低4位要慎用，在实际发送响应的ngx_http_write_filter_module
      * 过滤模块中，低4位标志位为1则意味着nginx会一直认为有HTTP模块还需要处理这个请求，
-     * 必须等待HTTP模块将低4位全置为0才会正常结束请
+     * 必须等待HTTP模块将低4位全置为0才会正常结束请求。检查低4位的宏如下：
+     * #define NGX_LOWLEVEL_BUFFERED 0x0f
      */
     unsigned            buffered:8;
 
+    /*
+     * 本连接记录日志时的级别，它占用了3位，取值范围是0~7，但实际上目前只定义
+     * 了5个值，由ngx_connection_log_error_e枚举表示，如下：
+     * typedef enum {
+     *      NGX_ERROR_ALERT = 0,
+     *      NGX_ERROR_ERR,
+     *      NGX_ERROR_INFO,
+     *      NGX_ERROR_IGNORE_ECONNRESET,
+     *      NGX_ERROR_IGNORE_EINVAL
+     * } ngx_connection_log_error_e;
+     */
     unsigned            log_error:3;     /* ngx_connection_log_error_e */
 
-    unsigned            timedout:1;
-    unsigned            error:1;
+    unsigned            timedout:1; // 标志位，为1时表示连接已经超时
+    unsigned            error:1; // 标志位，为1时表示连接处理过程中出现错误
+    /*
+     * 标志位，为1时表示连接已经销毁。这里的连接指的是TCP连接，而不是
+     * ngx_connection_t结构体。当destroyed为1时，ngx_connection_t结构体
+     * 仍然存在，但其对应的套接字、内存池等已经不可用
+     */
     unsigned            destroyed:1;
 
+    // 标志位，为1时表示连接处于空闲状态，如keepalive请求中两次请求之间的状态
     unsigned            idle:1;
+    // 标志位，为1时表示连接可重用，它与上面的queue字段是对应使用的
     unsigned            reusable:1;
+    // 标志位，为1时表示连接关闭
     unsigned            close:1;
     unsigned            shared:1;
 
+    // 标志位，为1时表示正在将文件中的数据发往连接的另一端
     unsigned            sendfile:1;
+    /*
+     * 标志位，如果为1，则表示只有在连接套接字对应的发送缓冲区必须满足最低设置的大小阈值
+     * 时，事件驱动模块才会分发该事件。这与上文介绍过的ngx_handle_write_event方法中的
+     * lowat参数是对应的
+     */
     unsigned            sndlowat:1;
+    /*
+     * 标志位，表示如何使用TCP的nodelay特性。它的取值范围是下面这个枚举类型
+     * ngx_connection_tcp_nodelay_e：
+     * typedef enum {
+     *      NGX_TCP_NODELAY_UNSET = 0,
+     *      NGX_TCP_NODELAY_SET,
+     *      NGX_TCP_NODELAY_DISABLED
+     * } ngx_connection_tcp_nodelay_e;
+     */
     unsigned            tcp_nodelay:2;   /* ngx_connection_tcp_nodelay_e */
+    /*
+     * 标志位，表示如何使用TCP的nopush特性。它的取值范围是下面这个枚举类型
+     * ngx_connection_tcp_nopush_e：
+     * typedef enum {
+     *      NGX_TCP_NOPUSH_UNSET = 0,
+     *      NGX_TCP_NOPUSH_SET,
+     *      NGX_TCP_NOPUSH_DISABLED
+     * } ngx_connection_tcp_nopush_e;
+     */
     unsigned            tcp_nopush:2;    /* ngx_connection_tcp_nopush_e */
 
     unsigned            need_last_buf:1;
