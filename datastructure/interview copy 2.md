@@ -521,7 +521,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [565. 数组嵌套](https://leetcode.cn/problems/array-nesting/)
 
-### 深度优先搜索DFS/广度优先搜索BFS
+### 深度优先搜索DFS
 
 #### [17. 电话号码的字母组合](https://leetcode.cn/problems/letter-combinations-of-a-phone-number/)
 
@@ -538,6 +538,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
 
 #### [463. 岛屿的周长](https://leetcode.cn/problems/island-perimeter/)
+
+### 广度优先搜索BFS
+
+#### [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges/)
 
 ### 回溯法
 
