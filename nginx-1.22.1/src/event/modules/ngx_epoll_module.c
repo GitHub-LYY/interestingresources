@@ -130,9 +130,9 @@ static void ngx_epoll_eventfd_handler(ngx_event_t *ev);
 static void *ngx_epoll_create_conf(ngx_cycle_t *cycle);
 static char *ngx_epoll_init_conf(ngx_cycle_t *cycle, void *conf);
 
-static int                  ep = -1;
-static struct epoll_event  *event_list;
-static ngx_uint_t           nevents;
+static int                  ep = -1; // epoll对象的描述符
+static struct epoll_event  *event_list; // event_list数组就是用于在epoll_wait调用中接收事件的参数
+static ngx_uint_t           nevents; // nevents是上面说到的epoll_events配置项参数，它既指明了epoll_wait一次返回的最大事件数，也告诉了event_list应该分配的数组大小
 
 #if (NGX_HAVE_EVENTFD)
 static int                  notify_fd = -1;
@@ -156,18 +156,30 @@ ngx_uint_t                  ngx_use_epoll_rdhup;
 
 static ngx_str_t      epoll_name = ngx_string("epoll");
 
+/*
+ * ngx_epoll_commands数组指明了影响其可定制性的两个配置项
+ */
 static ngx_command_t  ngx_epoll_commands[] = {
 
+    /*
+     * 在调用epoll_wait时，将由第2和第3个参数告诉Linux内核一次最多可返回
+     * 多少个事件。这个配置项表示调用一次epoll_wait时最多可以返回的事件数，
+     * 当然，它也会预分配那么多epoll_event结构体用于存储事件
+     */
     { ngx_string("epoll_events"),
       NGX_EVENT_CONF|NGX_CONF_TAKE1,
-      ngx_conf_set_num_slot,
+      ngx_conf_set_num_slot, // 使用预分配的ngx_conf_set_num_slot方法来解析配置项
       0,
       offsetof(ngx_epoll_conf_t, events),
       NULL },
 
+    /*
+     * 指明在开启异步I/O且使用io_setup系统调用初始化异步I/O上下文环境时，
+     * 初始分配的异步I/O事件个数，详见9.9节
+     */
     { ngx_string("worker_aio_requests"),
       NGX_EVENT_CONF|NGX_CONF_TAKE1,
-      ngx_conf_set_num_slot,
+      ngx_conf_set_num_slot, // 使用预分配的ngx_conf_set_num_slot方法来解析配置项
       0,
       offsetof(ngx_epoll_conf_t, aio_requests),
       NULL },
@@ -178,23 +190,35 @@ static ngx_command_t  ngx_epoll_commands[] = {
 
 static ngx_event_module_t  ngx_epoll_module_ctx = {
     &epoll_name,
+    // 解析配置项
     ngx_epoll_create_conf,               /* create configuration */
+    // 解析配置项
     ngx_epoll_init_conf,                 /* init configuration */
 
     {
+        // 对应于ngx_event_actions_t中的add方法
         ngx_epoll_add_event,             /* add an event */
+        // 对应于ngx_event_actions_t中的del方法
         ngx_epoll_del_event,             /* delete an event */
+        // 对应于ngx_event_actions_t中的enable方法，与add方法一致
         ngx_epoll_add_event,             /* enable an event */
+        // 对应于ngx_event_actions_t中的disable方法，与del方法一致
         ngx_epoll_del_event,             /* disable an event */
+        // 对应于ngx_event_actions_t中的add_conn方法
         ngx_epoll_add_connection,        /* add an connection */
+        // 对应于ngx_event_actions_t中的del_conn方法
         ngx_epoll_del_connection,        /* delete an connection */
 #if (NGX_HAVE_EVENTFD)
         ngx_epoll_notify,                /* trigger a notify */
 #else
+        // 未实现ngx_event_actions_t中的process_changes方法
         NULL,                            /* trigger a notify */
 #endif
+        // 对应于ngx_event_actions_t中的process_events方法
         ngx_epoll_process_events,        /* process the events */
+        // 对应于ngx_event_actions_t中的init方法
         ngx_epoll_init,                  /* init the events */
+        // 对应于ngx_event_actions_t中的done方法
         ngx_epoll_done,                  /* done the events */
     }
 };
@@ -319,6 +343,11 @@ failed:
 #endif
 
 
+/*
+ * ngx_epoll_init方法主要做了两件事：
+ * 1）调用epoll_create方法创建epoll对象
+ * 2）创建event_list数组，用于进行epoll_wait调用时传递内核态的事件
+ */
 static ngx_int_t
 ngx_epoll_init(ngx_cycle_t *cycle, ngx_msec_t timer)
 {
@@ -327,6 +356,11 @@ ngx_epoll_init(ngx_cycle_t *cycle, ngx_msec_t timer)
     epcf = ngx_event_get_conf(cycle->conf_ctx, ngx_epoll_module);
 
     if (ep == -1) {
+        /*
+         * 调用epoll_create在内核中创建epoll对象。上文已经讲过，参数size不是用于指明epoll
+         * 能够处理的最大事件个数，因为在许多Linux内核版本中，epoll是不处理这个参数的，所以
+         * 设为cycle->connection_n/2（而不是cycle->connection_n）也不要紧
+         */
         ep = epoll_create(cycle->connection_n / 2);
 
         if (ep == -1) {
@@ -342,6 +376,7 @@ ngx_epoll_init(ngx_cycle_t *cycle, ngx_msec_t timer)
 #endif
 
 #if (NGX_HAVE_FILE_AIO)
+        // 异步I/O内容可参见9.9节
         ngx_epoll_aio_init(cycle, epcf);
 #endif
 
@@ -355,6 +390,7 @@ ngx_epoll_init(ngx_cycle_t *cycle, ngx_msec_t timer)
             ngx_free(event_list);
         }
 
+        // 初始化event_list数组。数组个数是配置项epoll_events的参数
         event_list = ngx_alloc(sizeof(struct epoll_event) * epcf->events,
                                cycle->log);
         if (event_list == NULL) {
@@ -362,13 +398,20 @@ ngx_epoll_init(ngx_cycle_t *cycle, ngx_msec_t timer)
         }
     }
 
+    // nevents也是配置项epoll_events的参数
     nevents = epcf->events;
 
+    // 指明读写I/O的方法，本章不做具体说明
     ngx_io = ngx_os_io;
 
+    // 设置ngx_event_actions接口
     ngx_event_actions = ngx_epoll_module_ctx.actions;
 
 #if (NGX_HAVE_CLEAR_EVENT)
+    /*
+     * 默认是采用ET模式来使用epoll的，NGX_USE_CLEAR_EVENT宏实际上就是在
+     * 告诉nginx使用ET模式
+     */
     ngx_event_flags = NGX_USE_CLEAR_EVENT
 #else
     ngx_event_flags = NGX_USE_LEVEL_EVENT
@@ -584,8 +627,13 @@ ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags)
     ngx_connection_t    *c;
     struct epoll_event   ee;
 
+    // 每个事件的data成员都存放着其对应的ngx_connection_t连接
     c = ev->data;
 
+    /*
+     * 下面会根据event参数确定档期事件是读事件还是写事件，这会决定events是加上EPOLLIN
+     * 标志位还是EPOLLOUT标志位
+     */
     events = (uint32_t) event;
 
     if (event == NGX_READ_EVENT) {
@@ -603,6 +651,7 @@ ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags)
 #endif
     }
 
+    // 根据active标志位确定是否为活跃事件，以决定到底是修改还是添加事件
     if (e->active) {
         op = EPOLL_CTL_MOD;
         events |= prev;
@@ -617,13 +666,19 @@ ngx_epoll_add_event(ngx_event_t *ev, ngx_int_t event, ngx_uint_t flags)
     }
 #endif
 
+    // 加入flags参数到events标志位中
     ee.events = events | (uint32_t) flags;
+    /*
+     * ptr成员存储的是ngx_connection_t连接，可参见9.6.2节中epoll的使用方式。在9.2节中曾经提到过事件的
+     * instance标志位，下面就配合ngx_epoll_process_events方法说明它的用法
+     */
     ee.data.ptr = (void *) ((uintptr_t) c | ev->instance);
 
     ngx_log_debug3(NGX_LOG_DEBUG_EVENT, ev->log, 0,
                    "epoll add event: fd:%d op:%d ev:%08XD",
                    c->fd, op, ee.events);
 
+    // 调用epoll_ctl方法向epoll中添加事件或者在epoll中修改事件
     if (epoll_ctl(ep, op, c->fd, &ee) == -1) {
         ngx_log_error(NGX_LOG_ALERT, ev->log, ngx_errno,
                       "epoll_ctl(%d, %d) failed", op, c->fd);
