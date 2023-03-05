@@ -533,6 +533,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [695. 岛屿的最大面积](https://leetcode.cn/problems/max-area-of-island/)
 
+#### [130. 被围绕的区域](https://leetcode.cn/problems/surrounded-regions/)
+
+#### [417. 太平洋大西洋水流问题](https://leetcode.cn/problems/pacific-atlantic-water-flow/)
+
 #### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 #### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
@@ -542,6 +546,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 广度优先搜索BFS
 
 #### [994. 腐烂的橘子](https://leetcode.cn/problems/rotting-oranges/)
+
+#### [542. 01 矩阵](https://leetcode.cn/problems/01-matrix/)
 
 ### 回溯法
 
