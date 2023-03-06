@@ -1103,6 +1103,7 @@ ngx_get_connection(ngx_socket_t s, ngx_log_t *log)
 {
     ngx_uint_t         instance;
     ngx_event_t       *rev, *wev;
+    // 从连接池中获取一个连接
     ngx_connection_t  *c;
 
     /* disable warning: Win32 SOCKET is u_int while UNIX socket is int */
@@ -1149,6 +1150,7 @@ ngx_get_connection(ngx_socket_t s, ngx_log_t *log)
     ngx_memzero(rev, sizeof(ngx_event_t));
     ngx_memzero(wev, sizeof(ngx_event_t));
 
+    // 将instance标志位置为原来的相反值
     rev->instance = !instance;
     wev->instance = !instance;
 
