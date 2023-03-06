@@ -537,6 +537,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [417. 太平洋大西洋水流问题](https://leetcode.cn/problems/pacific-atlantic-water-flow/)
 
+#### [529. 扫雷游戏](https://leetcode.cn/problems/minesweeper/)
+
 #### [剑指 Offer 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 #### [面试题13. 机器人的运动范围](https://leetcode.cn/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
@@ -974,3 +976,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [301. 删除无效的括号](https://leetcode.cn/problems/remove-invalid-parentheses/)
 
 #### [488. 祖玛游戏](https://leetcode.cn/problems/zuma-game/)
+
+#### [127. 单词接龙](https://leetcode.cn/problems/word-ladder/)
+
+#### [126. 单词接龙 II](https://leetcode.cn/problems/word-ladder-ii/)
