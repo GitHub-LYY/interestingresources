@@ -551,6 +551,8 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [542. 01 矩阵](https://leetcode.cn/problems/01-matrix/)
 
+#### [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation/)
+
 ### 回溯法
 
 回溯法的题，官方题解不是特别容易理解。
@@ -980,3 +982,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [127. 单词接龙](https://leetcode.cn/problems/word-ladder/)
 
 #### [126. 单词接龙 II](https://leetcode.cn/problems/word-ladder-ii/)
+
+#### [675. 为高尔夫比赛砍树](https://leetcode.cn/problems/cut-off-trees-for-golf-event/)
