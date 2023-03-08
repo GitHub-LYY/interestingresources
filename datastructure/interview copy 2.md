@@ -553,6 +553,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation/)
 
+### 并查集
+
+#### [547. 省份数量](https://leetcode.cn/problems/number-of-provinces/)
+
+#### [684. 冗余连接](https://leetcode.cn/problems/redundant-connection/)
+
+#### [685. 冗余连接 II](https://leetcode.cn/problems/redundant-connection-ii/)
+
+### 有限状态自动机
+
+#### [65. 有效数字](https://leetcode.cn/problems/valid-number/)
+
 ### 回溯法
 
 回溯法的题，官方题解不是特别容易理解。
@@ -728,6 +740,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [剑指 Offer 53 - I. 在排序数组中查找数字 I](https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
 
 #### [剑指 Offer 53 - II. 0～n-1中缺失的数字](https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/)
+
+### 二分搜索应用（简单）
+
+#### [374. 猜数字大小](https://leetcode.cn/problems/guess-number-higher-or-lower/)
+
+#### [35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
+
+#### [278. 第一个错误的版本](https://leetcode.cn/problems/first-bad-version/)
 
 ### 方向数组
 
@@ -984,3 +1004,11 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [126. 单词接龙 II](https://leetcode.cn/problems/word-ladder-ii/)
 
 #### [675. 为高尔夫比赛砍树](https://leetcode.cn/problems/cut-off-trees-for-golf-event/)
+
+#### [399. 除法求值](https://leetcode.cn/problems/evaluate-division/)
+
+#### [207. 课程表](https://leetcode.cn/problems/course-schedule/)
+
+#### [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
+
+#### [468. 验证IP地址](https://leetcode.cn/problems/validate-ip-address/)
