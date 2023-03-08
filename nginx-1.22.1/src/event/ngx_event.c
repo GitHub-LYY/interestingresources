@@ -88,7 +88,7 @@ static ngx_command_t  ngx_events_commands[] = {
 
     { ngx_string("events"),
       NGX_MAIN_CONF|NGX_CONF_BLOCK|NGX_CONF_NOARGS,
-      ngx_events_block,
+      ngx_events_block, // ngx_events_block方法是处理这个events{...}配置项的方法
       0,
       0,
       NULL },
