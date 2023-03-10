@@ -731,8 +731,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
 
-#### [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
-
 #### [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
 
 #### [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
@@ -748,6 +746,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [35. 搜索插入位置](https://leetcode.cn/problems/search-insert-position/)
 
 #### [278. 第一个错误的版本](https://leetcode.cn/problems/first-bad-version/)
+
+#### [367. 有效的完全平方数](https://leetcode.cn/problems/valid-perfect-square/)
+
+#### [69. x 的平方根 ](https://leetcode.cn/problems/sqrtx/)
+
+#### [441. 排列硬币](https://leetcode.cn/problems/arranging-coins/)
+
+### 二分搜索应用（中等）
+
+#### [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
+#### [540. 有序数组中的单一元素](https://leetcode.cn/problems/single-element-in-a-sorted-array/)
 
 ### 方向数组
 
