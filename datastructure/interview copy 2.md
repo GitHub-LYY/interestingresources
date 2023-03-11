@@ -727,11 +727,7 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 二分搜索
 
-#### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
-
 #### [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
-
-#### [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
 
 #### [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
 
@@ -758,6 +754,20 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 #### [540. 有序数组中的单一元素](https://leetcode.cn/problems/single-element-in-a-sorted-array/)
+
+#### [275. H 指数 II](https://leetcode.cn/problems/h-index-ii/)
+
+#### [436. 寻找右区间](https://leetcode.cn/problems/find-right-interval/)
+
+#### [658. 找到 K 个最接近的元素](https://leetcode.cn/problems/find-k-closest-elements/)
+
+#### [162. 寻找峰值](https://leetcode.cn/problems/find-peak-element/)
+
+#### [4. 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays/)
+
+### 二分搜索与旋转数组
+
+#### [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
 
 ### 方向数组
 
@@ -1022,3 +1032,5 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
 
 #### [468. 验证IP地址](https://leetcode.cn/problems/validate-ip-address/)
+
+#### [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes/)
