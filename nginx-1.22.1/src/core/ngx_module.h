@@ -264,8 +264,10 @@ struct ngx_module_s {
 
 
 typedef struct {
-    ngx_str_t             name;
+    ngx_str_t             name; // 核心模块名称
+    // 解析配置项前，nginx框架会调用create_conf方法
     void               *(*create_conf)(ngx_cycle_t *cycle);
+    // 解析配置项完成后，nginx框架会调用init_conf方法
     char               *(*init_conf)(ngx_cycle_t *cycle, void *conf);
 } ngx_core_module_t;
 
