@@ -727,10 +727,6 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 二分搜索
 
-#### [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
-
-#### [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
-
 #### [剑指 Offer 53 - I. 在排序数组中查找数字 I](https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
 
 #### [剑指 Offer 53 - II. 0～n-1中缺失的数字](https://leetcode.cn/problems/que-shi-de-shu-zi-lcof/)
@@ -768,6 +764,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 ### 二分搜索与旋转数组
 
 #### [153. 寻找旋转排序数组中的最小值](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/)
+
+#### [154. 寻找旋转排序数组中的最小值 II](https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/)
+
+#### [33. 搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)
+
+#### [81. 搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii/)
+
+### 二分搜索与矩阵
+
+#### [74. 搜索二维矩阵](https://leetcode.cn/problems/search-a-2d-matrix/)
+
+#### [240. 搜索二维矩阵 II](https://leetcode.cn/problems/search-a-2d-matrix-ii/)
 
 ### 方向数组
 
