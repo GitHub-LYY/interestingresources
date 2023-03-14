@@ -170,6 +170,7 @@ typedef struct {
 
     ngx_hash_keys_arrays_t    *variables_keys;
 
+    // 存放着该HTTP{}配置块下监听的所有ngx_http_conf_port_t端口
     ngx_array_t               *ports;
 
     ngx_http_phase_t           phases[NGX_HTTP_LOG_PHASE + 1];
@@ -267,11 +268,21 @@ typedef struct {
 typedef struct {
     ngx_int_t                  family;
     in_port_t                  port;
+    /*
+     * ngx_http_conf_port_t的addrs动态数组可能不太容易理解。可先回顾一下listen
+     * 配置项的语法，在10.1节的例子中，对同一个端口8000，我们可以同时监听
+     * 127.0.0.1:8000、173.39.160.51:8000这两个地址，当一台物理机器具备多个IP
+     * 地址时这是很有用的。具体到HTTP框架的实现上，nginx是使用ngx_http_conf_addr_t
+     * 结构体来表示一个对应着具体地址的监听端口的，因此，一个ngx_http_conf_port_t
+     * 将会对应多个ngx_http_conf_addr_t，而ngx_http_conf_addr_t就是以动态数组
+     * 的形式保存在addrs成员中的
+     */
     ngx_array_t                addrs;     /* array of ngx_http_conf_addr_t */
 } ngx_http_conf_port_t;
 
 
 typedef struct {
+    /* 监听套接字的各种属性 */
     ngx_http_listen_opt_t      opt;
 
     ngx_hash_t                 hash;
