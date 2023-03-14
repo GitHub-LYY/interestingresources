@@ -777,6 +777,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [240. 搜索二维矩阵 II](https://leetcode.cn/problems/search-a-2d-matrix-ii/)
 
+### 二分答案法
+
+#### [378. 有序矩阵中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/)
+
+#### [668. 乘法表中第k小的数](https://leetcode.cn/problems/kth-smallest-number-in-multiplication-table/)
+
+#### [410. 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum/)
+
+#### [483. 最小好进制](https://leetcode.cn/problems/smallest-good-base/)
+
 ### 方向数组
 
 #### [661. 图片平滑器](https://leetcode.cn/problems/image-smoother/)
@@ -970,6 +980,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [693. 交替位二进制数](https://leetcode.cn/problems/binary-number-with-alternating-bits/)
 
 #### [405. 数字转换为十六进制数](https://leetcode.cn/problems/convert-a-number-to-hexadecimal/)
+
+### 二进制运算的应用
+
+### 异或的应用
+
+#### [89. 格雷编码](https://leetcode.cn/problems/gray-code/)
+
+#### [136. 只出现一次的数字](https://leetcode.cn/problems/single-number/)
+
+#### [137. 只出现一次的数字 II](https://leetcode.cn/problems/single-number-ii/)
 
 ### 摩尔投票法
 
