@@ -991,6 +991,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [137. 只出现一次的数字 II](https://leetcode.cn/problems/single-number-ii/)
 
+#### [260. 只出现一次的数字 III](https://leetcode.cn/problems/single-number-iii/)
+
+#### [268. 丢失的数字](https://leetcode.cn/problems/missing-number/)
+
+### 与或非的应用
+
+#### [371. 两整数之和](https://leetcode.cn/problems/sum-of-two-integers/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
