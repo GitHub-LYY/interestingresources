@@ -999,6 +999,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [371. 两整数之和](https://leetcode.cn/problems/sum-of-two-integers/)
 
+#### [318. 最大单词长度乘积](https://leetcode.cn/problems/maximum-product-of-word-lengths/)
+
+#### [201. 数字范围按位与](https://leetcode.cn/problems/bitwise-and-of-numbers-range/)
+
+### 数据结构
+
+### 数据结构设计
+
+#### [225. 用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
