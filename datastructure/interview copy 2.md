@@ -1005,9 +1005,17 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 数据结构
 
-### 数据结构设计
+### 数据结构设计-栈与队列
 
 #### [225. 用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/)
+
+#### [232. 用栈实现队列](https://leetcode.cn/problems/implement-queue-using-stacks/)
+
+#### [284. 顶端迭代器](https://leetcode.cn/problems/peeking-iterator/)
+
+#### [622. 设计循环队列](https://leetcode.cn/problems/design-circular-queue/)
+
+#### [641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/)
 
 ### 摩尔投票法
 
