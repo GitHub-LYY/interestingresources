@@ -1017,6 +1017,20 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/)
 
+#### [155. 最小栈](https://leetcode.cn/problems/min-stack/)
+
+### 数据结构设计-哈希表
+
+#### [676. 实现一个魔法字典](https://leetcode.cn/problems/implement-magic-dictionary/)
+
+#### [380. O(1) 时间插入、删除和获取随机元素](https://leetcode.cn/problems/insert-delete-getrandom-o1/)
+
+### 数据结构设计-哈希与双向链表
+
+#### [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/)
+
+#### [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
@@ -1088,3 +1102,9 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [468. 验证IP地址](https://leetcode.cn/problems/validate-ip-address/)
 
 #### [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes/)
+
+#### [355. 设计推特](https://leetcode.cn/problems/design-twitter/)
+
+#### [381. O(1) 时间插入、删除和获取随机元素 - 允许重复](https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/)
+
+#### [432. 全 O(1) 的数据结构](https://leetcode.cn/problems/all-oone-data-structure/)
