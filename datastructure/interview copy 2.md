@@ -1031,6 +1031,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
 
+### 前缀树
+
+#### [208. 实现 Trie (前缀树)](https://leetcode.cn/problems/implement-trie-prefix-tree/)
+
+#### [211. 添加与搜索单词 - 数据结构设计](https://leetcode.cn/problems/design-add-and-search-words-data-structure/)
+
+#### [648. 单词替换](https://leetcode.cn/problems/replace-words/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
