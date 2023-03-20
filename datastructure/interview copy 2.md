@@ -1039,6 +1039,16 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [648. 单词替换](https://leetcode.cn/problems/replace-words/)
 
+#### [386. 字典序排数](https://leetcode.cn/problems/lexicographical-numbers/)
+
+#### [677. 键值映射](https://leetcode.cn/problems/map-sum-pairs/)
+
+#### [421. 数组中两个数的最大异或值](https://leetcode.cn/problems/maximum-xor-of-two-numbers-in-an-array/)
+
+### 堆
+
+#### [23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
@@ -1116,3 +1126,11 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [381. O(1) 时间插入、删除和获取随机元素 - 允许重复](https://leetcode.cn/problems/insert-delete-getrandom-o1-duplicates-allowed/)
 
 #### [432. 全 O(1) 的数据结构](https://leetcode.cn/problems/all-oone-data-structure/)
+
+#### [472. 连接词](https://leetcode.cn/problems/concatenated-words/)
+
+#### [212. 单词搜索 II](https://leetcode.cn/problems/word-search-ii/)
+
+#### [336. 回文对](https://leetcode.cn/problems/palindrome-pairs/)
+
+#### [440. 字典序的第K小数字](https://leetcode.cn/problems/k-th-smallest-in-lexicographical-order/)
