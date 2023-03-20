@@ -1,1 +1,5 @@
 在nginx中，只有核心模块才有create_conf这个方法，只有核心模块有资格对配置文件进行解析。
+
+连接是使用连接池进行管理的，nginx的连接结构体是ngx_connection_t，内部有一个void \*data，应该理解为ngx_connection_t \*next。这样理解不是很熟悉的单向链表吗？所以这是理解到了本质。因此nginx的连接池本质上是使用一个链表来构成连接池的。
+
+319页的9.4.1节读了几次才理解了四级指针的巧妙之处。这块说了ngx_events_module这个核心模块管理ngx_event_module_t结构体的create_conf创建的配置项结构体指针方法。理解思路从conf_ctx->ngx_events_module->配置项结构体的指针。
