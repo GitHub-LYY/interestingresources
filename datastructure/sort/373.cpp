@@ -16,7 +16,27 @@ class Solution {
 public:
     vector<vector<int>> kSmallestPairs(vector<int>& nums1, vector<int>& nums2, int k) {
         vector<vector<int>> res; // 结果
-        auto
+        auto cmp = [&nums1, &nums2] (const pair<int, int>& a, const pair<int, int>& b) { // 小顶堆仿函数
+            return (nums1[a.first] + nums2[a.second]) > (nums1[b.first] + nums2[b.second]);
+        };
+        priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> pri_que(cmp); // 小顶堆
+        int len1 = nums1.size(); // 数组一的长度
+        int len2 = nums2.size(); // 数组二的长度
+
+        for (int i = 0; i < min(k, len1); i++) { // 第一个数组的数字和第二个数组的第一个数字组成对组
+            pri_que.push(make_pair(i, 0));
+        }
+
+        while (k-- > 0 && !pri_que.empty()) { // k消耗完
+            auto [x, y] = pri_que.top(); // 取出堆顶
+            pri_que.pop(); // 出堆
+            res.emplace_back(vector<int>{nums1[x], nums2[y]}); // 插入结果
+            if (y + 1 < len2) { // 再取第二个数组的下一个数
+                pri_que.emplace(make_pair(x, y + 1)); 
+            }
+        }
+
+        return res;
     }
 };
 

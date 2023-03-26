@@ -1051,6 +1051,12 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [373. 查找和最小的 K 对数字](https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/)
 
+#### [378. 有序矩阵中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-sorted-matrix/)
+
+#### [632. 最小区间](https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists/)
+
+#### [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
