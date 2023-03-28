@@ -1,17 +1,20 @@
 /*
 ** Author: Yangyang Liu
-** Date: 2022-08-21
+** Date: 2022-08-21，2023-03-28
 ** Description: 227. 基本计算器 II
 ** link: https://leetcode.cn/problems/basic-calculator-ii/
 ** reference: 题解区，搜索，拆解复杂问题：实现一个完整计算器，作者，labuladong，搜索，labuladong，参考
+** 官方题解，20230328，很好，直接遍历字符串，没有那么弯弯绕绕，容易理解
 */
 
 #include <iostream>
 #include <stack>
+#include <vector>
+#include <numeric>
 
 using namespace std;
 
-class Solution {
+class SolutionOld {
 public:
     bool isDigit(char c) {
         return (c >= '0' && c <= '9');
@@ -89,6 +92,44 @@ public:
     int calculate(string s) {
         int index = 0;
         return helper(s, index);
+    }
+};
+
+class Solution {
+public:
+    int calculate(string s) {
+        vector<int> st; // 栈
+        int len = s.size(); // 字符串长度
+        char preSign = '+'; // 前符号，默认是+号
+        int num = 0; // 遍历到的数字
+
+        for (int i = 0; i < len; i++) {
+            if (isdigit(s[i])) { // 当前字符的数字字符
+                num = num * 10 + int(s[i] - '0');
+            }
+
+            if (!isdigit(s[i]) && s[i] != ' ' || i == len - 1) { // 是符号字符，或者是最后一个字符了
+                switch (preSign) {
+                    case '+':
+                        st.push_back(num); // 正数入栈
+                        break;
+                    case '-':
+                        st.push_back(-num); // 负数入栈
+                        break;
+                    case '*':
+                        st.back() *= num; // 栈顶结合
+                        break;
+                    case '/':
+                        st.back() /= num; // 栈顶结合
+                        break;
+                }
+
+                preSign = s[i]; // 下次的前符号
+                num = 0; // 置零
+            }
+        }
+
+        return accumulate(st.begin(), st.end(), 0);
     }
 };
 
