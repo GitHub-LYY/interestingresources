@@ -1057,6 +1057,18 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/)
 
+#### [692. 前K个高频单词](https://leetcode.cn/problems/top-k-frequent-words/)
+
+#### [295. 数据流的中位数](https://leetcode.cn/problems/find-median-from-data-stream/)
+
+### 采样
+
+### 蓄水池抽样
+
+### 拒绝采样
+
+
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
@@ -1142,3 +1154,42 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [336. 回文对](https://leetcode.cn/problems/palindrome-pairs/)
 
 #### [440. 字典序的第K小数字](https://leetcode.cn/problems/k-th-smallest-in-lexicographical-order/)
+
+#### [502. IPO](https://leetcode.cn/problems/ipo/)
+
+#### [630. 课程表 III](https://leetcode.cn/problems/course-schedule-iii/)
+
+#### [407. 接雨水 II](https://leetcode.cn/problems/trapping-rain-water-ii/)
+
+#### [480. 滑动窗口中位数](https://leetcode.cn/problems/sliding-window-median/)
+
+#### [307. 区域和检索 - 数组可修改](https://leetcode.cn/problems/range-sum-query-mutable/)
+
+#### [315. 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/)
+
+#### [493. 翻转对](https://leetcode.cn/problems/reverse-pairs/)
+
+#### [327. 区间和的个数](https://leetcode.cn/problems/count-of-range-sum/)
+
+#### [673. 最长递增子序列的个数](https://leetcode.cn/problems/number-of-longest-increasing-subsequence/)
+
+#### [699. 掉落的方块](https://leetcode.cn/problems/falling-squares/)
+
+#### [352. 将数据流变为多个不相交区间](https://leetcode.cn/problems/data-stream-as-disjoint-intervals/)
+
+#### [218. 天际线问题](https://leetcode.cn/problems/the-skyline-problem/)
+
+#### [363. 矩形区域不超过 K 的最大数值和](https://leetcode.cn/problems/max-sum-of-rectangle-no-larger-than-k/)
+
+#### [528. 按权重随机选择](https://leetcode.cn/problems/random-pick-with-weight/)
+
+#### [497. 非重叠矩形中的随机点](https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/)
+
+
+ 
+
+
+ 
+
+
+  
