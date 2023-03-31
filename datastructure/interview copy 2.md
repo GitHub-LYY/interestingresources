@@ -1065,9 +1065,39 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 ### 蓄水池抽样
 
+#### [382. 链表随机节点](https://leetcode.cn/problems/linked-list-random-node/)
+
 ### 拒绝采样
 
+#### [470. 用 Rand7() 实现 Rand10()](https://leetcode.cn/problems/implement-rand10-using-rand7/)
 
+### 计算几何
+
+### 计算几何基础
+
+#### [593. 有效的正方形](https://leetcode.cn/problems/valid-square/)
+
+#### [447. 回旋镖的数量](https://leetcode.cn/problems/number-of-boomerangs/)
+
+#### [223. 矩形面积](https://leetcode.cn/problems/rectangle-area/)
+
+### 常用技巧与算法
+
+### 博弈论
+
+#### [292. Nim 游戏](https://leetcode.cn/problems/nim-game/)
+
+### 分块
+
+#### [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+
+### 拓展欧几里得算法
+
+#### [365. 水壶问题](https://leetcode.cn/problems/water-and-jug-problem/)
+
+### 洗牌算法
+
+#### [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/)
 
 ### 摩尔投票法
 
@@ -1185,11 +1215,20 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [497. 非重叠矩形中的随机点](https://leetcode.cn/problems/random-point-in-non-overlapping-rectangles/)
 
+#### [398. 随机数索引](https://leetcode.cn/problems/random-pick-index/)
 
- 
+#### [478. 在圆内随机生成点](https://leetcode.cn/problems/generate-random-point-in-a-circle/)
 
+#### [519. 随机翻转矩阵](https://leetcode.cn/problems/random-flip-matrix/)
 
- 
+#### [149. 直线上最多的点数](https://leetcode.cn/problems/max-points-on-a-line/)
 
+#### [335. 路径交叉](https://leetcode.cn/problems/self-crossing/)
 
-  
+#### [587. 安装栅栏](https://leetcode.cn/problems/erect-the-fence/)
+
+#### [391. 完美矩形](https://leetcode.cn/problems/perfect-rectangle/)
+
+#### [164. 最大间距](https://leetcode.cn/problems/maximum-gap/)
+
+#### [330. 按要求补齐数组](https://leetcode.cn/problems/patching-array/)
