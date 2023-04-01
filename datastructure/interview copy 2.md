@@ -1099,6 +1099,14 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 
 #### [384. 打乱数组](https://leetcode.cn/problems/shuffle-an-array/)
 
+### 排序算法
+
+#### [147. 对链表进行插入排序](https://leetcode.cn/problems/insertion-sort-list/)
+
+### 线性筛
+
+#### [204. 计数质数](https://leetcode.cn/problems/count-primes/)
+
 ### 摩尔投票法
 
 #### [169. 多数元素](https://leetcode.cn/problems/majority-element/)
@@ -1232,3 +1240,10 @@ stringstream学一下，笔试的时候快速做出字符串的题。
 #### [164. 最大间距](https://leetcode.cn/problems/maximum-gap/)
 
 #### [330. 按要求补齐数组](https://leetcode.cn/problems/patching-array/)
+
+#### [390. 消除游戏](https://leetcode.cn/problems/elimination-game/)
+
+#### [672. 灯泡开关 Ⅱ](https://leetcode.cn/problems/bulb-switcher-ii/)
+
+#### [395. 至少有 K 个重复字符的最长子串](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/)
+
