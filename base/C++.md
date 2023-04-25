@@ -277,3 +277,8 @@ functor在模板参数中必须写类名字，如priority_queue<int, vector<int>
 ### new有那些？
 
 new，array new，placement new。operator new。
+
+### C++源文件后缀名有哪些？
+
+.cc文件是Linux/Unix下为C++源文件的默认扩展名,与.cpp(windows下)一个意思。
+详细参考C++ 中 .cc 和 .cpp 文件扩展名之间的区别：https://www.zadmei.com/czchcwjk.html
